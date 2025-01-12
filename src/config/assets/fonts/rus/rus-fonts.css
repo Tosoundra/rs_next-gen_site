@@ -1,0 +1,134 @@
+@font-face {
+  font-family: 'Segoe UI';
+  src: local('Segoe-UI-Variable-Static-Display-Bold'), url('./woff2/Segoe-UI-Variable-Static-Display-Bold.woff2') format('woff2'),
+    url('./woff/Segoe-UI-Variable-Static-Display-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: local('Segoe-UI-Variable-Static-Display-Light'), url('./woff2/Segoe-UI-Variable-Static-Display-Light.woff2') format('woff2'),
+    url('./woff/Segoe-UI-Variable-Static-Display-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: local('Segoe-UI-Variable-Static-Display-Semibold'), url('./woff2/Segoe-UI-Variable-Static-Display-Semibold.woff2') format('woff2'),
+    url('./woff/Segoe-UI-Variable-Static-Display-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: local('Segoe-UI-Variable-Static-Display-Semilight'), url('./woff2/Segoe-UI-Variable-Static-Display-Semilight.woff2') format('woff2'),
+    url('./woff/Segoe-UI-Variable-Static-Display-Semilight.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: local('Segoe-UI-Variable-Static-Display'), url('./woff2/Segoe-UI-Variable-Static-Display.woff2') format('woff2'),
+    url('./woff/Segoe-UI-Variable-Static-Display.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: local('Segoe-UI-Variable-Static-Small-Bold'), url('./woff2/Segoe-UI-Variable-Static-Small-Bold.woff2') format('woff2'),
+    url('./woff/Segoe-UI-Variable-Static-Small-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: local('Segoe-UI-Variable-Static-Small-Light'), url('./woff2/Segoe-UI-Variable-Static-Small-Light.woff2') format('woff2'),
+    url('./woff/Segoe-UI-Variable-Static-Small-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: local('Segoe-UI-Variable-Static-Small-Semibold'), url('./woff2/Segoe-UI-Variable-Static-Small-Semibold.woff2') format('woff2'),
+    url('./woff/Segoe-UI-Variable-Static-Small-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: local('Segoe-UI-Variable-Static-Small-Semilight'), url('./woff2/Segoe-UI-Variable-Static-Small-Semilight.woff2') format('woff2'),
+    url('./woff/Segoe-UI-Variable-Static-Small-Semilight.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: local('Segoe-UI-Variable-Static-Small'), url('./woff2/Segoe-UI-Variable-Static-Small.woff2') format('woff2'),
+    url('./woff/Segoe-UI-Variable-Static-Small.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: local('Segoe-UI-Variable-Static-Text-Bold'), url('./woff2/Segoe-UI-Variable-Static-Text-Bold.woff2') format('woff2'),
+    url('./woff/Segoe-UI-Variable-Static-Text-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: local('Segoe-UI-Variable-Static-Text-Light'), url('./woff2/Segoe-UI-Variable-Static-Text-Light.woff2') format('woff2'),
+    url('./woff/Segoe-UI-Variable-Static-Text-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: local('Segoe-UI-Variable-Static-Text-Semibold'), url('./woff2/Segoe-UI-Variable-Static-Text-Semibold.woff2') format('woff2'),
+    url('./woff/Segoe-UI-Variable-Static-Text-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: local('Segoe-UI-Variable-Static-Text-Semilight'), url('./woff2/Segoe-UI-Variable-Static-Text-Semilight.woff2') format('woff2'),
+    url('./woff/Segoe-UI-Variable-Static-Text-Semilight.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: local('Segoe-UI-Variable-Static-Text'), url('./woff2/Segoe-UI-Variable-Static-Text.woff2') format('woff2'),
+    url('./woff/Segoe-UI-Variable-Static-Text.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

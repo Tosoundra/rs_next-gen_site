@@ -1,0 +1,6 @@
+# Add files here to ignore them from prettier formatting
+/dist
+/coverage
+libs/modules/viewer-3d/ui/jaw-3d/*
+
+/.nx/cache
