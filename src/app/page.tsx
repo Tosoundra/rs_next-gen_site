@@ -8,8 +8,8 @@ import styles from './page.module.scss';
 
 export default function Home() {
   return (
-    <h1 className={`${styles.title} flex items-center justify-center`}>
-      Welcome to the future of the web!
-    </h1>
+    <div className={`${styles.wrapper} flex items-center justify-center`}>
+      <h1 className={`${styles.title}`}>Welcome to the future of the web!</h1>
+    </div>
   );
 }

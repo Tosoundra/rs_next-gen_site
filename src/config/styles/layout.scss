@@ -5,7 +5,7 @@
    --wrapper-horizontal-padding: 0px;
 
    // sizes 
-   // --header-height: 109px;
+   --header-height: 198px;
    // --sidebar-width: 435px;
    // --sidebar-height: calc(100dvh - var(--header-height) - var(--page-padding-top) * 2);
 
@@ -69,14 +69,18 @@ html,
 body {
    margin: 0;
    padding: 0;
+   min-width: 320px;
    min-height: 100dvh;
+   display: flex;
+   flex-direction: column;
    scroll-behavior: smooth;
    overflow-x: clip;
-   min-width: 320px;
 }
 
 main {
    flex: 1 0 auto;
+   display: flex;
+   flex-direction: column;
 }
 
 header,

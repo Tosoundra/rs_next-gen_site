@@ -18,3 +18,17 @@ img {
    -webkit-user-select: none;
    -ms-user-select: none;
 }
+
+.background {
+   &-white {
+      background-color: var(--white);
+   }
+
+   &-white {
+      background-color: var(--black);
+   }
+
+   &-white {
+      background-color: var(--blue);
+   }
+}

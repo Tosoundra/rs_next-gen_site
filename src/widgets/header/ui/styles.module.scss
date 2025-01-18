@@ -1,0 +1,12 @@
+.header {
+   --padding-vertical: 75px;
+   position: fixed;
+   padding: var(--padding-vertical) 0;
+   width: 100%;
+
+   .wrapper {
+      .side {
+         flex: 1;
+      }
+   }
+}
