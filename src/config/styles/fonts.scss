@@ -1,0 +1,229 @@
+:root {
+   font-family: 'Satoshi', sans-serif;
+}
+
+.caption {
+   &-120 {
+      font-size: 120px;
+      line-height: 110%;
+
+      @media (max-width: 1919px) {
+         font-size: 120px;
+      }
+
+      @media (max-width: 1439px) {
+         font-size: 120px;
+      }
+
+      @media (max-width: 1279px) {
+         font-size: 120px;
+      }
+
+      @media (max-width: 1023px) {
+         font-size: 120px;
+      }
+
+      @media (max-width: 719px) {
+         font-size: 120px;
+      }
+
+      @media (max-width: 479px) {
+         font-size: 120px;
+      }
+
+      @media (max-width: 389px) {
+         font-size: 120px;
+      }
+   }
+
+   &-100 {
+      font-size: 100px;
+      line-height: 110%;
+
+      @media (max-width: 1919px) {
+         font-size: 100px;
+      }
+
+      @media (max-width: 1439px) {
+         font-size: 100px;
+      }
+
+      @media (max-width: 1279px) {
+         font-size: 100px;
+      }
+
+      @media (max-width: 1023px) {
+         font-size: 100px;
+      }
+
+      @media (max-width: 719px) {
+         font-size: 100px;
+      }
+
+      @media (max-width: 479px) {
+         font-size: 100px;
+      }
+
+      @media (max-width: 389px) {
+         font-size: 100px;
+      }
+   }
+
+   &-80 {
+      font-size: 80px;
+      line-height: 110%;
+
+      @media (max-width: 1919px) {
+         font-size: 80px;
+      }
+
+      @media (max-width: 1439px) {
+         font-size: 80px;
+      }
+
+      @media (max-width: 1279px) {
+         font-size: 80px;
+      }
+
+      @media (max-width: 1023px) {
+         font-size: 80px;
+      }
+
+      @media (max-width: 719px) {
+         font-size: 80px;
+      }
+
+      @media (max-width: 479px) {
+         font-size: 80px;
+      }
+
+      @media (max-width: 389px) {
+         font-size: 80px;
+      }
+   }
+
+   &-60 {
+      font-size: 60px;
+      line-height: 120%;
+
+      @media (max-width: 1919px) {
+         font-size: 60px;
+      }
+
+      @media (max-width: 1439px) {
+         font-size: 60px;
+      }
+
+      @media (max-width: 1279px) {
+         font-size: 60px;
+      }
+
+      @media (max-width: 1023px) {
+         font-size: 60px;
+      }
+
+      @media (max-width: 719px) {
+         font-size: 60px;
+      }
+
+      @media (max-width: 479px) {
+         font-size: 60px;
+      }
+
+      @media (max-width: 389px) {
+         font-size: 60px;
+      }
+   }
+
+   &-38 {
+      font-size: 38px;
+      line-height: 110%;
+
+      @media (max-width: 1919px) {
+         font-size: 38px;
+      }
+
+      @media (max-width: 1439px) {
+         font-size: 38px;
+      }
+
+      @media (max-width: 1279px) {
+         font-size: 38px;
+      }
+
+      @media (max-width: 1023px) {
+         font-size: 38px;
+      }
+
+      @media (max-width: 719px) {
+         font-size: 38px;
+      }
+
+      @media (max-width: 479px) {
+         font-size: 38px;
+      }
+
+      @media (max-width: 389px) {
+         font-size: 38px;
+      }
+   }
+}
+
+.text {
+   &-black {
+      color: var(--black);
+   }
+
+   &-white {
+      color: var(--white);
+   }
+
+   &-blue {
+      color: var(--blue);
+   }
+
+   &-36 {
+      font-size: 35px;
+      line-height: 120%;
+   }
+
+   &-20 {
+      font-size: 20px;
+      line-height: 120%;
+   }
+
+   &-18 {
+      font-size: 18px;
+      line-height: 120%;
+   }
+
+   &-light {
+      font-weight: 300;
+   }
+
+   &-regular {
+      font-weight: 400;
+   }
+
+   &-medium {
+      font-weight: 500;
+   }
+
+   &-bold {
+      font-weight: 700;
+   }
+
+   &-black {
+      font-weight: 900;
+   }
+
+   &-center {
+      text-align: center;
+   }
+
+   &-center-mobile {
+      @media (max-width: 719px) {
+         text-align: center;
+      }
+   }
+}
