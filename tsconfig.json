@@ -20,7 +20,7 @@
     ],
     "paths": {
       "@shared/*": ["./src/shared/index.ts"],
-      "@widgets/*": ["./src/widgets/index.ts"],
+      "@widgets/*": ["src/widgets/pages/home/index.ts"],
       "@/*": ["./*"]
     }
   },

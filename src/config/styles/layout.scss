@@ -10,12 +10,12 @@
    // --sidebar-height: calc(100dvh - var(--header-height) - var(--page-padding-top) * 2);
 
    // gaps
-   --layout-gap: 20px;
-   --between-blocks-gap: 50px;
-   --between-blocks-gap-nn: 40px;
-   --inside-block-gap: 30px;
-   --between-items-gap: 20px;
-   --page-padding-top: 24px;
+   // --layout-gap: 20px;
+   // --between-blocks-gap: 50px;
+   // --between-blocks-gap-nn: 40px;
+   --gap-between-heading-content: 85px;
+   // --between-items-gap: 20px;
+   // --page-padding-top: 24px;
 
    @media (max-width: 1919px) {
       // --wrapper-width: 1820px;

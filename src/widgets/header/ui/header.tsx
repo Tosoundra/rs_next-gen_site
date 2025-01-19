@@ -1,12 +1,19 @@
+import { ButtonRounded } from '@/src/shared/button';
 import styles from './styles.module.scss';
 
 const Header = () => {
   return (
-    <header className={`${styles.header}`}>
+    <header className={`${styles.header} background-black`}>
       <div className={`${styles.wrapper} content-wrapper flex items-center`}>
-        <div className={`${styles.side} flex justify-start`}>кнопка 1</div>
-        <div>RS</div>
-        <div className={`${styles.side} flex justify-end`}>кнопка 2</div>
+        <div className={`${styles.side} flex justify-start`}>
+          <ButtonRounded type="button" title="Menu" />
+        </div>
+        <div className="text-white">RS</div>
+        <div className={`${styles.side} flex justify-end`}>
+          <ButtonRounded type="button" title="Contact">
+            Contact
+          </ButtonRounded>
+        </div>
       </div>
     </header>
   );
