@@ -1,15 +1,17 @@
-// import { Metadata } from 'next';
+import { Hero, SectionWrapper } from '@/src/widgets/pages/home/';
 import styles from './page.module.scss';
-
-// export const metadata: Metadata = {
-//   title: 'Ronix Systems',
-//   description: 'Сайт компании Ronix Systems',
-// };
 
 export default function Home() {
   return (
-    <div className={`${styles.wrapper} flex items-center justify-center`}>
-      <h1 className={`${styles.title}`}>Welcome to the future of the web!</h1>
+    <div className={`${styles.wrapper} flex flex-col`}>
+      <h1 className={`${styles.title} visuallyhidden`}>
+        Ronix Systems - the Future of Web-Development
+      </h1>
+      <Hero />
+      <SectionWrapper caption={'Our services'}>content</SectionWrapper>
+      <SectionWrapper caption={'Our works'}>content</SectionWrapper>
+      <SectionWrapper caption={'More details?'}>content</SectionWrapper>
+      <SectionWrapper caption={'Contacts'}>content</SectionWrapper>
     </div>
   );
 }

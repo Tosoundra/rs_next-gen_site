@@ -1,9 +1,12 @@
 :root {
+   // sizes
+   --button-rounded-height: 55px;
+   --button-rounded-min-width: 140px;
+   --button-rounded-padding-horizontal: 20px;
+
    // ui
-   // --border-grey: 3px solid var(--grey-2);
-   // --block-border-radius: 20px;
-   // --action-border-radius: 16px;
-   // --action-border-radius-small: 10px;
+   --border-radius: 90px;
+   --border-white: 1px solid var(--white);
 }
 
 img {
@@ -24,11 +27,11 @@ img {
       background-color: var(--white);
    }
 
-   &-white {
+   &-black {
       background-color: var(--black);
    }
 
-   &-white {
+   &-blue {
       background-color: var(--blue);
    }
 }
