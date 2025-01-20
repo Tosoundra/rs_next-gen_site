@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 
-import { Header } from '../widgets/header';
-import { Footer } from '../widgets/footer';
+import { Header } from '@/src/widgets/header';
+import { Footer } from '@/src/widgets/footer';
 
 import '@/index.css';
 import '@/src/config/styles/global.scss';

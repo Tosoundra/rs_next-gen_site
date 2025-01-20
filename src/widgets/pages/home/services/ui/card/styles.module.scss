@@ -1,0 +1,36 @@
+.card {
+   padding: 30px 0;
+   gap: 220px;
+
+   .text {
+      padding: 70px 0;
+
+      .title {
+         flex: 1;
+         gap: 20px;
+      }
+
+      .description {
+         flex: 1;
+         gap: 50px;
+      }
+   }
+
+   // заглушка
+   .image {
+      min-width: 500px;
+      height: 500px;
+      background-color: var(--black);
+      border-radius: 60px;
+   }
+
+   &.reverse {
+      .image {
+         order: 1;
+      }
+
+      .text {
+         order: 2;
+      }
+   }
+}

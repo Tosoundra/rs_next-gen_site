@@ -1,9 +1,10 @@
+'use server';
 import { ButtonRounded } from '@/src/shared/button';
 import styles from './styles.module.scss';
 
 const Header = () => {
   return (
-    <header className={`${styles.header} background-black`}>
+    <header className={`${styles.header}`}>
       <div className={`${styles.wrapper} content-wrapper flex items-center`}>
         <div className={`${styles.side} flex justify-start`}>
           <ButtonRounded type="button" title="Menu" />
