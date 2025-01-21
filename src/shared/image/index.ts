@@ -1,1 +1,1 @@
-export { default as ImageFlow } from './ImageFlow/ui/image';
+export { default as ImageFlow } from './ImageFlow/ui';

@@ -1,5 +1,5 @@
 'use server';
-import { ButtonRounded } from '@/src/shared/button';
+import { ButtonRounded } from '@/src/shared/action';
 import styles from './styles.module.scss';
 
 const Header = () => {

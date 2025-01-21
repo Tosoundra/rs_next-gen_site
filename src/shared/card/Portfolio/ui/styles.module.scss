@@ -1,0 +1,28 @@
+.card {
+   --padding-inside: 50px;
+   --padding-bottom: 30px;
+   padding: var(--padding-inside) var(--padding-inside) var(--padding-bottom) var(--padding-inside);
+   gap: 30px;
+
+   border-radius: calc(30px + var(--padding-inside) * 0.5);
+   border: var(--border-black);
+
+   .image {
+      .title {
+         --margin: 30px;
+         position: absolute;
+         bottom: var(--margin);
+         left: var(--margin);
+      }
+   }
+
+   .content {
+      justify-content: space-between;
+
+      .tags {
+         max-width: 640px;
+         flex-wrap: wrap;
+         justify-content: flex-end;
+      }
+   }
+}
