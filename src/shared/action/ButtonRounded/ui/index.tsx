@@ -2,7 +2,7 @@
 import Link, { LinkProps } from 'next/link';
 import { ButtonHTMLAttributes, ReactNode } from 'react';
 
-import styles from './ButtonRounded.module.scss';
+import styles from './styles.module.scss';
 
 type ButtonRoundedProps = {
   title: string;

@@ -7,6 +7,7 @@
    // ui
    --border-radius: 90px;
    --border-white: 1px solid var(--white);
+   --border-black: 1px solid var(--black);
 }
 
 img {
@@ -33,5 +34,20 @@ img {
 
    &-blue {
       background-color: var(--blue);
+   }
+}
+
+.marker {
+   &-brick {
+      padding: 5px 30px;
+      width: fit-content;
+      height: fit-content;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: var(--border-black);
+      border-radius: 10px;
    }
 }

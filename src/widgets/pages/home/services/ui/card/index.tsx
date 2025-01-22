@@ -1,0 +1,27 @@
+'use server';
+import { ImageFlow } from '@/src/shared/image';
+import { LearnMore } from '@/src/shared/action';
+import { ServiceProps } from '../../types';
+import styles from './styles.module.scss';
+
+const ServiceCard = ({ index, service }: ServiceProps) => {
+  return (
+    <div className={`${styles.card} ${index % 2 && styles.reverse} flex`}>
+      <div className={`${styles.text} flex`}>
+        <div className={`${styles.title} flex flex-col`}>
+          <h3 className={`caption-60 text-light`}>{service.title}</h3>
+          <li className={`text-bold text-18 text-blue list-disc`}>0{index + 1} /</li>
+        </div>
+        <div className={`${styles.description} flex flex-col`}>
+          <p className={`text-20 text-light text-pretty`}>{service.description}</p>
+          <LearnMore title="Learn more" href={`/services/${service.slug}`} />
+        </div>
+      </div>
+      <div className={`${styles.image}`}>
+        <ImageFlow src={service.image} alt={service.title} />
+      </div>
+    </div>
+  );
+};
+
+export default ServiceCard;

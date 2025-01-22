@@ -1,0 +1,28 @@
+.card {
+   padding: 30px 0;
+   gap: 220px;
+
+   .text {
+      padding: 40px 0;
+
+      .title {
+         flex: 1;
+         gap: 20px;
+      }
+
+      .description {
+         flex: 1;
+         gap: 50px;
+      }
+   }
+
+   &.reverse {
+      .image {
+         order: 1;
+      }
+
+      .text {
+         order: 2;
+      }
+   }
+}

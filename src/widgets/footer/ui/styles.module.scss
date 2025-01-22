@@ -1,0 +1,16 @@
+.footer {
+   --padding-vertical: 45px;
+   padding: var(--padding-vertical) 0;
+   width: 100%;
+   gap: 90px;
+
+   .contacts {
+      gap: 50px;
+   }
+
+   .links {
+      .side {
+         flex: 1;
+      }
+   }
+}

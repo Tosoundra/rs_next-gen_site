@@ -1,4 +1,4 @@
-import { Hero, SectionWrapper } from '@/src/widgets/pages/home/';
+import { Hero, SectionWrapper, Services, Portfolio } from '@/src/widgets/pages/home/';
 import styles from './page.module.scss';
 
 export default function Home() {
@@ -8,8 +8,12 @@ export default function Home() {
         Ronix Systems - the Future of Web-Development
       </h1>
       <Hero />
-      <SectionWrapper caption={'Our services'}>content</SectionWrapper>
-      <SectionWrapper caption={'Our works'}>content</SectionWrapper>
+      <SectionWrapper caption={'Our services'}>
+        <Services />
+      </SectionWrapper>
+      <SectionWrapper caption={'Our works'}>
+        <Portfolio />
+      </SectionWrapper>
       <SectionWrapper caption={'More details?'}>content</SectionWrapper>
       <SectionWrapper caption={'Contacts'}>content</SectionWrapper>
     </div>
