@@ -1,5 +1,6 @@
 .card {
    --padding-inside: 50px;
+   // --padding-bottom: 50px;
    --padding-bottom: 30px;
    padding: var(--padding-inside) var(--padding-inside) var(--padding-bottom) var(--padding-inside);
    gap: 30px;
@@ -7,7 +8,11 @@
    border-radius: calc(30px + var(--padding-inside) * 0.5);
    border: var(--border-black);
 
-   .image {
+   .imageWrapper {
+      .image {
+         height: 585px;
+      }
+
       .title {
          --margin: 30px;
          position: absolute;
@@ -19,8 +24,13 @@
    .content {
       justify-content: space-between;
 
+      .description {
+         max-width: min(720px, 50%);
+      }
+
       .tags {
-         max-width: 640px;
+         gap: 15px;
+         max-width: min(640px, 50%);
          flex-wrap: wrap;
          justify-content: flex-end;
       }

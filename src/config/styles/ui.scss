@@ -40,7 +40,14 @@ img {
 .marker {
    &-brick {
       padding: 5px 30px;
+      width: fit-content;
+      height: fit-content;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       border: var(--border-black);
-      border-radius: 5px;
+      border-radius: 10px;
    }
 }

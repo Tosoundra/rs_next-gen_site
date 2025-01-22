@@ -1,4 +1,4 @@
-import { Hero, SectionWrapper, Services } from '@/src/widgets/pages/home/';
+import { Hero, SectionWrapper, Services, Portfolio } from '@/src/widgets/pages/home/';
 import styles from './page.module.scss';
 
 export default function Home() {
@@ -11,7 +11,9 @@ export default function Home() {
       <SectionWrapper caption={'Our services'}>
         <Services />
       </SectionWrapper>
-      <SectionWrapper caption={'Our works'}>content</SectionWrapper>
+      <SectionWrapper caption={'Our works'}>
+        <Portfolio />
+      </SectionWrapper>
       <SectionWrapper caption={'More details?'}>content</SectionWrapper>
       <SectionWrapper caption={'Contacts'}>content</SectionWrapper>
     </div>
