@@ -1,6 +1,7 @@
 'use server';
 import { Fragment } from 'react';
 import { CardPortfolio } from '@/src/shared/card';
+import { LinkLines } from '@/src/shared/action';
 import { PortfolioMock } from '../mock';
 import styles from './styles.module.scss';
 
@@ -12,6 +13,7 @@ const Portfolio = () => {
           <CardPortfolio data={portfolioCase} />
         </Fragment>
       ))}
+      <LinkLines title="More works" href="/porfolio" />
     </div>
   );
 };

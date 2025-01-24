@@ -1,10 +1,10 @@
 'use server';
 import Link from 'next/link';
-import { LearnMoreProps } from '../types';
+import { LinkUnderlineProps } from '../types';
 
 import styles from './styles.module.scss';
 
-const LearnMore = ({ title, href, ...props }: LearnMoreProps) => {
+const LinkUnderline = ({ title, href, ...props }: LinkUnderlineProps) => {
   return (
     <Link
       href={href}
@@ -23,4 +23,4 @@ const LearnMore = ({ title, href, ...props }: LearnMoreProps) => {
   );
 };
 
-export default LearnMore;
+export default LinkUnderline;

@@ -1,6 +1,6 @@
 'use server';
 import { ImageFlow } from '@/src/shared/image';
-import { LearnMore } from '@/src/shared/action';
+import { LinkUnderline } from '@/src/shared/action';
 import { ServiceProps } from '../../types';
 import styles from './styles.module.scss';
 
@@ -14,7 +14,7 @@ const ServiceCard = ({ index, service }: ServiceProps) => {
         </div>
         <div className={`${styles.description} flex flex-col`}>
           <p className={`text-20 text-light text-pretty`}>{service.description}</p>
-          <LearnMore title="Learn more" href={`/services/${service.slug}`} />
+          <LinkUnderline title="Learn more" href={`/services/${service.slug}`} />
         </div>
       </div>
       <div className={`${styles.image}`}>

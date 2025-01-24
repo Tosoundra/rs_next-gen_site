@@ -1,9 +1,14 @@
 .section {
-   padding-top: 180px;
-   padding-bottom: 180px;
-   gap: var(--gap-between-heading-content);
+   padding-top: 150px;
+   padding-bottom: 150px;
 
-   .heading {}
+   .wrapper {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      gap: var(--gap-between-heading-content);
 
-   .content {}
+      .heading {}
+
+      .content {}
+   }
 }

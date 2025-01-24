@@ -1,0 +1,42 @@
+.wrapper {
+   flex: 1;
+   display: grid;
+   grid-template-areas:
+      "A A A A   B B C C"
+      "A A A A   D D C C"
+      "E E E E   D D F F";
+   gap: var(--gap-between-section-items);
+
+   .item {
+      border: var(--border-black);
+      border-radius: var(--item-border-radius);
+
+      &.projects {
+         border-color: var(--blue);
+      }
+
+      &.A {
+         grid-area: A;
+      }
+
+      &.B {
+         grid-area: B;
+      }
+
+      &.C {
+         grid-area: C;
+      }
+
+      &.D {
+         grid-area: D;
+      }
+
+      &.E {
+         grid-area: E;
+      }
+
+      &.F {
+         grid-area: F;
+      }
+   }
+}

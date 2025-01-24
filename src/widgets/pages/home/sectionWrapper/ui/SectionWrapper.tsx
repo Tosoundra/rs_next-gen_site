@@ -5,27 +5,38 @@ import styles from './SectionWrapper.module.scss';
 type SectionWrapperProps = {
   children: ReactNode;
   caption?: string;
-  className?: string;
+  classNames?: {
+    section?: string;
+    wrapper?: string;
+    heading?: string;
+    content?: string;
+  };
   useWrapper?: boolean;
 };
 
 const SectionWrapper = ({
   children,
   caption,
-  className,
+  classNames,
   useWrapper = true,
 }: SectionWrapperProps) => {
   return (
-    <section>
+    <section className={`${styles.section} ${classNames?.section && classNames.section}`}>
       <div
-        className={`${useWrapper && 'content-wrapper'} ${className} ${styles.section} flex flex-col`}
+        className={`${useWrapper && 'content-wrapper'} ${classNames?.wrapper && classNames.wrapper} ${styles.wrapper} flex flex-col`}
       >
         {caption && (
-          <div className={`${styles.heading} flex flex-col`}>
+          <div
+            className={`${styles.heading} ${classNames?.heading && classNames.heading} flex flex-col`}
+          >
             <h2 className={`caption-100 text-bold`}>{caption}</h2>
           </div>
         )}
-        <div className={`${styles.content} flex flex-col`}>{children}</div>
+        <div
+          className={`${styles.content} ${classNames?.content && classNames.content} flex flex-col`}
+        >
+          {children}
+        </div>
       </div>
     </section>
   );
