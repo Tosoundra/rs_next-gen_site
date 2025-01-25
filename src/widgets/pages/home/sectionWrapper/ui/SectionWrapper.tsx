@@ -11,23 +11,17 @@ type SectionWrapperProps = {
     heading?: string;
     content?: string;
   };
-  useWrapper?: boolean;
 };
 
-const SectionWrapper = ({
-  children,
-  caption,
-  classNames,
-  useWrapper = true,
-}: SectionWrapperProps) => {
+const SectionWrapper = ({ children, caption, classNames }: SectionWrapperProps) => {
   return (
     <section className={`${styles.section} ${classNames?.section && classNames.section}`}>
       <div
-        className={`${useWrapper && 'content-wrapper'} ${classNames?.wrapper && classNames.wrapper} ${styles.wrapper} flex flex-col`}
+        className={`${classNames?.wrapper && classNames.wrapper} ${styles.wrapper} flex flex-col`}
       >
         {caption && (
           <div
-            className={`${styles.heading} ${classNames?.heading && classNames.heading} flex flex-col`}
+            className={`${styles.heading} ${classNames?.heading && classNames.heading} content-wrapper flex flex-col`}
           >
             <h2 className={`caption-100 text-bold`}>{caption}</h2>
           </div>
