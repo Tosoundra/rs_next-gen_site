@@ -1,4 +1,11 @@
-import { Hero, SectionWrapper, Services, Portfolio, Details } from '@/src/widgets/pages/home/';
+import {
+  Hero,
+  SectionWrapper,
+  Services,
+  Portfolio,
+  Details,
+  Partners,
+} from '@/src/widgets/pages/home/';
 import styles from './page.module.scss';
 
 export default function Home() {
@@ -13,6 +20,9 @@ export default function Home() {
       </SectionWrapper>
       <SectionWrapper caption={'Our works'}>
         <Portfolio />
+      </SectionWrapper>
+      <SectionWrapper classNames={{ section: styles.partnersSection, wrapper: styles.partners }}>
+        <Partners />
       </SectionWrapper>
       <SectionWrapper
         caption={'More details?'}

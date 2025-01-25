@@ -20,6 +20,9 @@ importers:
       react-fast-marquee:
         specifier: ^1.6.5
         version: 1.6.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      ymap3-components:
+        specifier: ^1.2.3
+        version: 1.2.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
     devDependencies:
       '@eslint/eslintrc':
         specifier: ^3
@@ -33,6 +36,9 @@ importers:
       '@types/react-dom':
         specifier: ^19
         version: 19.0.3(@types/react@19.0.7)
+      '@yandex/ymaps3-types':
+        specifier: ^1.0.15728622
+        version: 1.0.15728622(@types/react-dom@19.0.3(@types/react@19.0.7))(@types/react@19.0.7)
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.5.1)
@@ -488,6 +494,20 @@ packages:
   '@typescript-eslint/visitor-keys@8.20.0':
     resolution: {integrity: sha512-v/BpkeeYAsPkKCkR8BDwcno0llhzWVqPOamQrAEMdpZav2Y9OVjd9dwJyBLJWwf335B5DmlifECIkZRJCaGaHA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@yandex/ymaps3-types@1.0.15728622':
+    resolution: {integrity: sha512-mFz64Iy1nc78aU0WpVT1uqS/T69PguhKdNirJQvOgtIpVEC59INhvbfhhobqZhhN89kCQf3wdfmOeIvU0eW6xw==}
+    peerDependencies:
+      '@types/react': 16-18
+      '@types/react-dom': 16-18
+      '@vue/runtime-core': '3'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+      '@vue/runtime-core':
+        optional: true
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -1847,6 +1867,12 @@ packages:
     engines: {node: '>= 14'}
     hasBin: true
 
+  ymap3-components@1.2.3:
+    resolution: {integrity: sha512-VEye49LEMleEpbjF/c+XYPRlC9bKPGfQeWw5fiRbupGZsPJJhi9kOo0akp3L5GAA5uhpgQrnxmYQeb1Ng+ijCA==}
+    peerDependencies:
+      react: ^18.2.0 || ^19.0.0
+      react-dom: ^18.2.0 || ^19.0.0
+
   yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
@@ -2228,6 +2254,11 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.20.0
       eslint-visitor-keys: 4.2.0
+
+  '@yandex/ymaps3-types@1.0.15728622(@types/react-dom@19.0.3(@types/react@19.0.7))(@types/react@19.0.7)':
+    optionalDependencies:
+      '@types/react': 19.0.7
+      '@types/react-dom': 19.0.3(@types/react@19.0.7)
 
   acorn-jsx@5.3.2(acorn@8.14.0):
     dependencies:
@@ -3884,5 +3915,10 @@ snapshots:
       strip-ansi: 7.1.0
 
   yaml@2.7.0: {}
+
+  ymap3-components@1.2.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+    dependencies:
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
 
   yocto-queue@0.1.0: {}
