@@ -19,7 +19,8 @@
       }
     ],
     "paths": {
-      "@shared/*": ["./src/shared/index.ts"],
+      "@shared": ["./src/shared/index.ts"],
+      "@icons": ["./src/config/assets/icons/index.ts"],
       "@widgets/*": ["./src/widgets/index.ts"],
       "@/*": ["./*"]
     }
