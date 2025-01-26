@@ -13,3 +13,13 @@
       flex: 1;
    }
 }
+
+.partnersSection {
+   padding-top: unset;
+   padding-bottom: unset;
+
+   .partners {
+      height: 100dvh;
+      justify-content: center;
+   }
+}

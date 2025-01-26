@@ -1,16 +1,21 @@
 .footer {
-   --padding-vertical: 45px;
-   padding: var(--padding-vertical) 0;
+   min-height: 100dvh;
    width: 100%;
-   gap: 90px;
 
-   .contacts {
-      gap: 50px;
-   }
+   .container {
+      --padding-vertical: 45px;
+      padding: var(--padding-vertical) 0;
+      width: 100%;
+      gap: 90px;
 
-   .links {
-      .side {
-         flex: 1;
+      .contacts {
+         gap: 50px;
+      }
+
+      .links {
+         .side {
+            flex: 1;
+         }
       }
    }
 }

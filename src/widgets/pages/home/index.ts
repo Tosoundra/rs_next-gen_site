@@ -4,3 +4,4 @@ export { SectionWrapper } from './sectionWrapper';
 export { Portfolio } from './portfolio';
 export { Details } from './details';
 export { Experience } from './experience';
+export { Partners } from './partners';
