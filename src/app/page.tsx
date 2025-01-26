@@ -4,6 +4,7 @@ import {
   Services,
   Portfolio,
   Details,
+  Experience,
   Partners,
 } from '@/src/widgets/pages/home/';
 import styles from './page.module.scss';
@@ -15,6 +16,7 @@ export default function Home() {
         Ronix Systems - the Future of Web-Development
       </h1>
       <Hero />
+      <Experience />
       <SectionWrapper caption={'Our services'}>
         <Services />
       </SectionWrapper>
