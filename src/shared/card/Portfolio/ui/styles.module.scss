@@ -1,38 +1,111 @@
 .card {
    --padding-inside: 50px;
-   // --padding-bottom: 50px;
-   --padding-bottom: 30px;
-   padding: var(--padding-inside) var(--padding-inside) var(--padding-bottom) var(--padding-inside);
-   gap: 30px;
+   --padding-bottom: 40px;
+   --gap: 30px;
 
-   border-radius: calc(30px + var(--padding-inside) * 0.5);
+   padding: var(--padding-inside) var(--padding-inside) var(--padding-bottom) var(--padding-inside);
+   gap: var(--gap);
+
+   border-radius: calc(var(--item-border-radius) + var(--padding-inside) * 0.5);
    border: var(--border-black);
 
    .imageWrapper {
       .image {
          height: 585px;
+         width: 100%;
+         min-width: unset;
+
+         @media (max-width: 1919px) {
+            height: 420px;
+         }
+
+         @media (max-width: 1023px) {
+            height: 364px;
+         }
+
+         @media (max-width: 767px) {
+            height: 288px;
+         }
+
+         @media (max-width: 479px) {
+            height: 180px;
+         }
       }
 
       .title {
-         --margin: 30px;
          position: absolute;
-         bottom: var(--margin);
-         left: var(--margin);
+         bottom: 30px;
+         left: 40px;
+
+         @media (max-width: 1919px) {
+            bottom: 20px;
+            left: 30px;
+         }
+
+         @media (max-width: 479px) {
+            bottom: 12px;
+            left: 16px;
+         }
       }
    }
 
    .content {
       justify-content: space-between;
+      gap: var(--gap);
 
       .description {
          max-width: min(720px, 50%);
+
+         @media (max-width: 1023px) {
+            max-width: min(720px);
+         }
+
+         @media (max-width: 767px) {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+         }
       }
 
       .tags {
-         gap: 15px;
          max-width: min(640px, 50%);
+         height: fit-content;
          flex-wrap: wrap;
          justify-content: flex-end;
+         gap: 15px;
+
+         @media (max-width: 1023px) {
+            max-width: unset;
+            justify-content: flex-start;
+            gap: 10px;
+         }
+
+         @media (max-width: 767px) {
+            display: none;
+         }
       }
+
+      @media (max-width: 1023px) {
+         flex-direction: column-reverse;
+      }
+   }
+
+   @media (max-width: 1919px) {
+      --padding-inside: 30px;
+      --padding-bottom: 30px;
+      --gap: 20px;
+   }
+
+   @media (max-width: 1023px) {
+      --padding-inside: 20px;
+      --padding-bottom: 20px;
+      --gap: 15px;
+   }
+
+   @media (max-width: 479px) {
+      --padding-inside: 16px;
+      --padding-bottom: 16px;
+      --gap: 12px;
    }
 }

@@ -1,6 +1,7 @@
 'use server';
 import Link from 'next/link';
-import { Map } from '@/src/widgets/map';
+import Map from '@/src/widgets/map';
+
 import styles from './styles.module.scss';
 
 const Footer = () => {

@@ -9,4 +9,16 @@
          flex: 1;
       }
    }
+
+   @media (max-width: 1919px) {
+      --padding-vertical: 44px;
+   }
+
+   @media (max-width: 1279px) {
+      --padding-vertical: var(--wrapper-horizontal-padding);
+   }
+
+   @media (max-width: 767px) {
+      --padding-vertical: calc(var(--wrapper-horizontal-padding) * 2);
+   }
 }

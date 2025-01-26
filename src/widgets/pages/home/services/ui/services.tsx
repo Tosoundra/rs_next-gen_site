@@ -6,7 +6,7 @@ import styles from './services.module.scss';
 
 const Services = () => {
   return (
-    <div className={`${styles.section} content-wrapper flex flex-col`}>
+    <div className={`${styles.list} content-wrapper flex flex-col`}>
       {ServicesMock?.length &&
         ServicesMock.map((service, index) => (
           <Fragment key={`${index}${service.slug}`}>

@@ -1,8 +1,8 @@
 .image {
-   min-width: 500px;
-   height: 500px;
+   height: auto;
+   width: 100%;
    background-color: var(--black);
-   border-radius: 30px;
+   border-radius: var(--item-border-radius);
    mix-blend-mode: luminosity;
    filter: grayscale(1);
 }
