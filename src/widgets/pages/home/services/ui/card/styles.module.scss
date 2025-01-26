@@ -137,5 +137,9 @@
 
    @media (max-width: 479px) {
       gap: 16px;
+
+      .description {
+         gap: 16px;
+      }
    }
 }

@@ -6,7 +6,9 @@
 
    .marquee {
       --item-width: 300px;
-      --item-height: 150px;
+      --item-height: calc(var(--item-width) * 0.5);
+      --image-max-width: calc(var(--item-width) * 0.7);
+
       width: 100%;
 
       &.bottom {
@@ -18,26 +20,37 @@
          width: var(--item-width);
          height: var(--item-height);
          border: var(--border-black);
-         // border-radius: 16px;
 
          .logo {
-            max-width: 200px;
+            max-width: var(--image-max-width);
             width: auto;
             height: var(--item-height);
             object-fit: contain;
          }
       }
 
-      @media (max-width: 1023px) {
-         --padding-vertical: 42px;
+      @media (max-width: 1279px) {
+         --item-width: 220px;
       }
 
       @media (max-width: 767px) {
-         --image-size: 96px;
+         --item-width: 180px;
+      }
+
+      @media (max-width: 575px) {
+         --item-width: 140px;
       }
 
       @media (max-width: 479px) {
-         --image-size: 80px;
+         --item-width: 124px;
       }
+   }
+
+   @media (max-width: 767px) {
+      --between-items-gap: 15px;
+   }
+
+   @media (max-width: 479px) {
+      --between-items-gap: 10px;
    }
 }

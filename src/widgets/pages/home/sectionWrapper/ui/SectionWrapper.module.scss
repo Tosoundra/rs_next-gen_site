@@ -1,14 +1,30 @@
 .section {
-   padding-top: 150px;
-   padding-bottom: 150px;
+   --outer-padding: 150px;
+   --inner-padding: 30px;
+
+   padding-top: var(--outer-padding);
+   padding-bottom: var(--outer-padding);
 
    .wrapper {
-      padding-top: 30px;
-      padding-bottom: 30px;
+      padding-top: var(--inner-padding);
+      padding-bottom: var(--inner-padding);
       gap: var(--gap-between-heading-content);
 
       .heading {}
 
       .content {}
+   }
+
+   @media (max-width: 1919px) {
+      --outer-padding: 120px;
+   }
+
+   @media (max-width: 1279px) {
+      --outer-padding: 90px;
+      --inner-padding: 20px;
+   }
+
+   @media (max-width: 575px) {
+      --outer-padding: 60px;
    }
 }

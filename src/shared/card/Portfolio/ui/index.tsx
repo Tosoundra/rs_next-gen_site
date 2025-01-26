@@ -14,7 +14,7 @@ const CardPortfolio = ({ data }: PortfolioCaseProps) => {
           alt={data.title}
           width="1820"
           height="585"
-          className={`${styles.image}`}
+          classNames={{ image: `${styles.image}` }}
         />
         <h3 className={`${styles.title} caption-60 text-bold text-white`}>{data.title}</h3>
       </Link>

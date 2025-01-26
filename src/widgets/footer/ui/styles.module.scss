@@ -1,12 +1,23 @@
 .footer {
-   min-height: 100dvh;
+   min-height: var(--footer-height);
+   clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
    width: 100%;
 
    .container {
-      --padding-vertical: 45px;
-      padding: var(--padding-vertical) 0;
+      --padding-top: 45px;
+      --padding-bottom: 45px;
+      position: fixed;
+      bottom: 0;
+
+      padding-top: var(--padding-top);
+      padding-bottom: var(--padding-bottom);
       width: 100%;
+      min-height: var(--footer-height);
       gap: 90px;
+
+      // background-image: url('/img/mock/footer-bg.png');
+      // background-repeat: no-repeat;
+      // background-size: cover;
 
       .contacts {
          gap: 50px;
@@ -15,6 +26,33 @@
       .links {
          .side {
             flex: 1;
+         }
+      }
+
+      .background {
+         position: absolute;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         z-index: -1;
+      }
+
+      @media (max-width: 767px) {
+         --padding-bottom: 30px;
+         --padding-top: 40px;
+         gap: 60px;
+
+         .contacts {
+            gap: 40px
+         }
+      }
+
+      @media (max-width: 575px) {
+         --padding-top: 30px;
+         --padding-bottom: 12px;
+
+         .contacts {
+            gap: 30px;
          }
       }
    }
