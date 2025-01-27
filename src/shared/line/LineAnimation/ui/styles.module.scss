@@ -1,0 +1,22 @@
+.wrapper {
+   width: 100%;
+
+   .line {
+      min-height: 1px;
+      max-height: 1px;
+   }
+
+   &.left {
+      .line {
+         background: linear-gradient(90deg, #000000 0%, #000000 74.5%, rgba(102, 102, 102, 0) 96.17%);
+      }
+   }
+
+   &.right {
+      justify-content: flex-end;
+
+      .line {
+         background: linear-gradient(-90deg, #000000 0%, #000000 74.5%, rgba(102, 102, 102, 0) 96.17%);
+      }
+   }
+}

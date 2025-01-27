@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
+import { LineAnimation } from '@/src/shared/line';
 
 import { PartnerMock } from '../mock';
 import styles from './styles.module.scss';
@@ -8,6 +9,7 @@ import styles from './styles.module.scss';
 const Partners = () => {
   return (
     <div className={`${styles.wrapper} flex flex-col`}>
+      <LineAnimation widthPercent={50} direction={'left'} />
       <Marquee
         play={true}
         speed={50}
@@ -47,6 +49,7 @@ const Partners = () => {
           </Link>
         ))}
       </Marquee>
+      <LineAnimation widthPercent={50} direction={'right'} />
     </div>
   );
 };
