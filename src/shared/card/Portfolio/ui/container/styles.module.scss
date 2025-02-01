@@ -1,0 +1,22 @@
+.wrapper {
+   top: 0px;
+   height: 100dvh;
+
+   .container {
+      transform-origin: top;
+   }
+
+   @media (max-width: 1023px) {
+      --block-heading-height: 71px; // надо вынести переменную за пределы компонента
+      top: calc(var(--inner-padding, 0) + var(--gap-between-heading-content, 0) + var(--block-heading-height, 0));
+      height: calc(80svh - var(--inner-padding, 0) - var(--gap-between-heading-content, 0) - var(--block-heading-height, 0));
+   }
+
+   @media (max-width: 767px) {
+      --block-heading-height: 47px;
+   }
+
+   @media (max-width: 479px) {
+      --block-heading-height: 36px;
+   }
+}

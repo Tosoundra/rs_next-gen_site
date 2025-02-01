@@ -1,13 +1,14 @@
 'use server';
 import Link from 'next/link';
 import { ImageFlow } from '@/src/shared/image';
+
 import { PortfolioCaseProps } from '../types';
 
 import styles from './styles.module.scss';
 
 const CardPortfolio = ({ data }: PortfolioCaseProps) => {
   return (
-    <div className={`${styles.card} flex flex-col`}>
+    <div className={`${styles.card} flex flex-col background-white`}>
       <Link className={`${styles.imageWrapper} relative`} href={`/portfolio/${data.slug}`}>
         <ImageFlow
           src={data.image}

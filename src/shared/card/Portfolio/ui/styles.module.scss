@@ -4,6 +4,7 @@
    --gap: 30px;
 
    padding: var(--padding-inside) var(--padding-inside) var(--padding-bottom) var(--padding-inside);
+   // height: min(auto, 80svh);
    gap: var(--gap);
 
    border-radius: calc(var(--item-border-radius) + var(--padding-inside) * 0.5);
@@ -11,24 +12,26 @@
 
    .imageWrapper {
       .image {
-         height: 585px;
+         --height: 585px;
+         height: var(--height);
          width: 100%;
          min-width: unset;
 
          @media (max-width: 1919px) {
-            height: 420px;
+            --height: 420px;
          }
 
          @media (max-width: 1023px) {
-            height: 364px;
+            --height: 364px;
+            height: min(30svh, var(--height));
          }
 
          @media (max-width: 767px) {
-            height: 288px;
+            --height: 288px;
          }
 
          @media (max-width: 479px) {
-            height: 180px;
+            --height: 180px;
          }
       }
 

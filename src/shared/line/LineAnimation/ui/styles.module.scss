@@ -1,14 +1,31 @@
 .wrapper {
    width: 100%;
+   overflow: clip;
 
    .line {
       min-height: 1px;
       max-height: 1px;
+
+      @media (prefers-reduced-motion: no-preference) {
+         animation: FadeIn linear forwards;
+         animation-timeline: view();
+         animation-range: 20dvh 80dvh;
+
+         @keyframes FadeIn {
+            to {
+               transform: translateX(0%);
+            }
+         }
+      }
    }
 
    &.left {
       .line {
          background: linear-gradient(90deg, #000000 0%, #000000 74.5%, rgba(102, 102, 102, 0) 96.17%);
+
+         @media (prefers-reduced-motion: no-preference) {
+            transform: translateX(-80%);
+         }
       }
    }
 
@@ -17,6 +34,10 @@
 
       .line {
          background: linear-gradient(-90deg, #000000 0%, #000000 74.5%, rgba(102, 102, 102, 0) 96.17%);
+
+         @media (prefers-reduced-motion: no-preference) {
+            transform: translateX(80%);
+         }
       }
    }
 }

@@ -1,7 +1,6 @@
 'use server';
 import Link from 'next/link';
-import SpaceBackground from './background';
-
+import { SpaceBackgroundZ } from '@/src/shared/background';
 import styles from './styles.module.scss';
 
 const Footer = () => {
@@ -24,7 +23,7 @@ const Footer = () => {
             </Link>
           </div>
           <div>
-            <h4 className={`text-light text-18nn text-white`}>© RonixSystems – 2025</h4>
+            <h4 className={`text-light text-18nn text-white`}>© Ronix Systems – 2025</h4>
           </div>
           <div className={`${styles.side} flex justify-end`}>
             <Link href="#" className={`text-bold text-18nn text-white`}>
@@ -32,7 +31,7 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <SpaceBackground className={`${styles.background}`} />
+        <SpaceBackgroundZ className={`${styles.background}`} />
       </div>
     </footer>
   );
