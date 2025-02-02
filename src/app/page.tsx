@@ -8,6 +8,7 @@ import {
   Partners,
 } from '@/src/widgets/pages/home/';
 import styles from './page.module.scss';
+import Map from '@/src/widgets/map';
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
         <Details />
       </SectionWrapper>
       <SectionWrapper caption={'Contacts'}>content</SectionWrapper>
+      {/* <Map className={`${styles.map}`} /> */}
     </div>
   );
 }
