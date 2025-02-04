@@ -1,0 +1,11 @@
+.wrapper {
+   gap: var(--gap-between-section-items);
+
+   .network {
+      gap: 50px;
+
+      .networkRow {
+         gap: calc(var(--gap-between-section-items) * 3);
+      }
+   }
+}

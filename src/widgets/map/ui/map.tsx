@@ -8,7 +8,7 @@ declare global {
   }
 }
 
-const YandexMap = ({ latitude, longitude, zoom = 10, className }: YandexMapProps) => {
+const YandexMap = ({ latitude, longitude, zoom = 14, className }: YandexMapProps) => {
   const mapRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {

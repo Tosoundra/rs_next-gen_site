@@ -5,3 +5,4 @@ export { Portfolio } from './portfolio';
 export { Details } from './details';
 export { Experience } from './experience';
 export { Partners } from './partners';
+export { Contacts } from './contacts';

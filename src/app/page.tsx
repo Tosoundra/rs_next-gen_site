@@ -6,6 +6,7 @@ import {
   Details,
   Experience,
   Partners,
+  Contacts,
 } from '@/src/widgets/pages/home/';
 import styles from './page.module.scss';
 import Map from '@/src/widgets/map';
@@ -33,8 +34,10 @@ export default function Home() {
       >
         <Details />
       </SectionWrapper>
-      <SectionWrapper caption={'Contacts'}>content</SectionWrapper>
-      {/* <Map className={`${styles.map}`} /> */}
+      <SectionWrapper caption={'Contacts'}>
+        <Contacts />
+      </SectionWrapper>
+      <Map className={`${styles.map}`} />
     </div>
   );
 }
