@@ -11,6 +11,12 @@
          animation-timeline: view();
          animation-range: 20dvh 80dvh;
 
+         &.onentered {
+            // animation-range: entry 20dvh;
+            // animation-duration: 2s;
+            animation-range: 0dvh 20dvh;
+         }
+
          @keyframes FadeIn {
             to {
                transform: translateX(0%);

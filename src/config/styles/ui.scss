@@ -51,6 +51,14 @@ img {
    -ms-user-select: none;
 }
 
+input {
+   caret-color: var(--blue);
+
+   &::placeholder {
+      color: var(--grey);
+   }
+}
+
 .background {
    &-white {
       background-color: var(--white);

@@ -1,0 +1,16 @@
+.wrapper {
+   width: 100%;
+
+   .input {
+      padding: 10px 0;
+
+      &:focus,
+      &:focus-visible {
+         outline: none;
+      }
+   }
+
+   .title {
+      margin-bottom: 10px;
+   }
+}

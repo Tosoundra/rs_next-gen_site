@@ -6,6 +6,10 @@
 
       .networkRow {
          gap: calc(var(--gap-between-section-items) * 3);
+
+         .networkItem {
+            flex: 1;
+         }
       }
    }
 }

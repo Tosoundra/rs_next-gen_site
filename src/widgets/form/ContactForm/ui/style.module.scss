@@ -1,0 +1,17 @@
+.wrapper {
+   gap: var(--gap-between-section-items);
+
+   .formRow {
+      justify-content: center;
+      gap: calc(var(--gap-between-section-items) * 3);
+
+      .formItem {
+         flex: 1;
+         max-width: 540px;
+
+         @media (max-width: 1919px) {
+            max-width: 450px;
+         }
+      }
+   }
+}

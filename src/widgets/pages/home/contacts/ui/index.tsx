@@ -7,10 +7,10 @@ const Contacts = () => {
     <div className={`${styles.wrapper} content-wrapper flex flex-col`}>
       <div className={`${styles.network} flex flex-col`}>
         <div className={`${styles.networkRow} flex`}>
-          <div className={`flex flex-1 justify-end`}>
+          <div className={`${styles.networkItem} flex justify-end`}>
             <h3 className={`${styles.caption} caption-38 text-boldest`}>Network.</h3>
           </div>
-          <div className={`flex flex-1`}>
+          <div className={`${styles.networkItem} flex`}>
             <h3 className={`${styles.caption} caption-38 text-boldest`}>Let's chat!</h3>
           </div>
         </div>
