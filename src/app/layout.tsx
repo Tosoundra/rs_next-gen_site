@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 
 import { Header } from '@/src/widgets/header';
 import { Footer } from '@/src/widgets/footer';
+import { ReactLenis } from '@/src/config/utils/ScrollSmoother';
 
 import '@/index.css';
 import '@/src/config/styles/global.scss';
@@ -27,11 +28,13 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ru">
-      <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
-      </body>
+      <ReactLenis root options={{ duration: 2, smoothWheel: true }}>
+        <body>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </body>
+      </ReactLenis>
     </html>
   );
 }
