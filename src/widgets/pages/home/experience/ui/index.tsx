@@ -44,10 +44,7 @@ const Experience = () => {
         end: `+=${sections * 100}%`,
         scrub: 1,
         pin: true,
-        //@ts-expect-error //* pinSpacing не принимает HTML элемент, но это единственный способ который сработал.
-        // Убрав эту запись, секция которая следует за этим компонентом будет "залезать" на этот компонент при прокрутке страницы.
-        //  */
-        pinSpacing: container,
+        pinSpacing: true,
         onUpdate: (self) => {
           const newIndex = Math.round(self.progress * (sections - 1));
           setActiveIndex(newIndex);
