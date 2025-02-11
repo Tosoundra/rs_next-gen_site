@@ -1,5 +1,4 @@
 'use client';
-
 import React, { useEffect, useRef, useState } from 'react';
 import { experienceList } from '../mock';
 import { gsap } from 'gsap';
@@ -10,40 +9,114 @@ import styles from './styles.module.scss';
 
 gsap.registerPlugin(ScrollTrigger);
 
+const splitText = (text: string) => {
+  return text.split(' ').map((word, wordIndex) => (
+    <span key={wordIndex} className="word-wrapper inline-block overflow-hidden">
+      {word.split('').map((char, charIndex) => (
+        <span key={charIndex} className="char inline-block">
+          {char}
+        </span>
+      ))}
+      &nbsp;
+    </span>
+  ));
+};
+
 const Experience = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
   const imageRef = useRef<HTMLImageElement | null>(null);
   const textRef = useRef<HTMLDivElement | null>(null);
+  const headlineRef = useRef<HTMLDivElement | null>(null);
+  const subtitleRef = useRef<HTMLParagraphElement | null>(null);
+  const descriptionRef = useRef<HTMLParagraphElement | null>(null);
 
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
 
     const sections = experienceList.length;
-    ScrollTrigger.create({
-      trigger: container,
-      start: 'top 0%',
-      end: sections * window.innerHeight,
-      scrub: true,
-      pin: true,
-      markers: true,
-      onUpdate: (self) => {
-        const newIndex = Math.round(self.progress * (sections - 1));
-        setActiveIndex(newIndex);
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: container,
+        start: 'top top',
+        end: `+=${sections * 100}%`,
+        scrub: 1,
+        pin: true,
+        //@ts-expect-error //* pinSpacing не принимает HTML элемент, но это единственный способ который сработал.
+        // Убрав эту запись, секция которая следует за этим компонентом будет "залезать" на этот компонент при прокрутке страницы.
+        //  */
+        pinSpacing: container,
+        onUpdate: (self) => {
+          const newIndex = Math.round(self.progress * (sections - 1));
+          setActiveIndex(newIndex);
+        },
       },
     });
   }, []);
 
   useEffect(() => {
+    if (!headlineRef.current || !subtitleRef.current || !descriptionRef.current) return;
+
+    const chars = headlineRef.current.querySelectorAll('.char');
+    const words = headlineRef.current.querySelectorAll('.word-wrapper');
+
+    gsap.set([headlineRef.current, subtitleRef.current, descriptionRef.current], { opacity: 0 });
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: headlineRef.current,
+          start: 'top 70%',
+          toggleActions: 'play none none none',
+        },
+      })
+      .to(headlineRef.current, { opacity: 1, duration: 0.1 })
+      .from(chars, {
+        duration: 0.3,
+        opacity: 0,
+        ease: 'power1.inOut',
+        stagger: { from: 'center', each: 0.02 },
+      })
+      .from(
+        words,
+        {
+          duration: 1.2,
+          y: (i) => i * 40 - 20,
+          ease: 'expo',
+        },
+        0,
+      );
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: subtitleRef.current,
+          start: 'top 70%',
+          toggleActions: 'play none none none',
+        },
+      })
+      .to(subtitleRef.current, { opacity: 1, duration: 0.2, delay: 0.1 })
+      .from(subtitleRef.current, { y: 20, duration: 0.5, ease: 'power1.out' });
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: descriptionRef.current,
+          start: 'top 70%',
+          toggleActions: 'play none none none',
+        },
+      })
+      .to(descriptionRef.current, { opacity: 1, duration: 0.2, delay: 0.2 })
+      .from(descriptionRef.current, { y: 20, duration: 0.5, ease: 'power1.out' });
+
     gsap.fromTo(imageRef.current, { opacity: 0 }, { opacity: 1, duration: 0.5 });
-    gsap.fromTo(textRef.current, { opacity: 0 }, { opacity: 1, duration: 0.5 });
   }, [activeIndex]);
 
   return (
-    <section ref={containerRef} className="relative h-screen">
-      <div className="sticky top-0 h-screen flex justify-center items-center">
+    <section ref={containerRef} className="">
+      <div className="h-screen flex justify-center items-center">
         <div className="flex max-w-[1920px] w-full justify-between">
           <Image
             width={650}
@@ -56,13 +129,13 @@ const Experience = () => {
             ref={imageRef}
           />
           <div className="px-4" ref={textRef}>
-            <h3 className="caption-120 font-black text-white">
-              {experienceList[activeIndex].title}
+            <h3 ref={headlineRef} className="caption-120 font-black text-white headline">
+              {splitText(experienceList[activeIndex].title)}
             </h3>
-            <p className="caption-38 font-black text-blue mb-9">
+            <p ref={subtitleRef} className="caption-38 font-black text-blue mb-9">
               {experienceList[activeIndex].subtitle}
             </p>
-            <p className="text-20 font-normal text-white max-w-2xl">
+            <p ref={descriptionRef} className="text-20 font-normal text-white max-w-2xl">
               {experienceList[activeIndex].description}
             </p>
           </div>
