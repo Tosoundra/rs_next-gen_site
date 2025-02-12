@@ -61,53 +61,59 @@ const Experience = () => {
 
     gsap.set([headlineRef.current, subtitleRef.current, descriptionRef.current], { opacity: 0 });
 
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: headlineRef.current,
-          start: 'top 70%',
-          toggleActions: 'play none none none',
-        },
-      })
-      .to(headlineRef.current, { opacity: 1, duration: 0.1 })
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: headlineRef.current,
+        start: 'top 70%',
+        toggleActions: 'play none none none',
+      },
+    });
+
+    // Анимация заголовка
+    tl.to(headlineRef.current, { opacity: 1, duration: 0.2 })
       .from(chars, {
-        duration: 0.3,
+        duration: 0.4,
         opacity: 0,
-        ease: 'power1.inOut',
-        stagger: { from: 'center', each: 0.02 },
+        y: 20,
+        ease: 'power2.inOut',
+        stagger: { from: 'center', each: 0.1 }, // Уменьшаем задержку между символами
       })
       .from(
         words,
         {
           duration: 1.2,
           y: (i) => i * 40 - 20,
-          ease: 'expo',
+          ease: 'expo.out', // Более плавное завершение анимации
+          stagger: 0.05, // Добавляем небольшой stagger для слов
         },
-        0,
+        '-=0.3', // Перекрываем с предыдущей анимацией
       );
 
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: subtitleRef.current,
-          start: 'top 70%',
-          toggleActions: 'play none none none',
-        },
-      })
-      .to(subtitleRef.current, { opacity: 1, duration: 0.2, delay: 0.1 })
-      .from(subtitleRef.current, { y: 20, duration: 0.5, ease: 'power1.out' });
+    // Анимация подзаголовка с небольшим перекрытием
+    tl.to(
+      subtitleRef.current,
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        ease: 'power2.out',
+      },
+      '-=0.2', // Перекрываем с предыдущей анимацией
+    );
 
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: descriptionRef.current,
-          start: 'top 70%',
-          toggleActions: 'play none none none',
-        },
-      })
-      .to(descriptionRef.current, { opacity: 1, duration: 0.2, delay: 0.2 })
-      .from(descriptionRef.current, { y: 20, duration: 0.5, ease: 'power1.out' });
+    // Анимация описания с небольшим перекрытием
+    tl.to(
+      descriptionRef.current,
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        ease: 'power2.out',
+      },
+      '-=0.2', // Перекрываем с предыдущей анимацией
+    );
 
+    // Анимация изображения
     gsap.fromTo(imageRef.current, { opacity: 0 }, { opacity: 1, duration: 0.5 });
   }, [activeIndex]);
 
