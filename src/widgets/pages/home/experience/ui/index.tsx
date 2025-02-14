@@ -69,27 +69,25 @@ const Experience = () => {
       },
     });
 
-    // Анимация заголовка
     tl.to(headlineRef.current, { opacity: 1, duration: 0.2 })
       .from(chars, {
         duration: 0.4,
         opacity: 0,
         y: 20,
         ease: 'power2.inOut',
-        stagger: { from: 'center', each: 0.1 }, // Уменьшаем задержку между символами
+        stagger: { from: 'center', each: 0.1 },
       })
       .from(
         words,
         {
           duration: 1.2,
           y: (i) => i * 40 - 20,
-          ease: 'expo.out', // Более плавное завершение анимации
-          stagger: 0.05, // Добавляем небольшой stagger для слов
+          ease: 'expo.out',
+          stagger: 0.05,
         },
-        '-=0.3', // Перекрываем с предыдущей анимацией
+        '-=0.3',
       );
 
-    // Анимация подзаголовка с небольшим перекрытием
     tl.to(
       subtitleRef.current,
       {
@@ -98,10 +96,9 @@ const Experience = () => {
         duration: 0.6,
         ease: 'power2.out',
       },
-      '-=0.2', // Перекрываем с предыдущей анимацией
+      '-=0.2',
     );
 
-    // Анимация описания с небольшим перекрытием
     tl.to(
       descriptionRef.current,
       {
@@ -110,16 +107,15 @@ const Experience = () => {
         duration: 0.6,
         ease: 'power2.out',
       },
-      '-=0.2', // Перекрываем с предыдущей анимацией
+      '-=0.2',
     );
 
-    // Анимация изображения
     gsap.fromTo(imageRef.current, { opacity: 0 }, { opacity: 1, duration: 0.5 });
   }, [activeIndex]);
 
   return (
     <section ref={containerRef} className="">
-      <div className="h-screen flex justify-center items-center">
+      <div className="h-screen flex justify-center items-center content-wrapper">
         <div className="flex max-w-[1920px] w-full justify-between">
           <Image
             width={650}
@@ -128,7 +124,7 @@ const Experience = () => {
             loading="lazy"
             src={experienceList[activeIndex].img}
             className="transition-opacity duration-500 grayscale rounded-[30px]"
-            style={{ width: 650, height: 650 }}
+            style={{ width: '33.9%', height: '33.9%' }}
             ref={imageRef}
           />
           <div className="px-4" ref={textRef}>

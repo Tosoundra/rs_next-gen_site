@@ -1,5 +1,5 @@
 export type Partner = {
-  id: string;
+  id: number;
   slug: string;
   name: string;
   logo: string;

@@ -1,6 +1,7 @@
 .header {
    --padding-vertical: 75px;
    position: fixed;
+   z-index: 10;
    padding: var(--padding-vertical) 0;
    width: 100%;
 

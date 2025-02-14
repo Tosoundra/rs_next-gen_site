@@ -20,6 +20,7 @@ const ServiceCard = ({ index, service }: ServiceProps) => {
           classNames={{ image: `${styles.image}`, wrapper: `${styles.flowWrapper}` }}
           src={service.image}
           alt={service.title}
+          unoptimized
         />
       </div>
     </div>

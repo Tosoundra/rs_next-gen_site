@@ -4,7 +4,7 @@ export const PortfolioMock: PortfolioCase[] = [
   {
     id: '1',
     slug: 'indivit',
-    title: 'INDIVIT',
+    title: 'IDVIT',
     description:
       "At Refokus, web design is where creativity meets functionality. We craft visually striking and emotionally engaging websites that capture your brand's essence. Our designs blend beauty with seamless navigation, enhanced by micro-interactions and Lottie animations. Every detail, from concept to pixel, aligns with your vision and business.",
     image: '/img/mock/portfolio.jpeg',
