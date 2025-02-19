@@ -1,323 +1,373 @@
 :root {
-   font-family: 'Satoshi', sans-serif;
+  font-family: 'Satoshi', sans-serif;
 }
 
 .caption {
-   &-140 {
-      font-size: 140px;
-      line-height: 110%;
+  &-140 {
+    font-size: 140px;
+    line-height: 110%;
 
-      @media (max-width: 1919px) {
-         font-size: 124px;
-      }
+    @media (max-width: 1919px) {
+      font-size: 124px;
+    }
 
-      @media (max-width: 1439px) {
-         font-size: 108px;
-      }
+    @media (max-width: 1439px) {
+      font-size: 108px;
+    }
 
-      @media (max-width: 1279px) {
-         font-size: 88px;
-      }
+    @media (max-width: 1279px) {
+      font-size: 88px;
+    }
 
-      @media (max-width: 1023px) {
-         font-size: 64px;
-      }
+    @media (max-width: 1023px) {
+      font-size: 64px;
+    }
 
-      @media (max-width: 767px) {
-         font-size: 56px;
-      }
+    @media (max-width: 767px) {
+      font-size: 56px;
+    }
 
-      @media (max-width: 575px) {
-         font-size: 48px;
-      }
+    @media (max-width: 575px) {
+      font-size: 48px;
+    }
 
-      @media (max-width: 479px) {
-         font-size: 36px;
-      }
+    @media (max-width: 479px) {
+      font-size: 36px;
+    }
 
-      @media (max-width: 389px) {
-         font-size: 28px;
-      }
-   }
+    @media (max-width: 389px) {
+      font-size: 28px;
+    }
+  }
 
-   &-120 {
-      font-size: 120px;
-      line-height: 110%;
+  &-120 {
+    font-size: 120px;
+    line-height: 110%;
 
-      @media (max-width: 1919px) {
-         font-size: 112px;
-      }
+    @media (max-width: 1919px) {
+      font-size: 112px;
+    }
 
-      @media (max-width: 1439px) {
-         font-size: 96px;
-      }
+    @media (max-width: 1439px) {
+      font-size: 96px;
+    }
 
-      @media (max-width: 1279px) {
-         font-size: 88px;
-      }
+    @media (max-width: 1279px) {
+      font-size: 88px;
+    }
 
-      @media (max-width: 1023px) {
-         font-size: 72px;
-      }
+    @media (max-width: 1023px) {
+      font-size: 72px;
+    }
 
-      @media (max-width: 767px) {
-         font-size: 64px;
-      }
+    @media (max-width: 767px) {
+      font-size: 64px;
+    }
 
-      @media (max-width: 575px) {
-         font-size: 48px;
-      }
+    @media (max-width: 575px) {
+      font-size: 48px;
+    }
 
-      @media (max-width: 479px) {
-         font-size: 36px;
-      }
+    @media (max-width: 479px) {
+      font-size: 36px;
+    }
 
-      @media (max-width: 389px) {
-         font-size: 28px;
-      }
-   }
+    @media (max-width: 389px) {
+      font-size: 28px;
+    }
+  }
 
-   &-100 {
-      font-size: 100px;
-      line-height: 110%;
+  &-116 {
+    font-size: 116px;
+    line-height: 110%;
 
-      @media (max-width: 1919px) {
-         font-size: 88px;
-      }
+    @media (max-width: 1919px) {
+      font-size: 112px;
+    }
 
-      @media (max-width: 1439px) {
-         font-size: 72px;
-      }
+    @media (max-width: 1439px) {
+      font-size: 96px;
+    }
 
-      @media (max-width: 1279px) {
-         font-size: 64px;
-      }
+    @media (max-width: 1279px) {
+      font-size: 88px;
+    }
 
-      @media (max-width: 767px) {
-         font-size: 42px;
-      }
+    @media (max-width: 1023px) {
+      font-size: 72px;
+    }
 
-      @media (max-width: 479px) {
-         font-size: 32px;
-      }
+    @media (max-width: 767px) {
+      font-size: 64px;
+    }
 
-      @media (max-width: 389px) {
-         font-size: 24px;
-      }
-   }
+    @media (max-width: 575px) {
+      font-size: 48px;
+    }
 
-   &-80 {
-      font-size: 80px;
-      line-height: 110%;
+    @media (max-width: 479px) {
+      font-size: 36px;
+    }
 
-      @media (max-width: 1919px) {
-         font-size: 72px;
-      }
+    @media (max-width: 389px) {
+      font-size: 28px;
+    }
+  }
 
-      @media (max-width: 1439px) {
-         font-size: 56px;
-      }
+  &-100 {
+    font-size: 100px;
+    line-height: 110%;
 
-      @media (max-width: 1279px) {
-         font-size: 42px;
-      }
+    @media (max-width: 1919px) {
+      font-size: 88px;
+    }
 
-      @media (max-width: 767px) {
-         font-size: 28px;
-      }
+    @media (max-width: 1439px) {
+      font-size: 72px;
+    }
 
-      @media (max-width: 479px) {
-         font-size: 24px;
-      }
+    @media (max-width: 1279px) {
+      font-size: 64px;
+    }
 
-      @media (max-width: 389px) {
-         font-size: 20px;
-      }
-   }
+    @media (max-width: 767px) {
+      font-size: 42px;
+    }
 
-   &-60 {
-      font-size: 60px;
-      line-height: 120%;
+    @media (max-width: 479px) {
+      font-size: 32px;
+    }
 
-      @media (max-width: 1919px) {
-         font-size: 56px;
-      }
+    @media (max-width: 389px) {
+      font-size: 24px;
+    }
+  }
 
-      @media (max-width: 1439px) {
-         font-size: 48px;
-      }
+  &-80 {
+    font-size: 80px;
+    line-height: 110%;
 
-      @media (max-width: 1279px) {
-         font-size: 40px;
-      }
+    @media (max-width: 1919px) {
+      font-size: 72px;
+    }
 
-      @media (max-width: 1023px) {
-         font-size: 36px;
-      }
+    @media (max-width: 1439px) {
+      font-size: 56px;
+    }
 
-      @media (max-width: 767px) {
-         font-size: 28px;
-      }
+    @media (max-width: 1279px) {
+      font-size: 42px;
+    }
 
-      @media (max-width: 479px) {
-         // font-size: 20px;
-      }
+    @media (max-width: 767px) {
+      font-size: 28px;
+    }
 
-      @media (max-width: 389px) {
-         font-size: 20px;
-      }
-   }
+    @media (max-width: 479px) {
+      font-size: 24px;
+    }
 
-   &-38 {
-      font-size: 38px;
-      line-height: 110%;
+    @media (max-width: 389px) {
+      font-size: 20px;
+    }
+  }
 
-      @media (max-width: 1919px) {
-         font-size: 32px;
-      }
+  &-60 {
+    font-size: 60px;
+    line-height: 120%;
 
-      @media (max-width: 1439px) {
-         // font-size: 28px;
-      }
+    @media (max-width: 1919px) {
+      font-size: 56px;
+    }
 
-      @media (max-width: 1279px) {
-         font-size: 28px;
-      }
+    @media (max-width: 1439px) {
+      font-size: 48px;
+    }
 
-      @media (max-width: 1023px) {
-         font-size: 24px;
-      }
+    @media (max-width: 1279px) {
+      font-size: 40px;
+    }
 
-      @media (max-width: 767px) {
-         // font-size: 38px;
-      }
+    @media (max-width: 1023px) {
+      font-size: 36px;
+    }
 
-      @media (max-width: 479px) {
-         font-size: 20;
-      }
+    @media (max-width: 767px) {
+      font-size: 28px;
+    }
 
-      @media (max-width: 389px) {
-         font-size: 18px;
-      }
-   }
+    @media (max-width: 479px) {
+      // font-size: 20px;
+    }
+
+    @media (max-width: 389px) {
+      font-size: 20px;
+    }
+  }
+
+  &-38 {
+    font-size: 38px;
+    line-height: 110%;
+
+    @media (max-width: 1919px) {
+      font-size: 32px;
+    }
+
+    @media (max-width: 1439px) {
+      // font-size: 28px;
+    }
+
+    @media (max-width: 1279px) {
+      font-size: 28px;
+    }
+
+    @media (max-width: 1023px) {
+      font-size: 24px;
+    }
+
+    @media (max-width: 767px) {
+      // font-size: 38px;
+    }
+
+    @media (max-width: 479px) {
+      font-size: 20;
+    }
+
+    @media (max-width: 389px) {
+      font-size: 18px;
+    }
+  }
 }
 
 .text {
-   &-black {
-      color: var(--black);
-   }
+  &-black {
+    color: var(--black);
+  }
 
-   &-white {
-      color: var(--white);
-   }
+  &-white {
+    color: var(--white);
+  }
 
-   &-blue {
-      color: var(--blue);
-   }
+  &-blue {
+    color: var(--blue);
+  }
 
-   &-36 {
-      font-size: 36px;
-      line-height: 140%;
+  &-36 {
+    font-size: 36px;
+    line-height: 140%;
 
-      @media (max-width: 1439px) {
-         font-size: 32px;
-      }
+    @media (max-width: 1439px) {
+      font-size: 32px;
+    }
 
-      @media (max-width: 1279px) {
-         font-size: 28px;
-      }
+    @media (max-width: 1279px) {
+      font-size: 28px;
+    }
 
-      @media (max-width: 1023px) {
-         font-size: 24px;
-      }
+    @media (max-width: 1023px) {
+      font-size: 24px;
+    }
 
-      @media (max-width: 767px) {
-         // font-size: 38px;
-      }
+    @media (max-width: 767px) {
+      // font-size: 38px;
+    }
 
-      @media (max-width: 479px) {
-         font-size: 20;
-      }
+    @media (max-width: 479px) {
+      font-size: 20;
+    }
 
-      @media (max-width: 389px) {
-         // font-size: 18px;
-      }
-   }
+    @media (max-width: 389px) {
+      // font-size: 18px;
+    }
+  }
 
-   &-20 {
-      font-size: 20px;
-      line-height: 140%;
+  &-20 {
+    font-size: 20px;
+    line-height: 140%;
 
-      @media (max-width: 1279px) {
-         font-size: 18px;
-      }
-
-      @media (max-width: 767px) {
-         font-size: 16px;
-      }
-
-      @media (max-width: 389px) {
-         font-size: 14px;
-      }
-   }
-
-   &-18 {
+    @media (max-width: 1279px) {
       font-size: 18px;
-      line-height: 140%;
+    }
 
-      @media (max-width: 1279px) {
-         font-size: 16px;
-      }
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
 
-      @media (max-width: 767px) {
-         font-size: 14px;
-      }
-   }
+    @media (max-width: 389px) {
+      font-size: 14px;
+    }
+  }
 
-   &-18nn {
-      font-size: 18px;
-      line-height: 140%;
+  &-18 {
+    font-size: 18px;
+    line-height: 140%;
 
-      @media (max-width: 1279px) {
-         font-size: 16px;
-      }
+    @media (max-width: 1279px) {
+      font-size: 16px;
+    }
 
-      @media (max-width: 767px) {
-         font-size: 14px;
-      }
+    @media (max-width: 767px) {
+      font-size: 14px;
+    }
+  }
 
-      @media (max-width: 479px) {
-         font-size: 12px;
-      }
-   }
+  &-18nn {
+    font-size: 18px;
+    line-height: 140%;
 
-   &-light {
-      font-weight: 300;
-   }
+    @media (max-width: 1279px) {
+      font-size: 16px;
+    }
 
-   &-regular {
-      font-weight: 400;
-   }
+    @media (max-width: 767px) {
+      font-size: 14px;
+    }
 
-   &-medium {
-      font-weight: 500;
-   }
+    @media (max-width: 479px) {
+      font-size: 12px;
+    }
+  }
 
-   &-bold {
-      font-weight: 700;
-   }
+  &-light {
+    font-weight: 300;
+  }
 
-   &-boldest {
-      font-weight: 900;
-   }
+  &-regular {
+    font-weight: 400;
+  }
 
-   &-center {
+  &-medium {
+    font-weight: 500;
+  }
+
+  &-bold {
+    font-weight: 700;
+  }
+
+  &-boldest {
+    font-weight: 900;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-center-mobile {
+    @media (max-width: 767px) {
       text-align: center;
-   }
+    }
+  }
+}
 
-   &-center-mobile {
-      @media (max-width: 767px) {
-         text-align: center;
-      }
-   }
+.text-outline-1 {
+  color: #fff;
+  text-shadow: 0 0 1px #000;
+}
+.text-outline-2 {
+  color: #fff;
+  text-shadow: 0 0 2px #000;
+}
+.text-outline-3 {
+  color: #fff;
+  text-shadow: 0 0 3px #000;
 }

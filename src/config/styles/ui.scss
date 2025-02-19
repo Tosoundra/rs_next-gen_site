@@ -1,89 +1,89 @@
 :root {
-   // sizes
-   --button-rounded-height: 55px;
-   --button-rounded-min-width: 140px;
-   --button-rounded-padding-horizontal: 20px;
+  // sizes
+  --button-rounded-height: 55px;
+  --button-rounded-min-width: 140px;
+  --button-rounded-padding-horizontal: 20px;
 
-   // ui
-   --block-border-radius: 60px;
-   --item-border-radius: 30px;
-   --border-white: 1px solid var(--white);
-   --border-black: 1px solid var(--black);
+  // ui
+  --block-border-radius: 60px;
+  --item-border-radius: 30px;
+  --border-white: 1px solid var(--white);
+  --border-black: 1px solid var(--black);
 
-   @media (max-width: 1919px) {
-      --button-rounded-height: 48px;
-      --button-rounded-min-width: 132px;
-   }
+  @media (max-width: 1919px) {
+    --button-rounded-height: 48px;
+    --button-rounded-min-width: 132px;
+  }
 
-   @media (max-width: 1023px) {
-      --button-rounded-height: 44px;
-      --button-rounded-min-width: 124px;
-   }
+  @media (max-width: 1023px) {
+    --button-rounded-height: 44px;
+    --button-rounded-min-width: 124px;
+  }
 
-   @media (max-width: 767px) {
-      --button-rounded-height: 40px;
-      --button-rounded-min-width: 112px;
-      --button-rounded-padding-horizontal: 16px;
-      --item-border-radius: 24px;
-   }
+  @media (max-width: 767px) {
+    --button-rounded-height: 40px;
+    --button-rounded-min-width: 112px;
+    --button-rounded-padding-horizontal: 16px;
+    --item-border-radius: 24px;
+  }
 
-   @media (max-width: 479px) {
-      --button-rounded-min-width: 104px;
-      --button-rounded-padding-horizontal: 12px;
-      --item-border-radius: 20px;
-   }
+  @media (max-width: 479px) {
+    --button-rounded-min-width: 104px;
+    --button-rounded-padding-horizontal: 12px;
+    --item-border-radius: 20px;
+  }
 
-   @media (max-width: 389px) {
-      --button-rounded-min-width: 96px;
-   }
+  @media (max-width: 389px) {
+    --button-rounded-min-width: 96px;
+  }
 }
 
 img {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-   user-select: none;
-   user-drag: none;
-   -webkit-user-drag: none;
-   user-select: none;
-   -moz-user-select: none;
-   -webkit-user-select: none;
-   -ms-user-select: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 input {
-   caret-color: var(--blue);
+  caret-color: var(--blue);
 
-   &::placeholder {
-      color: var(--grey);
-   }
+  &::placeholder {
+    color: var(--grey);
+  }
 }
 
 .background {
-   &-white {
-      background-color: var(--white);
-   }
+  &-white {
+    background-color: var(--white);
+  }
 
-   &-black {
-      background-color: var(--black);
-   }
+  &-black {
+    background-color: var(--black);
+  }
 
-   &-blue {
-      background-color: var(--blue);
-   }
+  &-blue {
+    background-color: var(--blue);
+  }
 }
 
 .marker {
-   &-brick {
-      padding: 5px 30px;
-      width: fit-content;
-      height: fit-content;
+  &-brick {
+    padding: 5px 30px;
+    width: fit-content;
+    height: fit-content;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-      border: var(--border-black);
-      border-radius: 10px;
-   }
+    border: var(--border-black);
+    border-radius: 10px;
+  }
 }

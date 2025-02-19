@@ -15,6 +15,7 @@ const ImageFlow = ({
   return (
     <div className={`${styles.wrapper} ${classNames?.wrapper && classNames.wrapper}`}>
       <Image
+        {...props}
         className={`${styles.image} ${classNames?.image && classNames.image}`}
         src={src}
         alt={alt}
