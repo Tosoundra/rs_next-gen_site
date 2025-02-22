@@ -15,6 +15,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-fast-marquee": "^1.6.5",
+    "three": "^0.173.0",
     "ymap3-components": "^1.2.3"
   },
   "devDependencies": {
@@ -22,6 +23,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/three": "^0.173.0",
     "@yandex/ymaps3-types": "^1.0.15728622",
     "autoprefixer": "^10.4.20",
     "eslint": "^9",
