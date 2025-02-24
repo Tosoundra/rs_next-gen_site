@@ -1,6 +1,9 @@
 'use server';
 import { ButtonRounded } from '@/src/shared/action';
 import styles from './styles.module.scss';
+import logo from '/public/ronix-logo.svg';
+import { ImageFlow } from '@/src/shared/image';
+import Image from 'next/image';
 
 const Header = () => {
   return (
@@ -9,7 +12,7 @@ const Header = () => {
         <div className={`${styles.side} flex justify-start`}>
           <ButtonRounded type="button" title="Menu" />
         </div>
-        <div className="text-white">RS</div>
+        {/* <Image src={logo} alt="logo" height={44} /> */}
         <div className={`${styles.side} flex justify-end`}>
           <ButtonRounded type="button" title="Contact">
             Contact

@@ -4,6 +4,8 @@ import React, { useEffect, useRef } from 'react';
 import styles from './styles.module.scss';
 import { ImageFlow } from '@/src/shared/image';
 import worldImage from '/public/img/details/world-image.png';
+import { fragmentShader, vertexShader } from '../constants/threeJSConfiguration';
+import { yearsExperienceList } from '../constants/yearsExperienceList';
 
 const Details = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -23,37 +25,17 @@ const Details = () => {
         const uniforms = {
           time: { type: 'f', value: 1.0 },
           resolution: { type: 'v2', value: new THREE.Vector2() },
+          scale: { type: 'f', value: 1 },
+          center: {
+            type: 'v2',
+            value: new THREE.Vector2(window.innerWidth, window.innerHeight / 2),
+          },
         };
 
         const material = new THREE.ShaderMaterial({
           uniforms: uniforms,
-          vertexShader: `
-          void main() {
-            gl_Position = vec4(position, 1.0);
-          }
-        `,
-          fragmentShader: `
-          #define TWO_PI 6.2831853072
-          #define PI 3.14159265359
-
-          precision highp float;
-          uniform vec2 resolution;
-          uniform float time;
-
-          void main(void) {
-            vec2 uv = (gl_FragCoord.xy * 2.0 - resolution.xy) / min(resolution.x, resolution.y);
-            float t = time * 0.05;
-            float lineWidth = 0.002;
-
-            vec3 color = vec3(0.0);
-            for (int j = 0; j < 3; j++) {
-              for (int i = 0; i < 5; i++) {
-                color[j] += lineWidth * float(i * i) / abs(fract(t - 0.01 * float(j) + float(i) * 0.01) * 5.0 - length(uv) + mod(uv.x + uv.y, 0.2));
-              }
-            }
-            gl_FragColor = vec4(color[0], color[1], color[2], 1.0);
-          }
-        `,
+          vertexShader: vertexShader,
+          fragmentShader: fragmentShader,
         });
 
         const mesh = new THREE.Mesh(geometry, material);
@@ -116,10 +98,17 @@ const Details = () => {
             zIndex: 0,
           }}
         ></div>
-        <div className={styles.content} style={{ position: 'relative', zIndex: 1 }}>
-          <span className={styles.mainNumber}>27</span>
-          <p className={styles.mainText}>years of experience</p>
+        <div className="absolute font-black top-1/2 -translate-y-1/2 left-[9.4%] mix-blend-exclusion text-white">
+          <span className="caption-120">20+</span>
+          <p className="caption-38 ">State contract</p>
         </div>
+        <ul className="absolute flex flex-col text-white text-24 font-black top-1/2 -translate-y-1/2 right-[10%]">
+          {yearsExperienceList.map((year, i) => (
+            <li className={`${i % 2 !== 0 ? 'ml-20' : ''}`} key={i}>
+              {year.year}
+            </li>
+          ))}
+        </ul>
       </div>
 
       {/* Блок B - Projects */}

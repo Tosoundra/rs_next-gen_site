@@ -14,9 +14,6 @@ import Map from '@/src/widgets/map';
 export default function Home() {
   return (
     <div className={`${styles.wrapper} flex flex-col`}>
-      <h1 className={`${styles.title} visuallyhidden`}>
-        Ronix Systems - the Future of Web-Development
-      </h1>
       <Hero />
       <Experience />
       <SectionWrapper caption={'Our services'}>
@@ -28,10 +25,7 @@ export default function Home() {
       <SectionWrapper classNames={{ section: styles.partnersSection, wrapper: styles.partners }}>
         <Partners />
       </SectionWrapper>
-      <SectionWrapper
-        caption={'More details?'}
-        classNames={{ wrapper: styles.details, content: styles.detailsContent }}
-      >
+      <SectionWrapper caption={'More details?'}>
         <Details />
       </SectionWrapper>
       <SectionWrapper caption={'Contacts'}>

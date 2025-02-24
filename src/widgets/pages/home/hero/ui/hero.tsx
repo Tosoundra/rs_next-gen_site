@@ -23,16 +23,18 @@ const Hero = () => {
       className={`${styles.section} flex justify-center items-center background-black text-white relative`}
     >
       <NeuroBackground />
-
+      <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[clamp(3rem,15vw,15rem)] mix-blend-overlay text-nowrap">
+        Ronix Systems
+      </h1>
       <div className="content-wrapper grid grid-cols-1 md:grid-cols-2 h-screen text-white relative z-10">
         <div className="flex flex-col justify-center p-8">
-          <h1 className="caption-80 text-balance">
+          <h2 className="caption-80 text-balance">
             Welcome to the{' '}
             <span className="bg-gradient-to-r from-blue-500 to-blue-800 inline-block text-transparent bg-clip-text">
               future
             </span>{' '}
             of the web!
-          </h1>
+          </h2>
         </div>
 
         <div className="flex flex-col justify-center">

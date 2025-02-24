@@ -1,5 +1,5 @@
 .wrapper {
-  flex: 1;
+  // flex: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -14,6 +14,7 @@
 .A {
   position: relative;
   overflow: hidden;
+  max-height: 824px;
   flex: 2 1 calc(50% - var(--gap-between-items));
 }
 

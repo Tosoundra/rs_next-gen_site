@@ -32,7 +32,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <body>
           <Header />
           <main>{children}</main>
-          {/* <Footer /> */}
+          <Footer />
         </body>
       </ReactLenis>
     </html>
