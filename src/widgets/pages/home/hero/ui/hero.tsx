@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
-import { ArrowIcon, MouseWithDownArrow } from '@shared';
+import { ArrowIcon, Logo, MouseWithDownArrow } from '@shared';
 
 import styles from './hero.module.scss';
 import { NeuroBackground } from '@/src/shared/background';
@@ -23,9 +23,16 @@ const Hero = () => {
       className={`${styles.section} flex justify-center items-center background-black text-white relative`}
     >
       <NeuroBackground />
-      <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[clamp(3rem,15vw,15rem)] mix-blend-overlay text-nowrap">
+      {/* <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[clamp(3rem,15vw,15rem)] mix-blend-overlay text-nowrap">
         Ronix Systems
-      </h1>
+      </h1> */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-overlay">
+        <Logo
+          classNames={{
+            image: 'bg-transparent',
+          }}
+        />
+      </div>
       <div className="content-wrapper grid grid-cols-1 md:grid-cols-2 h-screen text-white relative z-10">
         <div className="flex flex-col justify-center p-8">
           <h2 className="caption-80 text-balance">

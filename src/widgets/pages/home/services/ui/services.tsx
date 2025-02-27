@@ -13,12 +13,9 @@ const Services = () => {
           <Fragment key={`${index}${service.slug}`}>
             <LineAnimation
               widthPercent={index === 0 ? 70 : 100}
-              direction={index % 2 || index === 0 ? 'left' : 'right'}
+              direction={index % 2 !== 0 ? 'left' : 'right'}
             />
             <ServiceCard service={service} index={index} />
-            {index === ServicesMock.length - 1 && (
-              <LineAnimation widthPercent={70} direction={'right'} />
-            )}
           </Fragment>
         ))}
     </div>

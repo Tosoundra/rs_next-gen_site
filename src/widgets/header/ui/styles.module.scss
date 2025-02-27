@@ -1,25 +1,30 @@
 .header {
-   --padding-vertical: 75px;
-   position: fixed;
-   z-index: 10;
-   padding: var(--padding-vertical) 0;
-   width: 100%;
+  --padding-vertical: 75px;
+  position: fixed;
+  z-index: 10;
+  padding: var(--padding-vertical) 0;
+  width: 100%;
+  transition: transform 1s ease-in-out; /* Анимация для плавного появления/исчезновения */
 
-   .wrapper {
-      .side {
-         flex: 1;
-      }
-   }
+  @media (max-width: 1919px) {
+    --padding-vertical: 44px;
+  }
 
-   @media (max-width: 1919px) {
-      --padding-vertical: 44px;
-   }
+  @media (max-width: 1279px) {
+    --padding-vertical: var(--wrapper-horizontal-padding);
+  }
 
-   @media (max-width: 1279px) {
-      --padding-vertical: var(--wrapper-horizontal-padding);
-   }
+  @media (max-width: 767px) {
+    --padding-vertical: calc(var(--wrapper-horizontal-padding) * 2);
+  }
+}
 
-   @media (max-width: 767px) {
-      --padding-vertical: calc(var(--wrapper-horizontal-padding) * 2);
-   }
+.header.hidden {
+  transform: translateY(-100%); /* Скрываем шапку за пределами экрана */
+}
+
+.wrapper {
+  .side {
+    flex: 1;
+  }
 }

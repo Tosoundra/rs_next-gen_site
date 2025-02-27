@@ -20,7 +20,7 @@ const CardPortfolio = ({ data }: PortfolioCaseProps) => {
         <h3 className={`${styles.title} caption-60 text-bold text-white`}>{data.title}</h3>
       </Link>
       <div className={`${styles.content} flex`}>
-        <p className={`${styles.description} text-18 text-light text-pertty`}>{data.description}</p>
+        <p className={`${styles.description} text-20 text-light text-pertty`}>{data.description}</p>
         {data.tags?.length && (
           <div className={`${styles.tags} flex`}>
             {data.tags.map((tag, index) => (
