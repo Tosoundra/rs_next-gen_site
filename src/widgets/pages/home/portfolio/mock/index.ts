@@ -7,7 +7,7 @@ export const PortfolioMock: PortfolioCase[] = [
     title: 'IDVIT',
     description:
       "At Refokus, web design is where creativity meets functionality. We craft visually striking and emotionally engaging websites that capture your brand's essence. Our designs blend beauty with seamless navigation, enhanced by micro-interactions and Lottie animations. Every detail, from concept to pixel, aligns with your vision and business.",
-    image: '/img/mock/portfolio.jpeg',
+    image: '/img/portfolio/idvit.png',
     tags: [
       {
         id: '1',
@@ -48,7 +48,7 @@ export const PortfolioMock: PortfolioCase[] = [
     title: 'Picasso',
     description:
       "At Refokus, web design is where creativity meets functionality. We craft visually striking and emotionally engaging websites that capture your brand's essence. Our designs blend beauty with seamless navigation, enhanced by micro-interactions and Lottie animations. Every detail, from concept to pixel, aligns with your vision and business.",
-    image: '/img/mock/portfolio.jpeg',
+    image: '/img/portfolio/picasso.png',
     tags: [
       {
         id: '1',
@@ -84,7 +84,7 @@ export const PortfolioMock: PortfolioCase[] = [
     title: 'ODKB',
     description:
       "At Refokus, web design is where creativity meets functionality. We craft visually striking and emotionally engaging websites that capture your brand's essence. Our designs blend beauty with seamless navigation, enhanced by micro-interactions and Lottie animations. Every detail, from concept to pixel, aligns with your vision and business.",
-    image: '/img/mock/portfolio.jpeg',
+    image: '/img/portfolio/odkb.png',
     tags: [
       {
         id: '1',
@@ -125,7 +125,7 @@ export const PortfolioMock: PortfolioCase[] = [
     title: 'Kardi.ru',
     description:
       "At Refokus, web design is where creativity meets functionality. We craft visually striking and emotionally engaging websites that capture your brand's essence. Our designs blend beauty with seamless navigation, enhanced by micro-interactions and Lottie animations. Every detail, from concept to pixel, aligns with your vision and business.",
-    image: '/img/mock/portfolio.jpeg',
+    image: '/img/portfolio/kardi.png',
     tags: [
       {
         id: '1',

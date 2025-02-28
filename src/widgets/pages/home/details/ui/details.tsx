@@ -3,9 +3,10 @@ import * as THREE from 'three';
 import React, { useEffect, useRef } from 'react';
 import styles from './styles.module.scss';
 import { ImageFlow } from '@/src/shared/image';
-import worldImage from '/public/img/details/world-image.png';
+import worldImage from '/public/img/details/world-image-2.png';
 import { fragmentShader, vertexShader } from '../constants/threeJSConfiguration';
 import { yearsExperienceList } from '../constants/yearsExperienceList';
+import Image from 'next/image';
 
 const Details = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -207,7 +208,7 @@ const Details = () => {
           <div className="text-black caption-38 font-black">countries</div>
         </div>
 
-        <ImageFlow src={worldImage} alt="World" width={450} height={430} />
+        <Image src={worldImage} alt="World" width={450} height={430} />
       </div>
 
       {/* Блок F - Additional info */}

@@ -26,12 +26,8 @@ const Hero = () => {
       {/* <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[clamp(3rem,15vw,15rem)] mix-blend-overlay text-nowrap">
         Ronix Systems
       </h1> */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-overlay">
-        <Logo
-          classNames={{
-            image: 'bg-transparent',
-          }}
-        />
+      <div className="absolute rounded-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-overlay">
+        <Logo className="bg-transparent rounded-none" />
       </div>
       <div className="content-wrapper grid grid-cols-1 md:grid-cols-2 h-screen text-white relative z-10">
         <div className="flex flex-col justify-center p-8">
