@@ -3,7 +3,7 @@ import * as THREE from 'three';
 import React, { useEffect, useRef } from 'react';
 import styles from './styles.module.scss';
 import { ImageFlow } from '@/src/shared/image';
-import worldImage from '/public/img/details/world-image-2.png';
+import worldImage from '/public/img/details/world-image.png';
 import { fragmentShader, vertexShader } from '../constants/threeJSConfiguration';
 import { yearsExperienceList } from '../constants/yearsExperienceList';
 import Image from 'next/image';
@@ -200,7 +200,7 @@ const Details = () => {
 
       {/* Блок E - Partners */}
       <div
-        className={`${styles.item} ${styles.partners} ${styles.E} flex flex-col place-items-center justify-center`}
+        className={`${styles.item} ${styles.partners} ${styles.E} flex flex-col place-items-center justify-center bg-white overflow-hidden`}
       >
         <div className="text-center">
           <div className="text-black caption-38 font-black">Clients from</div>
@@ -208,7 +208,7 @@ const Details = () => {
           <div className="text-black caption-38 font-black">countries</div>
         </div>
 
-        <Image src={worldImage} alt="World" width={450} height={430} />
+        <Image src={worldImage} alt="World" width={450} height={430} className='mix-blend-difference'/>
       </div>
 
       {/* Блок F - Additional info */}
