@@ -23,10 +23,10 @@
       border: var(--border-black);
 
       .logo {
-        max-width: var(--image-max-width);
-        width: 88px;
-        height: 88px;
-        object-fit: contain;
+        // max-width: var(--image-max-width);
+        width: auto;
+        height: auto;
+        // object-fit: contain;
       }
     }
 
