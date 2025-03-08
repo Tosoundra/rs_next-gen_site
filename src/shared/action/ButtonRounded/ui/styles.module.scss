@@ -1,15 +1,16 @@
 .button {
-   padding: 0 var(--button-rounded-padding-horizontal);
-   width: fit-content;
-   min-width: var(--button-rounded-min-width);
-   height: var(--button-rounded-height);
+  padding: 0 var(--button-rounded-padding-horizontal);
+  width: fit-content;
+  min-width: var(--button-rounded-min-width);
+  height: var(--button-rounded-height);
+  cursor: pointer;
 
   //  border-radius: 90px;
   //  border: var(--border-white);
 
-   @media (pointer: fine) {
-      &:hover {
-         // все ховеры по аналогии писать
-      }
-   }
+  @media (pointer: fine) {
+    &:hover {
+      // все ховеры по аналогии писать
+    }
+  }
 }

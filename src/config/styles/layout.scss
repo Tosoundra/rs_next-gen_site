@@ -4,7 +4,7 @@
    --wrapper-max-width: calc(var(--wrapper-width) + var(--wrapper-horizontal-padding) * 2);
    --wrapper-horizontal-padding: 0px;
 
-   // sizes 
+   // sizes
    --header-height: 198px;
    --footer-height: 564px;
 
@@ -73,6 +73,7 @@
 
 html,
 body {
+  background-color: white;
    margin: 0;
    padding: 0;
    min-width: 320px;

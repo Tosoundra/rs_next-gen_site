@@ -1,4 +1,4 @@
-'use server';
+
 import Link from 'next/link';
 import { LineAnimation } from '@/src/shared/line';
 import { LinkLinesProps } from '../types';

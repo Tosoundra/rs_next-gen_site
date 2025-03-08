@@ -1,4 +1,3 @@
-'use server';
 import { Fragment } from 'react';
 import { ServicesMock } from '../mock';
 import ServiceCard from './card/';

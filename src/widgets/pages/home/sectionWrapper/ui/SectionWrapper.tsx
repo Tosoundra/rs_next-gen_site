@@ -1,4 +1,3 @@
-'use server';
 import { ReactNode } from 'react';
 import styles from './SectionWrapper.module.scss';
 

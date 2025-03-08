@@ -2,7 +2,6 @@
 import * as THREE from 'three';
 import React, { useEffect, useRef } from 'react';
 import styles from './styles.module.scss';
-import { ImageFlow } from '@/src/shared/image';
 import worldImage from '/public/img/details/world-image.png';
 import { fragmentShader, vertexShader } from '../constants/threeJSConfiguration';
 import { yearsExperienceList } from '../constants/yearsExperienceList';
@@ -127,29 +126,41 @@ const Details = () => {
             Expertise in <br />
             building
           </h3>
-          <ul className="flex flex-col text-white text-18 font-light justify-between h-full">
+          <ul className="flex flex-col text-white text-16 font-light justify-between h-full">
             <li className="text-left">
-              <span className="border border-white rounded-[5px] py-1 px-3 ">Web Apps</span>
+              <span className="min-w-[142px] text-center border border-white rounded-[5px] py-1 px-3 inline-block">
+                Web Apps
+              </span>
             </li>
             <li className="text-center">
-              <span className="border border-white rounded-[5px] py-1 px-3 ">
+              <span className="min-w-[142px] text-center border border-white rounded-[5px] py-1 px-3 inline-block">
                 Futured Interfaces
               </span>
             </li>
             <li className="text-right">
-              <span className="border border-white rounded-[5px] py-1 px-3 ">Enterprise Apps</span>
+              <span className="min-w-[142px] text-center border border-white rounded-[5px] py-1 px-3 inline-block">
+                Enterprise Apps
+              </span>
             </li>
             <li className="text-center">
-              <span className="border border-white rounded-[5px] py-1 px-3 ">Business Logic</span>
+              <span className="min-w-[142px] text-center border border-white rounded-[5px] py-1 px-3 inline-block">
+                Business Logic
+              </span>
             </li>
             <li className="text-left">
-              <span className="border border-white rounded-[5px] py-1 px-3 ">Modern Design</span>
+              <span className="min-w-[142px] text-center border border-white rounded-[5px] py-1 px-3 inline-block">
+                Modern Design
+              </span>
             </li>
             <li className="text-center">
-              <span className="border border-white rounded-[5px] py-1 px-3 ">Bot development</span>
+              <span className="min-w-[142px] text-center border border-white rounded-[5px] py-1 px-3 inline-block">
+                Bot development
+              </span>
             </li>
             <li className="text-right">
-              <span className="border border-white rounded-[5px] py-1 px-3">SEO</span>
+              <span className="min-w-[142px] text-center border border-white rounded-[5px] py-1 px-3 inline-block">
+                SEO
+              </span>
             </li>
           </ul>
         </div>
@@ -208,7 +219,13 @@ const Details = () => {
           <div className="text-black caption-38 font-black">countries</div>
         </div>
 
-        <Image src={worldImage} alt="World" width={450} height={430} className='mix-blend-difference'/>
+        <Image
+          src={worldImage}
+          alt="World"
+          width={450}
+          height={430}
+          className="mix-blend-difference"
+        />
       </div>
 
       {/* Блок F - Additional info */}

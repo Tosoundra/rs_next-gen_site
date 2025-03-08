@@ -1,4 +1,3 @@
-'use server';
 import { Fragment } from 'react';
 import { CardPortfolio, CardPortfolioContainer } from '@/src/shared/card';
 import { LinkLines } from '@/src/shared/action';

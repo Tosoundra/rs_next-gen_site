@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next';
 
-import { Header } from '@/src/widgets/header';
 import { Footer } from '@/src/widgets/footer';
 import { ReactLenis } from '@/src/config/utils/ScrollSmoother';
 
@@ -30,7 +29,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="ru">
       <ReactLenis root options={{ duration: 2, smoothWheel: true }}>
         <body>
-          <Header />
           <main>{children}</main>
           <Footer />
         </body>

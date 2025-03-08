@@ -1,4 +1,3 @@
-'use server';
 import { ImageFlow } from '@/src/shared/image';
 import { LinkUnderline } from '@/src/shared/action';
 import { ServiceProps } from '../../types';

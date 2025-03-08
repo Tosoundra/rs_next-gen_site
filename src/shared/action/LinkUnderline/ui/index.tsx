@@ -1,4 +1,4 @@
-'use server';
+
 import Link from 'next/link';
 import { LinkUnderlineProps } from '../types';
 

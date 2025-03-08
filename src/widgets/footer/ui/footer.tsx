@@ -1,4 +1,3 @@
-'use server';
 import Link from 'next/link';
 import { SpaceBackgroundZ } from '@/src/shared/background';
 import styles from './styles.module.scss';

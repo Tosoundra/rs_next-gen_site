@@ -1,4 +1,3 @@
-'use client';
 import Link, { LinkProps } from 'next/link';
 import { ButtonHTMLAttributes, ReactNode } from 'react';
 
@@ -18,14 +17,11 @@ const ButtonRounded = (props: ButtonRoundedProps) => {
   const { title, children, className, callback, ...rest } = props;
 
   const commonClassName = `text-18 text-light text-white uppercase ${styles.button} ${className || ''}`;
-  const handleClick = () => {
-    if (callback) callback();
-  };
 
   if ('href' in rest) {
     // Если передан href, рендерим ссылку
     return (
-      <Link {...rest} className={commonClassName} title={title} onClick={handleClick}>
+      <Link {...rest} className={commonClassName} title={title}>
         {children || title}
       </Link>
     );
@@ -33,7 +29,7 @@ const ButtonRounded = (props: ButtonRoundedProps) => {
 
   // Если href нет, рендерим кнопку
   return (
-    <button {...rest} className={commonClassName} title={title} onClick={handleClick}>
+    <button {...rest} className={commonClassName} title={title}>
       {children || title}
     </button>
   );
