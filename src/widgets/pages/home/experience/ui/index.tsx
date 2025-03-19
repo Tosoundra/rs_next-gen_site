@@ -69,23 +69,23 @@ const Experience = () => {
       },
     });
 
-    tl.to(headlineRef.current, { opacity: 1, duration: 0.2 })
+    tl.to(headlineRef.current, { opacity: 1, duration: 0.15 })
       .from(chars, {
-        duration: 0.4,
+        duration: 0.3,
         opacity: 0,
-        y: 20,
-        ease: 'power2.inOut',
-        stagger: { from: 'center', each: 0.1 },
+        y: 15,
+        ease: 'power3.inOut',
+        stagger: { from: 'center', each: 0.07 },
       })
       .from(
         words,
         {
-          duration: 1.2,
-          y: (i) => i * 40 - 20,
+          duration: 0.8,
+          y: (i) => i * 30 - 15,
           ease: 'expo.out',
-          stagger: 0.05,
+          stagger: 0.03,
         },
-        '-=0.3',
+        '-=0.2',
       );
 
     tl.to(
@@ -93,10 +93,10 @@ const Experience = () => {
       {
         opacity: 1,
         y: 0,
-        duration: 0.6,
-        ease: 'power2.out',
+        duration: 0.4,
+        ease: 'power3.out',
       },
-      '-=0.2',
+      '-=0.15',
     );
 
     tl.to(
@@ -104,13 +104,21 @@ const Experience = () => {
       {
         opacity: 1,
         y: 0,
-        duration: 0.6,
-        ease: 'power2.out',
+        duration: 0.4,
+        ease: 'power3.out',
       },
-      '-=0.2',
+      '-=0.15',
     );
 
-    gsap.fromTo(imageRef.current, { opacity: 0 }, { opacity: 1, duration: 0.5 });
+    gsap.fromTo(
+      imageRef.current,
+      { opacity: 0 },
+      {
+        opacity: 1,
+        duration: 0.3,
+        ease: 'power2.inOut',
+      },
+    );
   }, [activeIndex]);
 
   return (
