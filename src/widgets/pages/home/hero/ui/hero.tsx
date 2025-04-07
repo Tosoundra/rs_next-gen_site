@@ -7,7 +7,9 @@ import { ArrowIcon, Logo, MouseWithDownArrow } from '@shared';
 import styles from './hero.module.scss';
 import { NeuroBackground } from '@/src/shared/background';
 
-const Hero = () => {
+type Props = { onExperienceClick: () => void };
+
+const Hero = ({ onExperienceClick }: Props) => {
   useEffect(() => {
     gsap.to('.scroll-icon', {
       y: 30,
@@ -46,12 +48,12 @@ const Hero = () => {
             experience in the information technology market. We keep pace with progress and make
             products that are as reliable as Swiss watches!
           </h2>
-          <p className="text-16 sm:text-18 mt-4 font-light">
+          <button onClick={onExperienceClick} className="text-16 sm:text-18 mt-4 font-light">
             Get Started{' '}
             <span>
               <ArrowIcon className="fill-white rotate-90 inline-block font-light" width="9px" />
             </span>
-          </p>
+          </button>
         </div>
       </div>
 

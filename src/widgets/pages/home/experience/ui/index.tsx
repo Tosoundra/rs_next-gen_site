@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { ComponentProps, useEffect, useRef, useState } from 'react';
 import { experienceList } from '../mock';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -22,8 +22,9 @@ const splitText = (text: string) => {
   ));
 };
 
-const Experience = () => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
+type Props = ComponentProps<'section'>;
+
+const Experience = ({ ...props }: Props) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const imageRef = useRef<HTMLImageElement | null>(null);
@@ -33,7 +34,8 @@ const Experience = () => {
   const descriptionRef = useRef<HTMLParagraphElement | null>(null);
 
   useEffect(() => {
-    const container = containerRef.current;
+    //@ts-expect-error error
+    const container = props.ref!.current as unknown as HTMLDivElement;
     if (!container) return;
 
     const sections = experienceList.length;
@@ -122,7 +124,7 @@ const Experience = () => {
   }, [activeIndex]);
 
   return (
-    <section ref={containerRef} className="">
+    <section ref={props.ref} className="">
       <div className="min-h-screen flex justify-center items-center px-4 py-10">
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10 w-full max-w-[1920px]">
           <Image
