@@ -1,5 +1,12 @@
 .section {
   height: 100dvh;
+
+  @media (max-width: 767px) {
+    height: auto;
+    min-height: 100dvh;
+    padding-top: 100px;
+    padding-bottom: 80px;
+  }
 }
 
 .wrapper {

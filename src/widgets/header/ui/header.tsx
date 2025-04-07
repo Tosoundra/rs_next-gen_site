@@ -43,7 +43,12 @@ const Header = ({ onContactClick }: Props) => {
         <div className={`${styles.side} flex justify-start`}>
           <ButtonRounded type="button" title="Menu" />
         </div>
-        <Image src={logo} alt="logo" height={44} className="h-[44px] w-[44px]" />
+        <Image
+          src={logo}
+          alt="logo"
+          height={44}
+          className="h-[44px] w-[44px] sm:h-[36px] sm:w-[36px]"
+        />
         <div className={`${styles.side} flex justify-end`}>
           <ButtonRounded type="button" title="Contact" onClick={onContactClick} />
         </div>

@@ -123,26 +123,39 @@ const Experience = () => {
 
   return (
     <section ref={containerRef} className="">
-      <div className="h-screen flex justify-center items-center content-wrapper">
-        <div className="flex max-w-[1920px] w-full justify-between">
+      <div className="min-h-screen flex justify-center items-center px-4 py-10">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10 w-full max-w-[1920px]">
           <Image
             width={650}
             height={650}
             alt={experienceList[activeIndex].title}
             loading="lazy"
             src={experienceList[activeIndex].img}
-            className="transition-opacity duration-500 grayscale rounded-[30px]"
-            style={{ width: '33.9%', height: '33.9%' }}
+            className="transition-opacity duration-500 grayscale rounded-[30px]
+             w-[650px] h-[650px]
+             max-w-full max-h-[90vh]
+             sm:w-[500px] sm:h-[500px]
+             xs:w-full xs:h-auto xs:max-w-[320px] xs:mx-auto"
             ref={imageRef}
           />
-          <div className="px-4" ref={textRef}>
-            <h3 ref={headlineRef} className="caption-120 font-black text-white headline">
+
+          <div className="text-center lg:text-left" ref={textRef}>
+            <h3
+              ref={headlineRef}
+              className="caption-120 font-black text-white headline text-[48px] sm:text-[64px] md:text-[90px] lg:text-[120px] leading-tight"
+            >
               {splitText(experienceList[activeIndex].title)}
             </h3>
-            <p ref={subtitleRef} className="caption-38 font-black text-blue mb-9">
+            <p
+              ref={subtitleRef}
+              className="caption-38 font-black text-blue mb-4 text-[20px] md:text-[30px] lg:text-[38px]"
+            >
               {experienceList[activeIndex].subtitle}
             </p>
-            <p ref={descriptionRef} className="text-20 font-normal text-white max-w-2xl">
+            <p
+              ref={descriptionRef}
+              className="text-[16px] md:text-[20px] font-normal text-white max-w-2xl mx-auto lg:mx-0"
+            >
               {experienceList[activeIndex].description}
             </p>
           </div>
