@@ -25,14 +25,26 @@
     "politics": "Privacy Policy"
   },
   "experienceList": {
-      "27years": "27 YEARS",
-      "webspace": "IN THE WEB-SPACE",
-      "description1": "Many years of experience in developing, supporting and modernizing products for businesses of any scale is not just a part of our business, it is a part of our life! Working for results is our main goal, bringing results is our dogma.",
-      "leaders": "LEADERS",
-      "industry": "OF THE INDUSTRY ",
-      "description2": "Many years of experience in developing, supporting and modernizing products for businesses of any scale is not just a part of our business, it is a part of our life! Working for results is our main goal, bringing results is our dogma. Many years of experience in developing, supporting and modernizing products for businesses of any scale is not just a part of our business, it is a part of our life! Working for results is our main goal, bringing results is our dogma.",
-      "strong": "STRONG",
-      "product": "PRODUCT FOR BUSINESS",
-      "description3": "Many years of experience in developing, supporting and modernizing products for businesses of any scale is not just a part of our business, it is a part of our life! Working for results is our main goal, bringing results is our dogma. Many years of experience in developing, supporting and modernizing products for businesses of any scale is not just a part of our business, it is a part of our life! Working for results is our main goal, bringing results is our dogma."
-    }
+    "27years": "27 YEARS",
+    "webspace": "IN THE WEB-SPACE",
+    "description1": "Many years of experience in developing, supporting and modernizing products for businesses of any scale is not just a part of our business, it is a part of our life! Working for results is our main goal, bringing results is our dogma.",
+    "leaders": "LEADERS",
+    "industry": "OF THE INDUSTRY ",
+    "description2": "Many years of experience in developing, supporting and modernizing products for businesses of any scale is not just a part of our business, it is a part of our life! Working for results is our main goal, bringing results is our dogma. Many years of experience in developing, supporting and modernizing products for businesses of any scale is not just a part of our business, it is a part of our life! Working for results is our main goal, bringing results is our dogma.",
+    "strong": "STRONG",
+    "product": "PRODUCT FOR BUSINESS",
+    "description3": "Many years of experience in developing, supporting and modernizing products for businesses of any scale is not just a part of our business, it is a part of our life! Working for results is our main goal, bringing results is our dogma. Many years of experience in developing, supporting and modernizing products for businesses of any scale is not just a part of our business, it is a part of our life! Working for results is our main goal, bringing results is our dogma."
+  },
+  "header": {
+    "menu": "Menu",
+    "contact": "Contact"
+  },
+  "hero": {
+    "welcome": "Welcome to the",
+    "future": "future",
+    "web": "of the web!",
+    "ronix": "Ronix Systems",
+    "about_us": " – an IT studio with many years of experience in the information technology market. We keep pace with progress and make products that are as reliable as Swiss watches!",
+    "get_started": "Get Started"
+  }
 }
