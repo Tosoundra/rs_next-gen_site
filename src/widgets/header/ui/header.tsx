@@ -4,10 +4,13 @@ import styles from './styles.module.scss';
 import logo from '/public/ronix-logo.svg';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import LanguageSwitcher from '../../pages/home/switcher/LanguageSwitcher';
+import { useLanguage } from '@/src/context/LanguageContext';
 
 type Props = { onContactClick: () => void };
 
 const Header = ({ onContactClick }: Props) => {
+  const { translations } = useLanguage();
   const [isVisible, setIsVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   let timeoutId: number | null = null;
@@ -41,7 +44,7 @@ const Header = ({ onContactClick }: Props) => {
     <header className={`${styles.header} ${isVisible && styles.hidden}`}>
       <div className={`${styles.wrapper} content-wrapper flex items-center`}>
         <div className={`${styles.side} flex justify-start`}>
-          <ButtonRounded type="button" title="Menu" />
+          <ButtonRounded type="button" title={translations.header.menu} />
         </div>
         <Image
           src={logo}
@@ -50,7 +53,8 @@ const Header = ({ onContactClick }: Props) => {
           className="h-[44px] w-[44px] sm:h-[36px] sm:w-[36px]"
         />
         <div className={`${styles.side} flex justify-end`}>
-          <ButtonRounded type="button" title="Contact" onClick={onContactClick} />
+          <ButtonRounded type="button" title={translations.header.contact} onClick={onContactClick} />
+          <LanguageSwitcher/>
         </div>
       </div>
     </header>

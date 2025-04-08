@@ -1,8 +1,10 @@
 import Link from 'next/link';
 import { SpaceBackgroundZ } from '@/src/shared/background';
 import styles from './styles.module.scss';
+import { useLanguage } from '@/src/context/LanguageContext';
 
 const Footer = () => {
+  const { translations } = useLanguage();
   return (
     <footer className={`${styles.footer} relative flex flex-col`}>
       <div className={`${styles.container} flex flex-col background-black`}>
@@ -18,7 +20,7 @@ const Footer = () => {
           <div className={`${styles.side} flex justify-start`}>
             <Link href="/politics" className={`text-bold text-18nn text-white`}>
               {/* Конфиденциальность */}
-              Политика К.
+              {translations.footer.politics}
             </Link>
           </div>
           <div>
