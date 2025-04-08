@@ -27,14 +27,14 @@ export const viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ru">
-      <LanguageProvider>
-        <ReactLenis root options={{ duration: 2, smoothWheel: true }}>
-          <body>
+      <body>
+        <LanguageProvider>
+          <ReactLenis root options={{ duration: 2, smoothWheel: true }}>
             <main>{children}</main>
             <Footer />
-          </body>
-        </ReactLenis>
-      </LanguageProvider>
+          </ReactLenis>
+        </LanguageProvider>
+      </body>
     </html>
   );
 }
