@@ -1,0 +1,38 @@
+{
+  "details": {
+    "stateContract": "State contract",
+    "completedProjects": "completed projects",
+    "expertiseIn": "Expertise in",
+    "building": "building",
+    "moreThan": "More than",
+    "partners": "partners",
+    "clientsFrom": "Clients from",
+    "countries": "countries",
+    "yearsOf": "years of",
+    "experience": "experience",
+    "webApps": "Web Apps",
+    "futuredInterfaces": "Futured Interfaces",
+    "enterpriseApps": "Enterprise Apps",
+    "businessLogic": "Business Logic",
+    "modernDesign": "Modern Design",
+    "botDevelopment": "Bot development",
+    "seo": "SEO"
+  },
+  "contacts": {
+    "chat": "Let's chat!"
+  },
+  "footer": {
+    "politics": "Privacy Policy"
+  },
+  "experienceList": {
+      "27years": "27 YEARS",
+      "webspace": "IN THE WEB-SPACE",
+      "description1": "Many years of experience in developing, supporting and modernizing products for businesses of any scale is not just a part of our business, it is a part of our life! Working for results is our main goal, bringing results is our dogma.",
+      "leaders": "LEADERS",
+      "industry": "OF THE INDUSTRY ",
+      "description2": "Many years of experience in developing, supporting and modernizing products for businesses of any scale is not just a part of our business, it is a part of our life! Working for results is our main goal, bringing results is our dogma. Many years of experience in developing, supporting and modernizing products for businesses of any scale is not just a part of our business, it is a part of our life! Working for results is our main goal, bringing results is our dogma.",
+      "strong": "STRONG",
+      "product": "PRODUCT FOR BUSINESS",
+      "description3": "Many years of experience in developing, supporting and modernizing products for businesses of any scale is not just a part of our business, it is a part of our life! Working for results is our main goal, bringing results is our dogma. Many years of experience in developing, supporting and modernizing products for businesses of any scale is not just a part of our business, it is a part of our life! Working for results is our main goal, bringing results is our dogma."
+    }
+}
