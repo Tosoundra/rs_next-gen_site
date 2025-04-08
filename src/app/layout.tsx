@@ -1,10 +1,12 @@
-// layout.tsx
 import { Footer } from '@/src/widgets/footer';
 import { ReactLenis } from '@/src/config/utils/ScrollSmoother';
-import { LanguageProvider } from '@/src/context/LanguageContext'; // Импорт LanguageProvider
+import { LanguageProvider } from '@/src/context/LanguageContext';
 
 import '@/index.css';
 import '@/src/config/styles/global.scss';
+
+import fs from 'fs';
+import path from 'path';
 
 export const metadata = {
   title: 'Ronix Systems',
@@ -25,10 +27,17 @@ export const viewport = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  // Указываем язык по умолчанию
+  const defaultLang = 'ru';
+
+  // Чтение JSON перевода с сервера
+  const translationsPath = path.join(process.cwd(), 'public', 'locales', defaultLang, 'common.json');
+  const translations = JSON.parse(fs.readFileSync(translationsPath, 'utf-8'));
+
   return (
-    <html lang="ru">
+    <html lang={defaultLang}>
       <body>
-        <LanguageProvider>
+        <LanguageProvider initialLanguage={defaultLang} initialTranslations={translations}>
           <ReactLenis root options={{ duration: 2, smoothWheel: true }}>
             <main>{children}</main>
             <Footer />

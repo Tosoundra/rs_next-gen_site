@@ -7,7 +7,8 @@ const LanguageSwitcher = () => {
   const { language, setLanguage } = useLanguage();
 
   const toggleLanguage = () => {
-    setLanguage(language === 'ru' ? 'en' : 'ru');
+    const newLang = language === 'ru' ? 'en' : 'ru';
+    setLanguage(newLang); // Переключаем язык
   };
 
   return (
