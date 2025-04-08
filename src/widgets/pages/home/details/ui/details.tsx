@@ -1,91 +1,19 @@
 'use client';
 import * as THREE from 'three';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './styles.module.scss';
 import worldImage from '/public/img/details/world-image.png';
 import { fragmentShader, vertexShader } from '../constants/threeJSConfiguration';
 import { yearsExperienceList } from '../constants/yearsExperienceList';
 import Image from 'next/image';
+import { useLanguage } from '@/src/context/LanguageContext';
 
 const Details = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (containerRef.current) {
-      const init = () => {
-        const container = containerRef.current;
-
-        const camera = new THREE.Camera();
-        camera.position.z = 1;
-
-        const scene = new THREE.Scene();
-
-        const geometry = new THREE.PlaneGeometry(2, 2);
-
-        const uniforms = {
-          time: { type: 'f', value: 1.0 },
-          resolution: { type: 'v2', value: new THREE.Vector2() },
-          scale: { type: 'f', value: 1 },
-          center: {
-            type: 'v2',
-            value: new THREE.Vector2(window.innerWidth, window.innerHeight / 2),
-          },
-        };
-
-        const material = new THREE.ShaderMaterial({
-          uniforms: uniforms,
-          vertexShader: vertexShader,
-          fragmentShader: fragmentShader,
-        });
-
-        const mesh = new THREE.Mesh(geometry, material);
-        scene.add(mesh);
-
-        const renderer = new THREE.WebGLRenderer();
-        renderer.setPixelRatio(window.devicePixelRatio);
-
-        const containerWidth = container!.clientWidth;
-        const containerHeight = container!.clientHeight;
-        renderer.setSize(containerWidth, containerHeight);
-
-        container?.appendChild(renderer.domElement);
-
-        uniforms.resolution.value.x = containerWidth;
-        uniforms.resolution.value.y = containerHeight;
-
-        const onWindowResize = () => {
-          const newWidth = container!.clientWidth;
-          const newHeight = container!.clientHeight;
-          renderer.setSize(newWidth, newHeight);
-          uniforms.resolution.value.x = newWidth;
-          uniforms.resolution.value.y = newHeight;
-        };
-
-        window.addEventListener('resize', onWindowResize);
-
-        const animate = () => {
-          requestAnimationFrame(animate);
-          uniforms.time.value += 0.05;
-          renderer.render(scene, camera);
-        };
-
-        animate();
-      };
-
-      init();
-    }
-
-    // return () => {
-    //   if (renderer) {
-    //     renderer.dispose();
-    //   }
-    //   window.removeEventListener('resize', onWindowResize);
-    // };
-  }, []);
-
+  const { translations } = useLanguage();
   return (
     <div className={`${styles.wrapper} content-wrapper`}>
-      {/* Блок A - 27 years experience */}
+      {/* Блок A - 27 лет опыта */}
       <div className={`${styles.item} ${styles.years} ${styles.A} background-black`}>
         <div
           ref={containerRef}
@@ -100,7 +28,7 @@ const Details = () => {
         ></div>
         <div className="absolute font-black top-1/2 -translate-y-1/2 left-[9.4%] mix-blend-exclusion text-white">
           <span className="caption-120">20+</span>
-          <p className="caption-38 ">State contract</p>
+          <p className="caption-38 ">{translations.details.stateContract}</p> {/* Перевод */}
         </div>
         <ul className="absolute flex flex-col text-white text-24 font-black top-1/2 -translate-y-1/2 right-[10%]">
           {yearsExperienceList.map((year, i) => (
@@ -111,72 +39,72 @@ const Details = () => {
         </ul>
       </div>
 
-      {/* Блок B - Projects */}
+      {/* Блок B - Проекты */}
       <div
         className={`${styles.item} ${styles.projects} ${styles.B} background-blue flex flex-col place-items-center justify-center text-white`}
       >
         <div className="caption-100 font-black">80+</div>
-        <div className="caption-38 font-black">completed projects</div>
+        <div className="caption-38 font-black">{translations.details.completedProjects}</div> {/* Перевод */}
       </div>
 
-      {/* Блок C - Expertise */}
+      {/* Блок C - Экспертиза */}
       <div className={`${styles.item} ${styles.skills} ${styles.C} background-black`}>
         <div className={styles.content}>
           <h3 className="text-transparent text-center bg-clip-text bg-gradient-to-r from-[#F8F8F8] via-[#E0E0E0] to-[#A1A1A1] caption-38 font-black">
-            Expertise in <br />
-            building
+            {translations.details.expertiseIn} <br />
+            {translations.details.building} {/* Перевод */}
           </h3>
           <ul className="flex flex-col text-white text-16 font-light justify-between h-full">
             <li className="text-left">
               <span className="min-w-[142px] text-center border border-white rounded-[5px] py-1 px-3 inline-block">
-                Web Apps
+                {translations.details.webApps} {/* Перевод */}
               </span>
             </li>
             <li className="text-center">
               <span className="min-w-[142px] text-center border border-white rounded-[5px] py-1 px-3 inline-block">
-                Futured Interfaces
+                {translations.details.futuredInterfaces} {/* Перевод */}
               </span>
             </li>
             <li className="text-right">
               <span className="min-w-[142px] text-center border border-white rounded-[5px] py-1 px-3 inline-block">
-                Enterprise Apps
+                {translations.details.enterpriseApps} {/* Перевод */}
               </span>
             </li>
             <li className="text-center">
               <span className="min-w-[142px] text-center border border-white rounded-[5px] py-1 px-3 inline-block">
-                Business Logic
+                {translations.details.businessLogic} {/* Перевод */}
               </span>
             </li>
             <li className="text-left">
               <span className="min-w-[142px] text-center border border-white rounded-[5px] py-1 px-3 inline-block">
-                Modern Design
+                {translations.details.modernDesign} {/* Перевод */}
               </span>
             </li>
             <li className="text-center">
               <span className="min-w-[142px] text-center border border-white rounded-[5px] py-1 px-3 inline-block">
-                Bot development
+                {translations.details.botDevelopment} {/* Перевод */}
               </span>
             </li>
             <li className="text-right">
               <span className="min-w-[142px] text-center border border-white rounded-[5px] py-1 px-3 inline-block">
-                SEO
+                {translations.details.seo} {/* Перевод */}
               </span>
             </li>
           </ul>
         </div>
       </div>
 
-      {/* Блок D - Clients */}
+      {/* Блок D - Клиенты */}
       <div className={`${styles.item} ${styles.clients} ${styles.D}`}>
         <div className="flex place-items-center justify-center h-full">
           <div className="flex-1 text-right">
             <div className="relative">
               <span className="absolute caption-38 text-outline-1 font-black -top-full left-0">
-                More then
+                {translations.details.moreThan} {/* Перевод */}
               </span>
-              <span className="caption-38 text-black font-black">More then</span>
+              <span className="caption-38 text-black font-black">{translations.details.moreThan}</span>
               <span className="absolute caption-38 text-outline-1 font-black -bottom-full left-0">
-                More then
+                {translations.details.moreThan} {/* Перевод */}
               </span>
             </div>
           </div>
@@ -198,25 +126,25 @@ const Details = () => {
           <div className="flex-1 text-left">
             <div className="relative">
               <span className="absolute caption-38 text-outline-1 font-black -top-full right-0">
-                partners
+                {translations.details.partners} {/* Перевод */}
               </span>
-              <span className="caption-38 text-black font-black">partners</span>
+              <span className="caption-38 text-black font-black">{translations.details.partners}</span>
               <span className="absolute caption-38 text-outline-1 font-black -bottom-full right-0">
-                partners
+                {translations.details.partners} {/* Перевод */}
               </span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Блок E - Partners */}
+      {/* Блок E - Партнеры */}
       <div
         className={`${styles.item} ${styles.partners} ${styles.E} flex flex-col place-items-center justify-center bg-white overflow-hidden`}
       >
         <div className="text-center">
-          <div className="text-black caption-38 font-black">Clients from</div>
+          <div className="text-black caption-38 font-black">{translations.details.clientsFrom}</div>
           <div className="text-blue caption-116 font-black">10+</div>
-          <div className="text-black caption-38 font-black">countries</div>
+          <div className="text-black caption-38 font-black">{translations.details.countries}</div>
         </div>
 
         <Image
@@ -228,14 +156,14 @@ const Details = () => {
         />
       </div>
 
-      {/* Блок F - Additional info */}
+      {/* Блок F - Дополнительная информация */}
       <div
         className={`${styles.item} ${styles.experience} ${styles.F} flex flex-col place-items-center justify-center`}
       >
         <div className="text-center">
           <span className="text-blue caption-100 font-black block">27</span>
           <span className="text-black caption-38 font-black">
-            years of <br /> experience
+            {translations.details.yearsOf} <br /> {translations.details.experience} {/* Перевод */}
           </span>
         </div>
       </div>
