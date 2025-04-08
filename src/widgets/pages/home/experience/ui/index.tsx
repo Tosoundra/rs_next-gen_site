@@ -1,4 +1,5 @@
 'use client';
+
 import React, { ComponentProps, useEffect, useRef, useState } from 'react';
 import { experienceList } from '../mock';
 import { gsap } from 'gsap';
@@ -27,6 +28,7 @@ type Props = ComponentProps<'section'>;
 const Experience = ({ ...props }: Props) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const imageRef = useRef<HTMLImageElement | null>(null);
   const textRef = useRef<HTMLDivElement | null>(null);
   const headlineRef = useRef<HTMLDivElement | null>(null);
@@ -34,14 +36,13 @@ const Experience = ({ ...props }: Props) => {
   const descriptionRef = useRef<HTMLParagraphElement | null>(null);
 
   useEffect(() => {
-    //@ts-expect-error error
-    const container = props.ref!.current as unknown as HTMLDivElement;
-    if (!container) return;
+    if (!containerRef.current) return;
 
     const sections = experienceList.length;
-    gsap.timeline({
+
+    const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: container,
+        trigger: containerRef.current,
         start: 'top top',
         end: `+=${sections * 100}%`,
         scrub: 1,
@@ -53,6 +54,11 @@ const Experience = ({ ...props }: Props) => {
         },
       },
     });
+
+    return () => {
+      tl.scrollTrigger?.kill();
+      tl.kill();
+    };
   }, []);
 
   useEffect(() => {
@@ -124,7 +130,7 @@ const Experience = ({ ...props }: Props) => {
   }, [activeIndex]);
 
   return (
-    <section ref={props.ref} className="">
+    <section ref={containerRef} className="">
       <div className="min-h-screen flex justify-center items-center px-4 py-10">
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10 w-full max-w-[1920px]">
           <Image
