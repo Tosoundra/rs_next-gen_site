@@ -1,12 +1,12 @@
-import type { Metadata, Viewport } from 'next';
-
+// layout.tsx
 import { Footer } from '@/src/widgets/footer';
 import { ReactLenis } from '@/src/config/utils/ScrollSmoother';
+import { LanguageProvider } from '@/src/context/LanguageContext'; // Импорт LanguageProvider
 
 import '@/index.css';
 import '@/src/config/styles/global.scss';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Ronix Systems',
   description: 'Сайт компании Ronix Systems',
   metadataBase: new URL('https://ronix.ru'),
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport: Viewport = {
+export const viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 1,
@@ -27,12 +27,14 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ru">
-      <ReactLenis root options={{ duration: 2, smoothWheel: true }}>
-        <body>
-          <main>{children}</main>
-          <Footer />
-        </body>
-      </ReactLenis>
+      <LanguageProvider>
+        <ReactLenis root options={{ duration: 2, smoothWheel: true }}>
+          <body>
+            <main>{children}</main>
+            <Footer />
+          </body>
+        </ReactLenis>
+      </LanguageProvider>
     </html>
   );
 }

@@ -52,27 +52,27 @@ export default function Home() {
 
   return (
     <>
-      <Header onContactClick={handleContactClick} />
-      <div className={`${styles.wrapper} flex flex-col`}>
-        <Hero onExperienceClick={handleExperienceClick} />
-        <Experience ref={experienceRef} />
-        <SectionWrapper caption={'Our services'}>
-          <Services />
-        </SectionWrapper>
-        <SectionWrapper caption={'Our works'}>
-          <Portfolio />
-        </SectionWrapper>
-        <SectionWrapper classNames={{ section: styles.partnersSection, wrapper: styles.partners }}>
-          <Partners />
-        </SectionWrapper>
-        <SectionWrapper caption={'More details?'}>
-          <Details />
-        </SectionWrapper>
-        <SectionWrapper caption="Contacts">
-          <Contacts ref={contactsRef} />
-        </SectionWrapper>
-        <Map className={`${styles.map}`} />
-      </div>
+        <Header onContactClick={handleContactClick} />
+        <div className={`${styles.wrapper} flex flex-col`}>
+          <Hero onExperienceClick={handleExperienceClick} />
+          <Experience ref={experienceRef} />
+          <SectionWrapper caption={'Our services'}>
+            <Services />
+          </SectionWrapper>
+          <SectionWrapper caption={'Our works'}>
+            <Portfolio />
+          </SectionWrapper>
+          <SectionWrapper classNames={{ section: styles.partnersSection, wrapper: styles.partners }}>
+            <Partners />
+          </SectionWrapper>
+          <SectionWrapper caption={'More details?'}>
+            <Details />
+          </SectionWrapper>
+          <SectionWrapper caption="Contacts">
+            <Contacts ref={contactsRef} />
+          </SectionWrapper>
+          <Map className={`${styles.map}`} />
+        </div>
     </>
   );
 }
