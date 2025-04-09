@@ -61,7 +61,7 @@ const Hero = ({ onExperienceClick }: Props) => {
       <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-black to-transparent z-10"></div>
 
       <div className="absolute bottom-10 sm:bottom-14 flex flex-col items-center font-light gap-2 sm:gap-4 scroll-icon z-20">
-        <span className="text-14 sm:text-18">Let’s scroll</span>
+        <span className="text-14 sm:text-18">{translations.hero.scroll}</span>
         <MouseWithDownArrow width={32} height={32} className="sm:w-[50px] sm:h-[50px]" />
       </div>
     </section>
