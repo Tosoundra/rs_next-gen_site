@@ -3,7 +3,7 @@ import { PortfolioCase } from '@/src/config/types';
 export const PortfolioMock: PortfolioCase[] = [
   {
     id: '1',
-    slug: 'indivit',
+    slug: 'idvit',
     title: 'IDVIT',
     description:
       "At Refokus, web design is where creativity meets functionality. We craft visually striking and emotionally engaging websites that capture your brand's essence. Our designs blend beauty with seamless navigation, enhanced by micro-interactions and Lottie animations. Every detail, from concept to pixel, aligns with your vision and business.",
@@ -44,7 +44,7 @@ export const PortfolioMock: PortfolioCase[] = [
   },
   {
     id: '1',
-    slug: 'Picasso',
+    slug: 'picasso',
     title: 'Picasso',
     description:
       "At Refokus, web design is where creativity meets functionality. We craft visually striking and emotionally engaging websites that capture your brand's essence. Our designs blend beauty with seamless navigation, enhanced by micro-interactions and Lottie animations. Every detail, from concept to pixel, aligns with your vision and business.",
@@ -80,7 +80,7 @@ export const PortfolioMock: PortfolioCase[] = [
   },
   {
     id: '1',
-    slug: 'ODKB',
+    slug: 'odkb',
     title: 'ODKB',
     description:
       "At Refokus, web design is where creativity meets functionality. We craft visually striking and emotionally engaging websites that capture your brand's essence. Our designs blend beauty with seamless navigation, enhanced by micro-interactions and Lottie animations. Every detail, from concept to pixel, aligns with your vision and business.",
@@ -121,7 +121,7 @@ export const PortfolioMock: PortfolioCase[] = [
   },
   {
     id: '1',
-    slug: 'Kardi.ru',
+    slug: 'kardi',
     title: 'Kardi.ru',
     description:
       "At Refokus, web design is where creativity meets functionality. We craft visually striking and emotionally engaging websites that capture your brand's essence. Our designs blend beauty with seamless navigation, enhanced by micro-interactions and Lottie animations. Every detail, from concept to pixel, aligns with your vision and business.",

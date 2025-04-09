@@ -88,5 +88,24 @@
     "works": "Our works",
     "details": "More details?",
     "contacts": "Contacts"
+  },
+  "portfolio": {
+    "more_works": "More works",
+    "idvit": {
+      "title": "IDVIT",
+      "description": "At Refokus, web design is where creativity meets functionality. We craft visually striking and emotionally engaging websites that capture your brand's essence. Our designs blend beauty with seamless navigation, enhanced by micro-interactions and Lottie animations. Every detail, from concept to pixel, aligns with your vision and business."
+    },
+    "picasso": {
+      "title": "Picasso",
+      "description": "At Refokus, web design is where creativity meets functionality. We craft visually striking and emotionally engaging websites that capture your brand's essence. Our designs blend beauty with seamless navigation, enhanced by micro-interactions and Lottie animations. Every detail, from concept to pixel, aligns with your vision and business."
+    },
+    "odkb": {
+      "title": "CSTO",
+      "description": "At Refokus, web design is where creativity meets functionality. We craft visually striking and emotionally engaging websites that capture your brand's essence. Our designs blend beauty with seamless navigation, enhanced by micro-interactions and Lottie animations. Every detail, from concept to pixel, aligns with your vision and business."
+    },
+    "kardi": {
+      "title": "Kardi.ru",
+      "description": "At Refokus, web design is where creativity meets functionality. We craft visually striking and emotionally engaging websites that capture your brand's essence. Our designs blend beauty with seamless navigation, enhanced by micro-interactions and Lottie animations. Every detail, from concept to pixel, aligns with your vision and business."
+    }
   }
 }
