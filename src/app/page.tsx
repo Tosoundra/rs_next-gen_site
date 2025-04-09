@@ -15,6 +15,7 @@ import styles from './page.module.scss';
 import Map from '@/src/widgets/map';
 import { useRef } from 'react';
 import { Header } from '../widgets/header';
+import { useLanguage } from '../context/LanguageContext';
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -50,25 +51,27 @@ export default function Home() {
     }
   };
 
+  const { translations } = useLanguage();
+
   return (
     <>
         <Header onContactClick={handleContactClick} />
         <div className={`${styles.wrapper} flex flex-col`}>
           <Hero onExperienceClick={handleExperienceClick} />
           <Experience ref={experienceRef} />
-          <SectionWrapper caption={'Our services'}>
+          <SectionWrapper caption={translations.page.services}>
             <Services />
           </SectionWrapper>
-          <SectionWrapper caption={'Our works'}>
+          <SectionWrapper caption={translations.page.works}>
             <Portfolio />
           </SectionWrapper>
           <SectionWrapper classNames={{ section: styles.partnersSection, wrapper: styles.partners }}>
             <Partners />
           </SectionWrapper>
-          <SectionWrapper caption={'More details?'}>
+          <SectionWrapper caption={translations.page.details}>
             <Details />
           </SectionWrapper>
-          <SectionWrapper caption="Contacts">
+          <SectionWrapper caption={translations.page.contacts}>
             <Contacts ref={contactsRef} />
           </SectionWrapper>
           <Map className={`${styles.map}`} />

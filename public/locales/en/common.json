@@ -19,7 +19,17 @@
     "seo": "SEO"
   },
   "contacts": {
-    "chat": "Let's chat!"
+    "chat": "Let's chat!",
+    "step": "One step closer to the ",
+    "dream": "dream",
+    "together": "together ",
+    "best": "with the best",
+    "fullname": "Full Name",
+    "company": "Company",
+    "email": "Your Email",
+    "message": "Message",
+    "budget": "Your Budget",
+    "send_message": "send message"
   },
   "footer": {
     "politics": "Privacy Policy"
@@ -70,6 +80,13 @@
     "Hosting": {
       "title": "Hosting",
       "description": "A website is the temple of any business, product, or event. This is a source of income, a source of education for a potential visitor and a personal outlet for each holder of an Internet resource. The site's activity should not be destabilized. The site should always be accessible, and our hosting equipment will help you with this flawlessly! DDOS protection, backup backup, domain configuration, mail servers and much more are available at market prices."
-    }
+    },
+    "learn_more": "Learn more"
+  },
+  "page": {
+    "services": "Our services",
+    "works": "Our works",
+    "details": "More details?",
+    "contacts": "Contacts"
   }
 }
