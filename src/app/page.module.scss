@@ -1,29 +1,32 @@
 .wrapper {
-   flex: 1;
+  flex: 1;
 }
 
 .title {
-   margin: auto;
+  margin: auto;
 }
 
 .details {
-   height: 100dvh;
+  height: 100dvh;
 
-   .detailsContent {
-      flex: 1;
-   }
+  .detailsContent {
+    flex: 1;
+  }
 }
 
 .partnersSection {
-   padding-top: unset;
-   padding-bottom: unset;
+  padding-top: unset;
+  padding-bottom: unset;
 
-   .partners {
-      height: 100dvh;
-      justify-content: center;
-   }
+  .partners {
+    height: 100dvh;
+    justify-content: center;
+    @media (max-width: 767px) {
+      height: auto;
+    }
+  }
 }
 
 .map {
-   height: 500px;
+  height: 500px;
 }

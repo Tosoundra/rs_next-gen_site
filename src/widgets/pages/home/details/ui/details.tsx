@@ -44,17 +44,18 @@ const Details = () => {
         className={`${styles.item} ${styles.projects} ${styles.B} background-blue flex flex-col place-items-center justify-center text-white`}
       >
         <div className="caption-100 font-black">80+</div>
-        <div className="caption-38 font-black">{translations.details.completedProjects}</div> {/* Перевод */}
+        <div className="caption-38 font-black">{translations.details.completedProjects}</div>{' '}
+        {/* Перевод */}
       </div>
 
       {/* Блок C - Экспертиза */}
       <div className={`${styles.item} ${styles.skills} ${styles.C} background-black`}>
-        <div className={styles.content}>
-          <h3 className="text-transparent text-center bg-clip-text bg-gradient-to-r from-[#F8F8F8] via-[#E0E0E0] to-[#A1A1A1] caption-38 font-black">
+        <div className={`${styles.content} gap-y-3`}>
+          <h3 className="text-transparent text-center bg-clip-text bg-gradient-to-r from-[#F8F8F8] via-[#E0E0E0] to-[#A1A1A1] caption-38 font-black ">
             {translations.details.expertiseIn} <br />
             {translations.details.building} {/* Перевод */}
           </h3>
-          <ul className="flex flex-col text-white text-16 font-light justify-between h-full">
+          <ul className="flex flex-col text-white text-16 font-light justify-between h-full gap-y-3">
             <li className="text-left">
               <span className="min-w-[142px] text-center border border-white rounded-[5px] py-1 px-3 inline-block">
                 {translations.details.webApps} {/* Перевод */}
@@ -102,7 +103,9 @@ const Details = () => {
               <span className="absolute caption-38 text-outline-1 font-black -top-full left-0">
                 {translations.details.moreThan} {/* Перевод */}
               </span>
-              <span className="caption-38 text-black font-black">{translations.details.moreThan}</span>
+              <span className="caption-38 text-black font-black">
+                {translations.details.moreThan}
+              </span>
               <span className="absolute caption-38 text-outline-1 font-black -bottom-full left-0">
                 {translations.details.moreThan} {/* Перевод */}
               </span>
@@ -128,7 +131,9 @@ const Details = () => {
               <span className="absolute caption-38 text-outline-1 font-black -top-full right-0">
                 {translations.details.partners} {/* Перевод */}
               </span>
-              <span className="caption-38 text-black font-black">{translations.details.partners}</span>
+              <span className="caption-38 text-black font-black">
+                {translations.details.partners}
+              </span>
               <span className="absolute caption-38 text-outline-1 font-black -bottom-full right-0">
                 {translations.details.partners} {/* Перевод */}
               </span>

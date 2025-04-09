@@ -133,9 +133,7 @@ const Experience = ({ ...props }: Props) => {
 
   const active = experienceList[activeIndex];
   const getText = (key: string) => {
-    return key
-      .split('.')
-      .reduce((acc, part) => acc?.[part], translations) ?? key;
+    return key.split('.').reduce((acc, part) => acc?.[part], translations) ?? key;
   };
 
   return (
@@ -148,11 +146,9 @@ const Experience = ({ ...props }: Props) => {
             alt={getText(active.title)}
             loading="lazy"
             src={active.img}
-            className="transition-opacity duration-500 grayscale rounded-[30px]
-             w-[650px] h-[650px]
-             max-w-full max-h-[90vh]
-             sm:w-[500px] sm:h-[500px]
-             xs:w-full xs:h-auto xs:max-w-[320px] xs:mx-auto"
+            className="transition-opacity duration-500 grayscale rounded-[30px] sm:w-[500px] sm:h-auto
+    max-w-full max-h-[90vh]
+    xs:w-full xs:max-w-[320px] xs:mx-auto"
             ref={imageRef}
           />
 

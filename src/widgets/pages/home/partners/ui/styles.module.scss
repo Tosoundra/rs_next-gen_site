@@ -7,7 +7,6 @@
   .marquee {
     --item-width: 300px;
     --item-height: calc(var(--item-width) * 0.5);
-    --image-max-width: calc(var(--item-width) * 0.7);
 
     width: 100%;
 
@@ -21,29 +20,34 @@
       height: var(--item-height);
 
       border: var(--border-black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       .logo {
-        // max-width: var(--image-max-width);
+        max-width: 80%;
+        max-height: 80%;
         width: auto;
         height: auto;
-        // object-fit: contain;
+        object-fit: contain;
       }
     }
 
+    // Адаптивные размеры
     @media (max-width: 1279px) {
       --item-width: 220px;
     }
 
     @media (max-width: 767px) {
-      --item-width: 180px;
+      --item-width: 160px;
     }
 
     @media (max-width: 575px) {
-      --item-width: 140px;
+      --item-width: 120px;
     }
 
-    @media (max-width: 479px) {
-      --item-width: 124px;
+    @media (max-width: 420px) {
+      --item-width: 100px;
     }
   }
 
