@@ -7,6 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import { SpaceBackgroundZ } from '@/src/shared/background';
 import styles from './styles.module.scss';
+import { useLanguage } from '@/src/context/LanguageContext';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -26,6 +27,7 @@ const splitText = (text: string) => {
 type Props = ComponentProps<'section'>;
 
 const Experience = ({ ...props }: Props) => {
+  const { translations } = useLanguage(); // 👈
   const [activeIndex, setActiveIndex] = useState(0);
 
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -127,7 +129,14 @@ const Experience = ({ ...props }: Props) => {
         ease: 'power2.inOut',
       },
     );
-  }, [activeIndex]);
+  }, [activeIndex, translations]);
+
+  const active = experienceList[activeIndex];
+  const getText = (key: string) => {
+    return key
+      .split('.')
+      .reduce((acc, part) => acc?.[part], translations) ?? key;
+  };
 
   return (
     <section ref={containerRef} className="">
@@ -136,9 +145,9 @@ const Experience = ({ ...props }: Props) => {
           <Image
             width={650}
             height={650}
-            alt={experienceList[activeIndex].title}
+            alt={getText(active.title)}
             loading="lazy"
-            src={experienceList[activeIndex].img}
+            src={active.img}
             className="transition-opacity duration-500 grayscale rounded-[30px]
              w-[650px] h-[650px]
              max-w-full max-h-[90vh]
@@ -152,19 +161,19 @@ const Experience = ({ ...props }: Props) => {
               ref={headlineRef}
               className="caption-120 font-black text-white headline text-[48px] sm:text-[64px] md:text-[90px] lg:text-[120px] leading-tight"
             >
-              {splitText(experienceList[activeIndex].title)}
+              {splitText(getText(active.title))}
             </h3>
             <p
               ref={subtitleRef}
               className="caption-38 font-black text-blue mb-4 text-[20px] md:text-[30px] lg:text-[38px]"
             >
-              {experienceList[activeIndex].subtitle}
+              {getText(active.subtitle)}
             </p>
             <p
               ref={descriptionRef}
               className="text-[16px] md:text-[20px] font-normal text-white max-w-2xl mx-auto lg:mx-0"
             >
-              {experienceList[activeIndex].description}
+              {getText(active.description)}
             </p>
           </div>
         </div>
