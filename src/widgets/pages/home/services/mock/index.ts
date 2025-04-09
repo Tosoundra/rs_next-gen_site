@@ -2,8 +2,9 @@ import { Service } from '../types';
 
 export const ServicesMock: Service[] = [
   {
-    title: 'translations.service.development',
-    description:'translations.service.devDescription',
+    title: 'Development',
+    description:
+      'At Ronix Systems, web development is a place where creativity is combined with functionality. We create visually vibrant and emotionally engaging websites that reflect the essence of your brand. In our projects, beauty is combined with smooth navigation, complemented by micro-interactions and futuristic animations. Every detail, from concept to pixel, is fully consistent with your vision and business goals.',
     slug: 'development',
     image: '/img/services/1.gif',
   },
