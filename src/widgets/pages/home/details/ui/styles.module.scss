@@ -19,7 +19,6 @@
 
 .B {
   flex: 1 1 calc(25% - var(--gap-between-items));
-  height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;

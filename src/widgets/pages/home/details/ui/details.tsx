@@ -50,12 +50,12 @@ const Details = () => {
 
       {/* Блок C - Экспертиза */}
       <div className={`${styles.item} ${styles.skills} ${styles.C} background-black`}>
-        <div className={`${styles.content} gap-y-3`}>
+        <div className={`${styles.content} gap-y-10 sm:gap-y-14 md:gap-y-16 lg:gap-y-20`}>
           <h3 className="text-transparent text-center bg-clip-text bg-gradient-to-r from-[#F8F8F8] via-[#E0E0E0] to-[#A1A1A1] caption-38 font-black ">
             {translations.details.expertiseIn} <br />
             {translations.details.building} {/* Перевод */}
           </h3>
-          <ul className="flex flex-col text-white text-16 font-light justify-between h-full gap-y-3">
+          <ul className="flex flex-col text-white text-16 font-light justify-between h-full gap-y-10">
             <li className="text-left">
               <span className="min-w-[142px] text-center border border-white rounded-[5px] py-1 px-3 inline-block">
                 {translations.details.webApps} {/* Перевод */}
