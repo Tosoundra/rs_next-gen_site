@@ -24,16 +24,22 @@
   "footer": {
     "politics": "Privacy Policy"
   },
-  "experienceList": {
-    "27years": "27 YEARS",
-    "webspace": "IN THE WEB-SPACE",
-    "description1": "Many years of experience in developing, supporting and modernizing products for businesses of any scale is not just a part of our business, it is a part of our life! Working for results is our main goal, bringing results is our dogma.",
-    "experience": "EXPERIENCE",
-    "word": "NOT JUST A WORD ",
-    "description2": "Government contracts, large enterprise systems, government organizations and medical companies. Responsibility worthy of the practice of interacting with a large client!",
-    "product": "PRODUCT",
-    "expectations": "BEYOND EXPECTATIONS",
-    "description3": "The product is harmony, a balance of knowledge and the ability to transpose soulless machine code into a living project, under the guidance of the Client's thought! From Dreams to Reality, just one Button"
+  "experience": {
+    "0": {
+      "title": "27 YEARS",
+      "subtitle": "IN THE WEB-SPACE",
+      "description": "Many years of experience in developing, supporting and modernizing products for businesses of any scale is not just a part of our business, it is a part of our life! Working for results is our main goal, bringing results is our dogma."
+    },
+    "1": {
+      "title": "EXPERIENCE",
+      "subtitle": "NOT JUST A WORD ",
+      "description": "Government contracts, large enterprise systems, government organizations and medical companies. Responsibility worthy of the practice of interacting with a large client!"
+    },
+    "2": {
+      "title": "PRODUCT",
+      "subtitle": "BEYOND EXPECTATIONS",
+      "description": "The product is harmony, a balance of knowledge and the ability to transpose soulless machine code into a living project, under the guidance of the Client's thought! From Dreams to Reality, just one Button"
+    }
   },
   "header": {
     "menu": "Menu",
@@ -45,7 +51,8 @@
     "web": "of the web!",
     "ronix": "Ronix Systems",
     "about_us": " – an IT studio with many years of experience in the information technology market. We keep pace with progress and make products that are as reliable as Swiss watches!",
-    "get_started": "Get Started"
+    "get_started": "Get Started",
+    "scroll": "Let’s scroll"
   },
   "services": {
     "development": {
