@@ -1,12 +1,13 @@
 'use client';
-
-import React, { ComponentProps, useRef } from 'react';
+import * as THREE from 'three';
+import React, { ComponentProps, useEffect, useRef } from 'react';
 import styles from './styles.module.scss';
 import worldImage from '/public/img/details/world-image.png';
 
 import { yearsExperienceList } from '../constants/yearsExperienceList';
 import Image from 'next/image';
 import { useLanguage } from '@/src/context/LanguageContext';
+import { vertexShader, fragmentShader } from '../constants/threeJSConfiguration';
 
 type Props = ComponentProps<'div'>;
 
