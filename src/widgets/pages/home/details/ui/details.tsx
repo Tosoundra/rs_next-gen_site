@@ -13,6 +13,74 @@ type Props = ComponentProps<'div'>;
 const Details = ({ ...props }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { translations } = useLanguage();
+
+  useEffect(() => {
+    if (containerRef.current) {
+      const container = containerRef.current;
+
+      const camera = new THREE.Camera();
+      camera.position.z = 1;
+
+      const scene = new THREE.Scene();
+      const geometry = new THREE.PlaneGeometry(2, 2);
+
+      const uniforms = {
+        time: { type: 'f', value: 1.0 },
+        resolution: { type: 'v2', value: new THREE.Vector2() },
+        scale: { type: 'f', value: 1 },
+        center: {
+          type: 'v2',
+          value: new THREE.Vector2(window.innerWidth, window.innerHeight / 2),
+        },
+      };
+
+      const material = new THREE.ShaderMaterial({
+        uniforms,
+        vertexShader,
+        fragmentShader,
+      });
+
+      const mesh = new THREE.Mesh(geometry, material);
+      scene.add(mesh);
+
+      const renderer = new THREE.WebGLRenderer();
+      renderer.setPixelRatio(window.devicePixelRatio);
+
+      const containerWidth = container.clientWidth;
+      const containerHeight = container.clientHeight;
+      renderer.setSize(containerWidth, containerHeight);
+
+      container.appendChild(renderer.domElement);
+
+      uniforms.resolution.value.x = containerWidth;
+      uniforms.resolution.value.y = containerHeight;
+
+      const onWindowResize = () => {
+        const newWidth = container.clientWidth;
+        const newHeight = container.clientHeight;
+        renderer.setSize(newWidth, newHeight);
+        uniforms.resolution.value.x = newWidth;
+        uniforms.resolution.value.y = newHeight;
+      };
+
+      window.addEventListener('resize', onWindowResize);
+
+      const animate = () => {
+        requestAnimationFrame(animate);
+        uniforms.time.value += 0.05;
+        renderer.render(scene, camera);
+      };
+
+      animate();
+
+      return () => {
+        renderer.dispose();
+        window.removeEventListener('resize', onWindowResize);
+        container.removeChild(renderer.domElement);
+      };
+    }
+  }, []);
+
   return (
     <div {...props} className={`${styles.wrapper} content-wrapper`}>
       {/* Блок A - 27 лет опыта */}
