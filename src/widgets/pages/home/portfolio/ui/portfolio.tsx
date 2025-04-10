@@ -1,10 +1,12 @@
-import { Fragment } from 'react';
+import { ComponentProps, Fragment } from 'react';
 import { CardPortfolio, CardPortfolioContainer } from '@/src/shared/card';
 import { LinkLines } from '@/src/shared/action';
 import { useLanguage } from '@/src/context/LanguageContext';
 import styles from './styles.module.scss';
 
-const Portfolio = () => {
+type Props = ComponentProps<'div'>;
+
+const Portfolio = ({ ...props }: Props) => {
   const { translations } = useLanguage();
 
   const portfolioData = [
@@ -69,7 +71,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className={`content-wrapper flex flex-col ${styles.list}`}>
+    <div {...props} className={`content-wrapper flex flex-col ${styles.list}`}>
       {portfolioData.map((portfolioCase) => (
         <Fragment key={portfolioCase.id}>
           <CardPortfolioContainer index={+portfolioCase.id}>

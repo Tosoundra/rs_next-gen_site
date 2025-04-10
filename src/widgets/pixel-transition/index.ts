@@ -1,0 +1,1 @@
+export { default as CenteredPixelTransition } from './ui/pixelTranistion';

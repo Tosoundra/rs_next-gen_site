@@ -1,18 +1,20 @@
 'use client';
-import * as THREE from 'three';
-import React, { useEffect, useRef, useState } from 'react';
+
+import React, { ComponentProps, useRef } from 'react';
 import styles from './styles.module.scss';
 import worldImage from '/public/img/details/world-image.png';
-import { fragmentShader, vertexShader } from '../constants/threeJSConfiguration';
+
 import { yearsExperienceList } from '../constants/yearsExperienceList';
 import Image from 'next/image';
 import { useLanguage } from '@/src/context/LanguageContext';
 
-const Details = () => {
+type Props = ComponentProps<'div'>;
+
+const Details = ({ ...props }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { translations } = useLanguage();
   return (
-    <div className={`${styles.wrapper} content-wrapper`}>
+    <div {...props} className={`${styles.wrapper} content-wrapper`}>
       {/* Блок A - 27 лет опыта */}
       <div className={`${styles.item} ${styles.years} ${styles.A} background-black`}>
         <div

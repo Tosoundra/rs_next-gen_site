@@ -13,27 +13,52 @@ import gsap from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import styles from './page.module.scss';
 import Map from '@/src/widgets/map';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Header } from '../widgets/header';
 import { useLanguage } from '../context/LanguageContext';
+import { Dimensions } from '../widgets/pixel-transition/types/types';
+import { CenteredPixelTransition } from '../widgets/pixel-transition';
+import Menu from '../widgets/side-menu/ui/side-menu';
 
 gsap.registerPlugin(ScrollToPlugin);
 
 export default function Home() {
   const contactsRef = useRef(null);
   const experienceRef = useRef<HTMLDivElement | null>(null);
+  const serviceRef = useRef<HTMLDivElement | null>(null);
+  const portfolioRef = useRef<HTMLDivElement | null>(null);
+  const moreDetailsRef = useRef<HTMLDivElement | null>(null);
+  const partnersRef = useRef<HTMLDivElement | null>(null);
+
+  const [menuIsActive, setMenuIsActive] = useState(false);
+  const [dimensions, setDimensions] = useState<Dimensions>({ width: 0, height: 0 });
+
+  const updateDimensions = () => {
+    const { innerWidth, innerHeight } = window;
+
+    setDimensions({ width: innerWidth, height: innerHeight });
+  };
+
+  useEffect(() => {
+    updateDimensions();
+
+    window.addEventListener('resize', updateDimensions);
+
+    return () => window.removeEventListener('resize', updateDimensions);
+  }, []);
 
   const handleContactClick = () => {
     if (contactsRef.current) {
       gsap.to(window, {
         duration: 0,
-        ease: 'power4.inOut', // Более плавная функция easing
+        ease: 'power4.inOut',
         scrollTo: {
           y: contactsRef.current,
           offsetY: 0,
-          autoKill: false, // Позволяет анимации завершиться, даже если пользователь пытается скроллить
+          autoKill: false,
         },
       });
+      setMenuIsActive(false);
     }
   };
 
@@ -41,13 +66,70 @@ export default function Home() {
     if (contactsRef.current) {
       gsap.to(window, {
         duration: 0,
-        ease: 'power4.inOut', // Более плавная функция easing
+        ease: 'power4.inOut',
         scrollTo: {
           y: experienceRef.current!,
           offsetY: 0,
-          autoKill: false, // Позволяет анимации завершиться, даже если пользователь пытается скроллить
+          autoKill: false,
         },
       });
+      setMenuIsActive(false);
+    }
+  };
+  const handleServiceClick = () => {
+    if (serviceRef.current) {
+      gsap.to(window, {
+        duration: 0,
+        ease: 'power4.inOut',
+        scrollTo: {
+          y: serviceRef.current!,
+          offsetY: 0,
+          autoKill: false,
+        },
+      });
+      setMenuIsActive(false);
+    }
+  };
+  const handlePortfolioClick = () => {
+    if (portfolioRef.current) {
+      gsap.to(window, {
+        duration: 0,
+        ease: 'power4.inOut',
+        scrollTo: {
+          y: portfolioRef.current!,
+          offsetY: 0,
+          autoKill: false,
+        },
+      });
+      setMenuIsActive(false);
+    }
+  };
+  const handlePartnersClick = () => {
+    if (partnersRef.current) {
+      gsap.to(window, {
+        duration: 0,
+        ease: 'power4.inOut',
+        scrollTo: {
+          y: partnersRef.current!,
+          offsetY: 0,
+          autoKill: false,
+        },
+      });
+      setMenuIsActive(false);
+    }
+  };
+  const handleMoreDetailsClick = () => {
+    if (moreDetailsRef.current) {
+      gsap.to(window, {
+        duration: 0,
+        ease: 'power4.inOut',
+        scrollTo: {
+          y: moreDetailsRef.current!,
+          offsetY: 0,
+          autoKill: false,
+        },
+      });
+      setMenuIsActive(false);
     }
   };
 
@@ -55,27 +137,43 @@ export default function Home() {
 
   return (
     <>
-        <Header onContactClick={handleContactClick} />
-        <div className={`${styles.wrapper} flex flex-col`}>
-          <Hero onExperienceClick={handleExperienceClick} />
-          <Experience ref={experienceRef} />
-          <SectionWrapper caption={translations.page.services}>
-            <Services />
-          </SectionWrapper>
-          <SectionWrapper caption={translations.page.works}>
-            <Portfolio />
-          </SectionWrapper>
-          <SectionWrapper classNames={{ section: styles.partnersSection, wrapper: styles.partners }}>
-            <Partners />
-          </SectionWrapper>
-          <SectionWrapper caption={translations.page.details}>
-            <Details />
-          </SectionWrapper>
-          <SectionWrapper caption={translations.page.contacts}>
-            <Contacts ref={contactsRef} />
-          </SectionWrapper>
-          <Map className={`${styles.map}`} />
-        </div>
+      <Menu
+        menuIsActive={menuIsActive}
+        handleContactClick={handleContactClick}
+        handleExperienceClick={handleExperienceClick}
+        handleMoreDetailsClick={handleMoreDetailsClick}
+        handlePartnersClick={handlePartnersClick}
+        handlePortfolioClick={handlePortfolioClick}
+        handleServiceClick={handleServiceClick}
+      />
+      {dimensions.height > 0 && (
+        <CenteredPixelTransition menuIsActive={menuIsActive} dimensions={dimensions} />
+      )}
+      <Header
+        onContactClick={handleContactClick}
+        menuIsActive={menuIsActive}
+        setMenuIsActive={setMenuIsActive}
+      />
+      <div className={`${styles.wrapper} flex flex-col`}>
+        <Hero onExperienceClick={handleExperienceClick} />
+        <Experience ref={experienceRef} />
+        <SectionWrapper caption={translations.page.services}>
+          <Services ref={serviceRef} />
+        </SectionWrapper>
+        <SectionWrapper caption={translations.page.works}>
+          <Portfolio ref={portfolioRef} />
+        </SectionWrapper>
+        <SectionWrapper classNames={{ section: styles.partnersSection, wrapper: styles.partners }}>
+          <Partners ref={partnersRef} />
+        </SectionWrapper>
+        <SectionWrapper caption={translations.page.details}>
+          <Details ref={moreDetailsRef} />
+        </SectionWrapper>
+        <SectionWrapper caption={translations.page.contacts}>
+          <Contacts ref={contactsRef} />
+        </SectionWrapper>
+        <Map className={`${styles.map}`} />
+      </div>
     </>
   );
 }

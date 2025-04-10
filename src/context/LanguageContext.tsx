@@ -1,9 +1,9 @@
 'use client'
+import { Translations } from '@/public/locales/locale';
 import React, {
   createContext,
   useState,
   useContext,
-  useEffect,
   ReactNode,
 } from 'react';
 
@@ -12,7 +12,7 @@ type Language = 'ru' | 'en';
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  translations: any;
+  translations: Translations;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -20,7 +20,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 interface ProviderProps {
   children: ReactNode;
   initialLanguage: Language;
-  initialTranslations: any;
+  initialTranslations: Translations;
 }
 
 export const LanguageProvider = ({
@@ -29,7 +29,7 @@ export const LanguageProvider = ({
   initialTranslations,
 }: ProviderProps) => {
   const [language, setLanguageState] = useState<Language>(initialLanguage);
-  const [translations, setTranslations] = useState<any>(initialTranslations);
+  const [translations, setTranslations] = useState<Translations>(initialTranslations);
 
   const setLanguage = (newLang: Language) => {
     if (newLang === language) return;

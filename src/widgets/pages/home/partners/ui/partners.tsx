@@ -5,10 +5,13 @@ import { LineAnimation } from '@/src/shared/line';
 
 import { PartnerMock } from '../mock';
 import styles from './styles.module.scss';
+import { ComponentProps } from 'react';
 
-const Partners = () => {
+type Props = ComponentProps<'div'>;
+
+const Partners = ({ ...props }: Props) => {
   return (
-    <div className={`${styles.wrapper} flex flex-col`}>
+    <div {...props} className={`${styles.wrapper} flex flex-col`}>
       <LineAnimation widthPercent={50} direction={'left'} />
       <Marquee
         play={true}

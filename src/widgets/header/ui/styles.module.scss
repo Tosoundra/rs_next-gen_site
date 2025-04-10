@@ -2,7 +2,7 @@
   --padding-vertical: 75px;
   position: fixed;
   z-index: 1000;
-  padding: var(--padding-vertical) 0;
+  padding-top: var(--padding-vertical); /* исправлено здесь */
   width: 100%;
   transition: transform 1s ease-in-out;
   mix-blend-mode: difference;
@@ -18,7 +18,46 @@
   @media (max-width: 767px) {
     --padding-vertical: calc(var(--wrapper-horizontal-padding) * 2);
   }
+
+  .burger {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      display: block;
+      content: '';
+      width: 30px;
+      height: 2px;
+      background-color: rgb(255, 255, 255);
+      position: relative;
+      transition: transform 0.3s;
+    }
+
+    &::after {
+      top: -5px;
+    }
+
+    &::before {
+      top: 5px;
+    }
+  }
+
+  .burgerActive {
+    &::after {
+      transform: rotate(45deg);
+      top: -1px;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+      top: 0px;
+    }
+  }
 }
+
 
 .header.hidden {
   transform: translateY(-100%);

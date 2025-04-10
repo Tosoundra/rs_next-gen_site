@@ -1,12 +1,14 @@
-import { Fragment } from 'react';
+import { ComponentProps, Fragment } from 'react';
 import { ServicesMock } from '../mock';
 import ServiceCard from './card/';
 import styles from './services.module.scss';
 import { LineAnimation } from '@/src/shared/line';
 
-const Services = () => {
+type Props = ComponentProps<'div'>;
+
+const Services = ({ ...props }: Props) => {
   return (
-    <div className={`${styles.list} content-wrapper flex flex-col`}>
+    <div {...props} className={`${styles.list} content-wrapper flex flex-col`}>
       {ServicesMock?.length &&
         ServicesMock.map((service, index) => (
           <Fragment key={`${index}${service.slug}`}>
