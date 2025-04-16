@@ -34,6 +34,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   const translationsPath = path.join(process.cwd(), 'public', 'locales', defaultLang, 'common.json');
   const translations = JSON.parse(fs.readFileSync(translationsPath, 'utf-8'));
 
+  
   return (
     <html lang={defaultLang}>
       <body>
