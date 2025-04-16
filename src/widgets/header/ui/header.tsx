@@ -20,9 +20,6 @@ const Header = ({ onContactClick, menuIsActive, setMenuIsActive }: Props) => {
   let timeoutId: number | null = null;
 
   const handleMenuClick = () => {
-    if (!menuIsActive) {
-      setIsVisible(false);
-    }
     setMenuIsActive(!menuIsActive);
   };
 
@@ -63,9 +60,9 @@ const Header = ({ onContactClick, menuIsActive, setMenuIsActive }: Props) => {
           src={logo}
           alt="logo"
           height={44}
-          className="h-[44px] w-[44px] sm:h-[36px] sm:w-[36px]"
+          className={`h-[44px] w-[44px] sm:h-[36px] sm:w-[36px] ${menuIsActive ? 'invisible' : ''}`}
         />
-        <div className={`${styles.side} flex justify-end`}>
+        <div className={`${menuIsActive ? 'invisible' : 'flex'} ${styles.side}  justify-end `}>
           <ButtonRounded
             type="button"
             title={translations.header.contact}

@@ -20,4 +20,3 @@ export const experienceList: Experience[] = [
     description: 'experience.2.description',
   },
 ];
-

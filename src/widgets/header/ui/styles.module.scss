@@ -1,8 +1,8 @@
 .header {
   --padding-vertical: 75px;
   position: fixed;
-  z-index: 1000;
-  padding-top: var(--padding-vertical); /* исправлено здесь */
+  z-index: 9999;
+  padding-top: var(--padding-vertical);
   width: 100%;
   transition: transform 1s ease-in-out;
   mix-blend-mode: difference;
@@ -58,7 +58,6 @@
   }
 }
 
-
 .header.hidden {
   transform: translateY(-100%);
 }
@@ -83,8 +82,6 @@
     &:last-child {
       justify-content: flex-end;
     }
-
-    display: flex;
 
     @media (max-width: 479px) {
       flex: none;
