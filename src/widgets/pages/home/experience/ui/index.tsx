@@ -119,18 +119,17 @@ const Experience = ({ ...props }: Props) => {
           .experience-title,
           .experience-subtitle,
           .experience-description {
-            left: 50%;
-            transform: translateX(-50%);
+            left: 0% !important;
           }
 
           .experience-title {
-            top: calc(50% - 30px);
+            top: calc(50%) !important;
           }
           .experience-subtitle {
-            top: calc(50%);
+            top: calc(53%) !important;
           }
           .experience-description {
-            top: calc(50% + 30px);
+            top: calc(50%) !important;
 
             max-width: 90%;
           }
