@@ -8,6 +8,9 @@ import Image from 'next/image';
 import { SpaceBackgroundZ } from '@/src/shared/background';
 import styles from './styles.module.scss';
 import { useLanguage } from '@/src/context/LanguageContext';
+import { animate, scroll } from 'motion';
+import { useTranslation } from '@/src/lib/i18n';
+import { Translations } from '@/public/locales/locale';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,155 +30,153 @@ const splitText = (text: string) => {
 type Props = ComponentProps<'section'>;
 
 const Experience = ({ ...props }: Props) => {
-  const { translations } = useLanguage(); // 👈
-  const [activeIndex, setActiveIndex] = useState(0);
+  const { translations } = useLanguage();
+  const containerRef = useRef<HTMLDivElement>(null);
+  // const progressRef = useRef<HTMLDivElement | null>(null);
 
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const imageRef = useRef<HTMLImageElement | null>(null);
-  const textRef = useRef<HTMLDivElement | null>(null);
-  const headlineRef = useRef<HTMLDivElement | null>(null);
-  const subtitleRef = useRef<HTMLParagraphElement | null>(null);
-  const descriptionRef = useRef<HTMLParagraphElement | null>(null);
+  const getText = (key: string): string => {
+    return key.split('.').reduce((acc, part) => acc?.[part], translations) ?? key;
+  };
 
   useEffect(() => {
     if (!containerRef.current) return;
 
-    const sections = experienceList.length;
+    // // Анимация прогресс-бара: увеличение scaleX от 0 до 1 при прокрутке контейнера
+    // gsap.to(progressRef.current, {
+    //   scaleX: 1,
+    //   ease: 'linear',
+    //   scrollTrigger: {
+    //     trigger: containerRef.current,
+    //     start: 'top top',
+    //     end: 'bottom bottom',
+    //     scrub: true,
+    //   },
+    // });
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: 'top top',
-        end: `+=${sections * 100}%`,
-        scrub: 1,
-        pin: true,
-        pinSpacing: true,
-        onUpdate: (self) => {
-          const newIndex = Math.round(self.progress * (sections - 1));
-          setActiveIndex(newIndex);
-        },
-      },
-    });
-
-    return () => {
-      tl.scrollTrigger?.kill();
-      tl.kill();
-    };
+    if (containerRef.current) {
+      const sections = containerRef.current.querySelectorAll('.img-container');
+      sections.forEach((section) => {
+        const header = section.querySelectorAll('span');
+        if (header) {
+          header.forEach((item) => {
+            scroll(animate(item, { y: [-400, 400] }, { ease: 'linear' }), {
+              target: item,
+            });
+          });
+        }
+      });
+    }
   }, []);
 
-  useEffect(() => {
-    if (!headlineRef.current || !subtitleRef.current || !descriptionRef.current) return;
-
-    const chars = headlineRef.current.querySelectorAll('.char');
-    const words = headlineRef.current.querySelectorAll('.word-wrapper');
-
-    gsap.set([headlineRef.current, subtitleRef.current, descriptionRef.current], { opacity: 0 });
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: headlineRef.current,
-        start: 'top 70%',
-        toggleActions: 'play none none none',
-      },
-    });
-
-    tl.to(headlineRef.current, { opacity: 1, duration: 0.15 })
-      .from(chars, {
-        duration: 0.3,
-        opacity: 0,
-        y: 15,
-        ease: 'power3.inOut',
-        stagger: { from: 'center', each: 0.07 },
-      })
-      .from(
-        words,
-        {
-          duration: 0.8,
-          y: (i) => i * 30 - 15,
-          ease: 'expo.out',
-          stagger: 0.03,
-        },
-        '-=0.2',
-      );
-
-    tl.to(
-      subtitleRef.current,
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.4,
-        ease: 'power3.out',
-      },
-      '-=0.15',
-    );
-
-    tl.to(
-      descriptionRef.current,
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.4,
-        ease: 'power3.out',
-      },
-      '-=0.15',
-    );
-
-    gsap.fromTo(
-      imageRef.current,
-      { opacity: 0 },
-      {
-        opacity: 1,
-        duration: 0.3,
-        ease: 'power2.inOut',
-      },
-    );
-  }, [activeIndex, translations]);
-
-  const active = experienceList[activeIndex];
-  const getText = (key: string) => {
-    return key.split('.').reduce((acc, part) => acc?.[part], translations) ?? key;
-  };
-
   return (
-    <section ref={containerRef} className="">
-      <div className="min-h-screen flex justify-center items-center px-4 py-10">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10 w-full max-w-[1920px]">
+    <div {...props} ref={containerRef} className={styles.container}>
+      <SpaceBackgroundZ className={`${styles.background}`} />
+      {experienceList.map((experience, index) => (
+        <section key={index} className="img-container">
           <Image
             width={650}
             height={650}
-            alt={getText(active.title)}
+            alt={getText(experience.title)}
             loading="lazy"
-            src={active.img}
-            className="transition-opacity duration-500 grayscale rounded-[30px] sm:w-[500px] sm:h-auto
-    max-w-full max-h-[90vh]
-    xs:w-full xs:max-w-[320px] xs:mx-auto"
-            ref={imageRef}
+            src={experience.img}
+            className="transition-opacity duration-500 grayscale rounded-[30px] sm:w-[500px] sm:h-auto max-w-full max-h-[90vh] xs:w-full xs:max-w-[320px] xs:mx-auto"
           />
+          <span className="caption-60 font-black text-white">{getText(experience.title)}</span>
+          <span className="caption-38 font-black text-blue experience-subtitle">
+            {getText(experience.subtitle)}
+          </span>
+          <span className="text-[16px] md:text-[20px] font-normal text-white max-w-2xl mx-auto lg:mx-0 experience-description">
+            {getText(experience.description)}
+          </span>
+        </section>
+      ))}
 
-          <div className="text-center lg:text-left" ref={textRef}>
-            <h3
-              ref={headlineRef}
-              className="caption-120 font-black text-white headline text-[48px] sm:text-[64px] md:text-[90px] lg:text-[120px] leading-tight"
-            >
-              {splitText(getText(active.title))}
-            </h3>
-            <p
-              ref={subtitleRef}
-              className="caption-38 font-black text-blue mb-4 text-[20px] md:text-[30px] lg:text-[38px]"
-            >
-              {getText(active.subtitle)}
-            </p>
-            <p
-              ref={descriptionRef}
-              className="text-[16px] md:text-[20px] font-normal text-white max-w-2xl mx-auto lg:mx-0"
-            >
-              {getText(active.description)}
-            </p>
-          </div>
-        </div>
-      </div>
-      <SpaceBackgroundZ className={`${styles.background}`} />
-    </section>
+      <style jsx>{`
+        html {
+          scroll-snap-type: y mandatory;
+        }
+
+        .img-container {
+          height: 100vh;
+          scroll-snap-align: start;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+        }
+
+        .img-container > div {
+          width: 300px;
+          height: 400px;
+          margin: 20px;
+          background: #f5f5f5;
+          overflow: hidden;
+          position: relative;
+        }
+
+        .img-container img {
+          width: 300px;
+          height: 400px;
+          object-fit: cover;
+        }
+
+        .img-container span {
+          margin: 0;
+          /* font-size: 50px;
+          font-weight: 700;
+          letter-spacing: -3px;
+          line-height: 1.2; */
+          position: absolute;
+          top: calc(50% - 25px);
+          left: calc(50% + 120px);
+        }
+
+        .img-container .experience-subtitle {
+          top: calc(52%);
+        }
+        .img-container .experience-description {
+          top: calc(54%);
+        }
+
+        .progress {
+          position: fixed;
+          left: 0;
+          right: 0;
+          height: 5px;
+          background: var(--accent, #ff5722);
+          bottom: 50px;
+          transform: scaleX(0);
+          transform-origin: left;
+        }
+        @media (max-width: 640px) {
+          /* Если нужно уменьшить изображение, можно обнулить или пересмотреть размеры через Tailwind, а тут задать дополнительно max-width */
+          .img-container :global(img) {
+            width: 320px !important;
+            height: auto !important;
+          }
+          .experience-title,
+          .experience-subtitle,
+          .experience-description {
+            left: 50%;
+            transform: translateX(-50%);
+          }
+          /* Уменьшаем отступы между текстовыми блоками */
+          .experience-title {
+            top: calc(50% - 30px);
+            font-size: 32px;
+          }
+          .experience-subtitle {
+            top: calc(50%);
+            font-size: 24px;
+          }
+          .experience-description {
+            top: calc(50% + 30px);
+            font-size: 16px;
+            max-width: 90%;
+          }
+        }
+      `}</style>
+    </div>
   );
 };
 

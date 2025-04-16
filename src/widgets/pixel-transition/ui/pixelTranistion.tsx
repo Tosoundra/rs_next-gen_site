@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './styles.module.scss';
 import { Dimensions } from '../types/types';
-import { useLanguage } from '@/src/context/LanguageContext';
 
 type Props = {
   menuIsActive: boolean;

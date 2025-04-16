@@ -107,5 +107,13 @@
       "title": "Kardi.ru",
       "description": "At Refokus, web design is where creativity meets functionality. We craft visually striking and emotionally engaging websites that capture your brand's essence. Our designs blend beauty with seamless navigation, enhanced by micro-interactions and Lottie animations. Every detail, from concept to pixel, aligns with your vision and business."
     }
+  },
+   "menuNavigation": {
+    "about": "About us",
+    "service": "Services",
+    "portfolio": "Portfolio",
+    "clients": "Clients",
+    "moreDetails": "More details",
+    "contacts": "Contacts"
   }
 }

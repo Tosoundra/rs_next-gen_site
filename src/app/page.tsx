@@ -20,6 +20,8 @@ import { Dimensions } from '../widgets/pixel-transition/types/types';
 import { CenteredPixelTransition } from '../widgets/pixel-transition';
 import Menu from '../widgets/side-menu/ui/side-menu';
 
+import { useMediaQuery } from '@uidotdev/usehooks';
+
 gsap.registerPlugin(ScrollToPlugin);
 
 export default function Home() {
@@ -32,6 +34,10 @@ export default function Home() {
 
   const [menuIsActive, setMenuIsActive] = useState(false);
   const [dimensions, setDimensions] = useState<Dimensions>({ width: 0, height: 0 });
+
+  const isLargeDevice = useMediaQuery(
+    'only screen and (min-width : 993px)',
+  );
 
   const updateDimensions = () => {
     const { innerWidth, innerHeight } = window;
@@ -137,16 +143,18 @@ export default function Home() {
 
   return (
     <>
-      <Menu
-        menuIsActive={menuIsActive}
-        handleContactClick={handleContactClick}
-        handleExperienceClick={handleExperienceClick}
-        handleMoreDetailsClick={handleMoreDetailsClick}
-        handlePartnersClick={handlePartnersClick}
-        handlePortfolioClick={handlePortfolioClick}
-        handleServiceClick={handleServiceClick}
-      />
-      {dimensions.height > 0 && (
+      {menuIsActive && (
+        <Menu
+          menuIsActive={menuIsActive}
+          handleContactClick={handleContactClick}
+          handleExperienceClick={handleExperienceClick}
+          handleMoreDetailsClick={handleMoreDetailsClick}
+          handlePartnersClick={handlePartnersClick}
+          handlePortfolioClick={handlePortfolioClick}
+          handleServiceClick={handleServiceClick}
+        />
+      )}
+      {dimensions && (
         <CenteredPixelTransition menuIsActive={menuIsActive} dimensions={dimensions} />
       )}
       <Header
@@ -166,9 +174,11 @@ export default function Home() {
         <SectionWrapper classNames={{ section: styles.partnersSection, wrapper: styles.partners }}>
           <Partners ref={partnersRef} />
         </SectionWrapper>
-        <SectionWrapper caption={translations.page.details}>
-          <Details ref={moreDetailsRef} />
-        </SectionWrapper>
+        {isLargeDevice && (
+          <SectionWrapper caption={translations.page.details}>
+            <Details ref={moreDetailsRef} />
+          </SectionWrapper>
+        )}
         <SectionWrapper caption={translations.page.contacts}>
           <Contacts ref={contactsRef} />
         </SectionWrapper>
