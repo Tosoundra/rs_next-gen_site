@@ -34,14 +34,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   const translationsPath = path.join(process.cwd(), 'public', 'locales', defaultLang, 'common.json');
   const translations = JSON.parse(fs.readFileSync(translationsPath, 'utf-8'));
 
-  
+
   return (
     <html lang={defaultLang}>
       <body>
         <LanguageProvider initialLanguage={defaultLang} initialTranslations={translations}>
           <ReactLenis root options={{ duration: 2, smoothWheel: true }}>
-            <main>{children}</main>
-            <Footer />
+            {children}
           </ReactLenis>
         </LanguageProvider>
       </body>

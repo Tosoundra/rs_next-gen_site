@@ -1,6 +1,6 @@
 'use client';
 
-import React, { ComponentProps, useEffect, useRef, useState } from 'react';
+import React, { ComponentProps, useEffect } from 'react';
 import { experienceList } from '../mock';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -9,8 +9,6 @@ import { SpaceBackgroundZ } from '@/src/shared/background';
 import styles from './styles.module.scss';
 import { useLanguage } from '@/src/context/LanguageContext';
 import { animate, scroll } from 'motion';
-import { useTranslation } from '@/src/lib/i18n';
-import { Translations } from '@/public/locales/locale';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,8 +16,7 @@ type Props = ComponentProps<'section'>;
 
 const Experience = ({ ...props }: Props) => {
   const { translations } = useLanguage();
-  const containerRef = useRef<HTMLDivElement>(null);
-  // const progressRef = useRef<HTMLDivElement | null>(null);
+  const containerRef = props.ref as React.RefObject<HTMLDivElement>;
 
   const getText = (key: string): string => {
     return key.split('.').reduce((acc, part) => acc?.[part], translations) ?? key;
@@ -27,18 +24,6 @@ const Experience = ({ ...props }: Props) => {
 
   useEffect(() => {
     if (!containerRef.current) return;
-
-    // // Анимация прогресс-бара: увеличение scaleX от 0 до 1 при прокрутке контейнера
-    // gsap.to(progressRef.current, {
-    //   scaleX: 1,
-    //   ease: 'linear',
-    //   scrollTrigger: {
-    //     trigger: containerRef.current,
-    //     start: 'top top',
-    //     end: 'bottom bottom',
-    //     scrub: true,
-    //   },
-    // });
 
     if (containerRef.current) {
       const sections = containerRef.current.querySelectorAll('.img-container');

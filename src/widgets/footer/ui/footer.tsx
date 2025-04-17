@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import Link from 'next/link';
 import { SpaceBackgroundZ } from '@/src/shared/background';
 import styles from './styles.module.scss';
@@ -24,7 +24,7 @@ const Footer = () => {
             info@ronix.ru
           </Link>
         </div>
-        <div className={`${styles.links} content-wrapper flex items-center`}>
+        <div className={`${styles.links} content-wrapper flex flex-col items-center md:flex-row`}>
           <div className={`${styles.side} flex justify-start`}>
             <Link href="/politics" className={`text-bold text-18nn text-white`}>
               {translations.footer.politics}

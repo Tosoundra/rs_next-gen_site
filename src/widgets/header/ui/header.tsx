@@ -15,7 +15,7 @@ type Props = {
 
 const Header = ({ onContactClick, menuIsActive, setMenuIsActive }: Props) => {
   const { translations } = useLanguage();
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   let timeoutId: number | null = null;
 

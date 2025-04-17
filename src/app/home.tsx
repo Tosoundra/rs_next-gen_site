@@ -21,6 +21,7 @@ import { CenteredPixelTransition } from '../widgets/pixel-transition';
 import Menu from '../widgets/side-menu/ui/side-menu';
 
 import { useMediaQuery } from '@uidotdev/usehooks';
+import { Footer } from '../widgets/footer';
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -35,9 +36,7 @@ export default function Home() {
   const [menuIsActive, setMenuIsActive] = useState(false);
   const [dimensions, setDimensions] = useState<Dimensions>({ width: 0, height: 0 });
 
-  const isLargeDevice = useMediaQuery(
-    'only screen and (min-width : 993px)',
-  );
+  const isLargeDevice = useMediaQuery('only screen and (min-width : 993px)');
 
   const updateDimensions = () => {
     const { innerWidth, innerHeight } = window;
@@ -69,7 +68,9 @@ export default function Home() {
   };
 
   const handleExperienceClick = () => {
-    if (contactsRef.current) {
+    console.log(123);
+
+    if (experienceRef.current) {
       gsap.to(window, {
         duration: 0,
         ease: 'power4.inOut',
@@ -162,28 +163,33 @@ export default function Home() {
         menuIsActive={menuIsActive}
         setMenuIsActive={setMenuIsActive}
       />
-      <div className={`${styles.wrapper} flex flex-col`}>
-        <Hero onExperienceClick={handleExperienceClick} />
-        <Experience ref={experienceRef} />
-        <SectionWrapper caption={translations.page.services}>
-          <Services ref={serviceRef} />
-        </SectionWrapper>
-        <SectionWrapper caption={translations.page.works}>
-          <Portfolio ref={portfolioRef} />
-        </SectionWrapper>
-        <SectionWrapper classNames={{ section: styles.partnersSection, wrapper: styles.partners }}>
-          <Partners ref={partnersRef} />
-        </SectionWrapper>
-        {isLargeDevice && (
-          <SectionWrapper caption={translations.page.details}>
-            <Details ref={moreDetailsRef} />
+      <main>
+        <div className={`${styles.wrapper} flex flex-col`}>
+          <Hero onExperienceClick={handleExperienceClick} />
+          <Experience ref={experienceRef} />
+          <SectionWrapper caption={translations.page.services}>
+            <Services ref={serviceRef} />
           </SectionWrapper>
-        )}
-        <SectionWrapper caption={translations.page.contacts}>
-          <Contacts ref={contactsRef} />
-        </SectionWrapper>
-        <Map className={`${styles.map}`} />
-      </div>
+          <SectionWrapper caption={translations.page.works}>
+            <Portfolio ref={portfolioRef} />
+          </SectionWrapper>
+          <SectionWrapper
+            classNames={{ section: styles.partnersSection, wrapper: styles.partners }}
+          >
+            <Partners ref={partnersRef} />
+          </SectionWrapper>
+          {isLargeDevice && (
+            <SectionWrapper caption={translations.page.details}>
+              <Details ref={moreDetailsRef} />
+            </SectionWrapper>
+          )}
+          <SectionWrapper caption={translations.page.contacts}>
+            <Contacts ref={contactsRef} />
+          </SectionWrapper>
+          <Map className={`${styles.map}`} />
+        </div>
+      </main>
+      <Footer />
     </>
   );
 }

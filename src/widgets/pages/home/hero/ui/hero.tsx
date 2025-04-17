@@ -50,7 +50,7 @@ const Hero = ({ onExperienceClick }: Props) => {
             <span className="text-blue">{translations.hero.ronix}</span>
             {translations.hero.about_us}
           </h2>
-          <button onClick={onExperienceClick} className="text-16 sm:text-18 mt-4 font-light">
+          <button onClick={onExperienceClick} className="text-16 sm:text-18 mt-4 font-light w-fit ">
             {translations.hero.get_started}{' '}
             <span>
               <ArrowIcon className="fill-white rotate-90 inline-block font-light" width="9px" />
@@ -59,7 +59,7 @@ const Hero = ({ onExperienceClick }: Props) => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-black to-transparent z-10"></div>
+      <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-black to-transparent z-1"></div>
 
       <div className="absolute bottom-10 sm:bottom-14 flex flex-col items-center font-light gap-2 sm:gap-4 scroll-icon z-20">
         <span className="text-14 sm:text-18">{translations.hero.scroll}</span>
