@@ -1,6 +1,7 @@
-:root {
-  font-family: 'Satoshi', sans-serif;
-}
+@use '../assets/fonts/index.scss';
+// :root {
+//   font-family: 'Satoshi', sans-serif;
+// }
 
 .caption {
   &-140 {

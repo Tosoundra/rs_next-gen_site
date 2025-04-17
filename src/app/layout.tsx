@@ -1,4 +1,3 @@
-import { Footer } from '@/src/widgets/footer';
 import { ReactLenis } from '@/src/config/utils/ScrollSmoother';
 import { LanguageProvider } from '@/src/context/LanguageContext';
 

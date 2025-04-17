@@ -1,0 +1,15 @@
+@use './eng/eng-index.css';
+@use './rus/rus-index.css';
+/* @import url('./rus/index.css'); */
+
+html.ru {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+html.en {
+  font-family: 'Satoshi', sans-serif;
+}
+
+body {
+  font-family: inherit;
+}

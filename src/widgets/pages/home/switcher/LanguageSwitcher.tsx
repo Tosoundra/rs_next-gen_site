@@ -1,9 +1,11 @@
 'use client';
 
-import React from 'react';
+import React, { ComponentProps } from 'react';
 import { useLanguage } from '@/src/context/LanguageContext';
 
-const LanguageSwitcher = () => {
+type Props = ComponentProps<'button'>;
+
+const LanguageSwitcher = ({ ...props }: Props) => {
   const { language, setLanguage } = useLanguage();
 
   const toggleLanguage = () => {
@@ -12,7 +14,7 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <button onClick={toggleLanguage} className="text-white">
+    <button {...props} onClick={toggleLanguage} className={`text-white ${props.className}`}>
       {language === 'ru' ? 'EN' : 'RU'}
     </button>
   );

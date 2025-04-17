@@ -4,7 +4,6 @@ import styles from './styles.module.scss';
 import logo from '/public/ronix-logo.svg';
 import Image from 'next/image';
 import React, { useState, useEffect, SetStateAction } from 'react';
-import LanguageSwitcher from '../../pages/home/switcher/LanguageSwitcher';
 import { useLanguage } from '@/src/context/LanguageContext';
 
 type Props = {
@@ -68,7 +67,7 @@ const Header = ({ onContactClick, menuIsActive, setMenuIsActive }: Props) => {
             title={translations.header.contact}
             onClick={onContactClick}
           />
-          <LanguageSwitcher />
+
         </div>
       </div>
     </header>

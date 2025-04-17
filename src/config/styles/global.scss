@@ -2,13 +2,11 @@
 @use './ui.scss';
 @use './fonts.scss';
 @use './layout.scss';
+@use '../assets/fonts/index.scss';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-}
 
 *::selection {
   background-color: var(--blue-light);

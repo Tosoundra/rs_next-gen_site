@@ -1,11 +1,6 @@
-'use client'
+'use client';
 import { Translations } from '@/public/locales/locale';
-import React, {
-  createContext,
-  useState,
-  useContext,
-  ReactNode,
-} from 'react';
+import React, { createContext, useState, useContext, ReactNode, useEffect } from 'react';
 
 type Language = 'ru' | 'en';
 
@@ -44,6 +39,13 @@ export const LanguageProvider = ({
         console.error('Ошибка загрузки перевода:', err);
       });
   };
+
+  useEffect(() => {
+    document.documentElement.lang = language;
+
+    document.documentElement.classList.remove('ru', 'en');
+    document.documentElement.classList.add(language);
+  }, [language]);
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, translations }}>

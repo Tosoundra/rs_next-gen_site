@@ -22,6 +22,7 @@ import Menu from '../widgets/side-menu/ui/side-menu';
 
 import { useMediaQuery } from '@uidotdev/usehooks';
 import { Footer } from '../widgets/footer';
+import LanguageSwitcher from '../widgets/pages/home/switcher/LanguageSwitcher';
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -189,6 +190,7 @@ export default function Home() {
           <Map className={`${styles.map}`} />
         </div>
       </main>
+      <LanguageSwitcher className={styles.languageToggleButton} />
       <Footer />
     </>
   );
