@@ -54,7 +54,7 @@ const Experience = ({ ...props }: Props) => {
               src={experience.img}
               className={`grayscale rounded-[30px] ${styles.image}`}
             />
-            <span className="experience-title caption-60 font-black text-white">
+            <span className="experience-title caption-120 font-black text-white">
               {getText(experience.title)}
             </span>
             <span className="experience-subtitle caption-38 font-black text-blue">
