@@ -22,7 +22,7 @@ const SectionWrapper = ({ children, caption, classNames }: SectionWrapperProps) 
           <div
             className={`${styles.heading} ${classNames?.heading && classNames.heading} content-wrapper flex flex-col`}
           >
-            <h2 className={`caption-100 text-bold`}>{caption}</h2>
+            <h2 className={`caption-100 font-semibold`}>{caption}</h2>
           </div>
         )}
         <div

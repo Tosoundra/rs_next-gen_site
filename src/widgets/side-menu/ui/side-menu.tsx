@@ -45,22 +45,22 @@ const Menu = ({
       initial="initial"
       animate={menuIsActive ? 'open' : 'closed'}
     >
-      <button onClick={handleExperienceClick} className="caption-80 text-bold">
+      <button onClick={handleExperienceClick} className="caption-80 text-bold text-white">
         {translations.menuNavigation.about}
       </button>
-      <button onClick={handleServiceClick} className="caption-80 text-bold">
+      <button onClick={handleServiceClick} className="caption-80 text-bold text-white">
         {translations.menuNavigation.service}
       </button>
-      <button onClick={handlePortfolioClick} className="caption-80 text-bold">
+      <button onClick={handlePortfolioClick} className="caption-80 text-bold text-white">
         {translations.menuNavigation.portfolio}
       </button>
-      <button onClick={handlePartnersClick} className="caption-80 text-bold">
+      <button onClick={handlePartnersClick} className="caption-80 text-bold text-white">
         {translations.menuNavigation.clients}
       </button>
-      <button onClick={handleMoreDetailsClick} className="caption-80 text-bold">
+      <button onClick={handleMoreDetailsClick} className="caption-80 text-bold text-white">
         {translations.menuNavigation.moreDetails}
       </button>
-      <button onClick={handleContactClick} className="caption-80 text-bold">
+      <button onClick={handleContactClick} className="caption-80 text-bold text-white">
         {translations.menuNavigation.contacts}
       </button>
     </motion.div>
