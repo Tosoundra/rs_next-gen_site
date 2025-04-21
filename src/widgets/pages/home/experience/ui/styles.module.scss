@@ -49,12 +49,6 @@
   position: relative;
 }
 
-/* .img-container img {
-          width: 300px;
-          height: 400px;
-          object-fit: cover;
-        } */
-
 .img-container span {
   margin: 0;
   position: absolute;
@@ -67,41 +61,4 @@
 }
 .img-container .experience-description {
   top: calc(52%);
-}
-
-.progress {
-  position: fixed;
-  left: 0;
-  right: 0;
-  height: 5px;
-  background: var(--accent, #ff5722);
-  bottom: 50px;
-  transform: scaleX(0);
-  transform-origin: left;
-}
-@media (max-width: 640px) {
-  .img-container {
-    justify-content: center;
-  }
-
-  .experience-title,
-  .experience-subtitle,
-  .experience-description {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .experience-title {
-    top: calc(50% - 30px);
-    font-size: 32px;
-  }
-  .experience-subtitle {
-    top: calc(50%);
-    font-size: 24px;
-  }
-  .experience-description {
-    top: calc(50% + 30px);
-    font-size: 16px;
-    max-width: 90%;
-  }
 }

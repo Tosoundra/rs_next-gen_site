@@ -75,17 +75,10 @@ const Experience = ({ ...props }: Props) => {
           align-items: center;
           position: relative;
         }
-
-        /* .img-container img {
-          width: 300px;
-          height: 400px;
-          object-fit: cover;
-        } */
-
         .img-container span {
           margin: 0;
           position: absolute;
-          top: calc(48% - 25px);
+          top: calc(43% - 25px);
           left: calc(50% + 120px);
         }
 
@@ -93,7 +86,36 @@ const Experience = ({ ...props }: Props) => {
           top: calc(50%);
         }
         .img-container .experience-description {
-          top: calc(52%);
+          top: calc(51%);
+        }
+
+        .experience-title.caption-120,
+        .experience-subtitle.caption-120,
+        .experience-description.caption-120 {
+          @media (max-width: 1919px) {
+            font-size: 92px;
+          }
+          @media (max-width: 1439px) {
+            font-size: 86px;
+          }
+          @media (max-width: 1279px) {
+            font-size: 58px;
+          }
+          @media (max-width: 1023px) {
+            font-size: 42px;
+          }
+          @media (max-width: 767px) {
+            font-size: 34px;
+          }
+          @media (max-width: 575px) {
+            font-size: 38px;
+          }
+          @media (max-width: 479px) {
+            font-size: 26px;
+          }
+          @media (max-width: 389px) {
+            font-size: 18px;
+          }
         }
 
         @media (max-width: 640px) {
