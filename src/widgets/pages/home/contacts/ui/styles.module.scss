@@ -1,15 +1,24 @@
 .wrapper {
-   gap: var(--gap-between-section-items);
+  gap: var(--gap-between-section-items);
 
-   .network {
-      gap: 50px;
+  .network {
+    gap: 50px;
 
-      .networkRow {
-         gap: calc(var(--gap-between-section-items) * 3);
-
-         .networkItem {
-            flex: 1;
-         }
+    .networkRow {
+      display: flex;
+      align-items: center;
+      gap: calc(var(--gap-between-section-items) * 3);
+      @media (max-width: 767px) {
+        flex-direction: column;
+        gap: 0;
       }
-   }
+
+      .networkItem {
+        flex: 1;
+        @media (max-width: 767px) {
+          justify-content: space-between;
+        }
+      }
+    }
+  }
 }
