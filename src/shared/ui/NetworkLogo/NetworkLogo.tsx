@@ -43,7 +43,6 @@ const NetworkLogo = memo(({ image, imageOnHover }: Props) => {
           transition: 'transform 0.3s ease-out',
         }}
       >
-        {/* Обе картинки рендерятся одновременно, но меняется opacity */}
         <Image
           style={{
             transform: `translate(${position.x * 5}px, ${position.y * 5}px)`,
