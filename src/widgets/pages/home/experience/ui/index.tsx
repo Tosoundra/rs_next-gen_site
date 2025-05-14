@@ -42,7 +42,7 @@ const Experience = ({ ...props }: Props) => {
 
   return (
     <div {...props} ref={containerRef} className={styles.container}>
-      <SpaceBackgroundZ className={`${styles.background}`} />
+      <SpaceBackgroundZ className={`${styles.background}`} parentContainerRef={containerRef}/>
       <section className="content-wrapper">
         {experienceList.map((experience, index) => (
           <section key={index} className="img-container">

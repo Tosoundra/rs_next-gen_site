@@ -3,10 +3,11 @@ import { useEffect, useRef } from 'react';
 
 type SpaceBackgroundProps = {
   className?: string;
+  parentContainerRef: React.RefObject<HTMLElement> | null;
 };
 
 const StarsCounter = 500;
-const SpaceBackground = ({ className }: SpaceBackgroundProps) => {
+const SpaceBackground = ({ className, parentContainerRef }: SpaceBackgroundProps) => {
   const SpaceCanvas = useRef<HTMLCanvasElement | null>(null);
   const Stars = useRef<{ x: number; y: number; z: number }[]>([]);
   const center = useRef<{ x: number; y: number }>({ x: 1, y: 1 });
@@ -15,9 +16,9 @@ const SpaceBackground = ({ className }: SpaceBackgroundProps) => {
 
   useEffect(() => {
     const resize = () => {
-      if (!SpaceCanvas.current) return;
-      SpaceCanvas.current.width = window.innerWidth;
-      SpaceCanvas.current.height = window.innerHeight;
+      if (!SpaceCanvas.current || !parentContainerRef?.current) return;
+      SpaceCanvas.current.width = parentContainerRef.current.clientWidth;
+      SpaceCanvas.current.height = parentContainerRef.current.clientHeight;
       center.current = {
         x: SpaceCanvas.current.width / 2,
         y: SpaceCanvas.current.height / 2,

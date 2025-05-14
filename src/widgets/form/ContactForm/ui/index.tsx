@@ -1,26 +1,31 @@
 import { InputNormal } from '@/src/shared/input';
 import styles from './style.module.scss';
 import { useLanguage } from '@/src/context/LanguageContext';
+import { useMediaQuery } from '@uidotdev/usehooks';
 
 const ContactForm = () => {
-
   const { translations } = useLanguage();
+  const isLargeDevice = useMediaQuery('only screen and (min-width : 993px)');
 
   return (
     <form>
       <div className={`${styles.wrapper} flex flex-col`}>
-        <div className={`${styles.formRow} flex`}>
-          <div className={`${styles.formItem} flex justify-end`}>
-            <h3 className={`${styles.caption} caption-38 text-boldest`}>
-              {translations.contacts.step}<span className={`text-blue`}>{translations.contacts.dream}</span>
-            </h3>
+        {isLargeDevice && (
+          <div className={`${styles.formRow} flex`}>
+            <div className={`${styles.formItem} flex justify-end`}>
+              <h3 className={`${styles.caption} caption-38 text-boldest`}>
+                {translations.contacts.step}
+                <span className={`text-blue`}>{translations.contacts.dream}</span>
+              </h3>
+            </div>
+            <div className={`${styles.formItem} flex`}>
+              <h3 className={`${styles.caption} caption-38 text-boldest`}>
+                {translations.contacts.together}
+                <span className={`text-blue`}>{translations.contacts.best}</span> :)
+              </h3>
+            </div>
           </div>
-          <div className={`${styles.formItem} flex`}>
-            <h3 className={`${styles.caption} caption-38 text-boldest`}>
-              {translations.contacts.together}<span className={`text-blue`}>{translations.contacts.best}</span> :)
-            </h3>
-          </div>
-        </div>
+        )}
         <div className={`${styles.formRow} flex`}>
           <div className={`${styles.formItem} flex justify-end`}>
             <InputNormal
@@ -31,7 +36,12 @@ const ContactForm = () => {
             />
           </div>
           <div className={`${styles.formItem} flex`}>
-            <InputNormal title={translations.contacts.company} type="text" placeholder="Ronix Systems" required={true} />
+            <InputNormal
+              title={translations.contacts.company}
+              type="text"
+              placeholder="Ronix Systems"
+              required={true}
+            />
           </div>
         </div>
         <div className={`${styles.formRow} flex`}>
@@ -61,7 +71,9 @@ const ContactForm = () => {
               required={true}
             />
           </div>
-          <div className={`${styles.formItem} flex`}>{translations.contacts.send_message}</div>
+          <div className={`${styles.formItem} flex`}>
+            {translations.contacts.send_message} &rarr;{' '}
+          </div>
         </div>
       </div>
     </form>

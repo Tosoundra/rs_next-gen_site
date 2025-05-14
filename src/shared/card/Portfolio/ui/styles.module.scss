@@ -10,6 +10,11 @@
   border-radius: calc(var(--item-border-radius) + var(--padding-inside) * 0.5);
   border: var(--border-black);
 
+  @media (max-width: 767px) {
+    --padding-inside: calc(50px / 2);
+    --padding-bottom: calc(40px / 2);
+  }
+
   .imageWrapper {
     .image {
       --height: 585px;

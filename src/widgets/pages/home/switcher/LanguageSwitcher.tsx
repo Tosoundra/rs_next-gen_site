@@ -2,6 +2,7 @@
 
 import React, { ComponentProps } from 'react';
 import { useLanguage } from '@/src/context/LanguageContext';
+import styles from './styles.module.scss';
 
 type Props = ComponentProps<'button'>;
 
@@ -14,7 +15,11 @@ const LanguageSwitcher = ({ ...props }: Props) => {
   };
 
   return (
-    <button {...props} onClick={toggleLanguage} className={`text-white ${props.className}`}>
+    <button
+      {...props}
+      onClick={toggleLanguage}
+      className={`text-white ${props.className} ${styles.button}`}
+    >
       {language === 'ru' ? 'EN' : 'RU'}
     </button>
   );

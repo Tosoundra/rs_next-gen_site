@@ -156,9 +156,9 @@ export default function Home() {
           handleServiceClick={handleServiceClick}
         />
       )}
-      {dimensions && (
+      {/* {dimensions && (
         <CenteredPixelTransition menuIsActive={menuIsActive} dimensions={dimensions} />
-      )}
+      )} */}
       <Header
         onContactClick={handleContactClick}
         menuIsActive={menuIsActive}
@@ -171,14 +171,15 @@ export default function Home() {
           <SectionWrapper caption={translations.page.services}>
             <Services ref={serviceRef} />
           </SectionWrapper>
-          <SectionWrapper caption={translations.page.works}>
-            <Portfolio ref={portfolioRef} />
-          </SectionWrapper>
           <SectionWrapper
             classNames={{ section: styles.partnersSection, wrapper: styles.partners }}
           >
             <Partners ref={partnersRef} />
           </SectionWrapper>
+          <SectionWrapper caption={translations.page.works}>
+            <Portfolio ref={portfolioRef} />
+          </SectionWrapper>
+
           {isLargeDevice && (
             <SectionWrapper caption={translations.page.details}>
               <Details ref={moreDetailsRef} />

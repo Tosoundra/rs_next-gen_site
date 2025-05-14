@@ -10,7 +10,7 @@
       gap: calc(var(--gap-between-section-items) * 3);
       @media (max-width: 767px) {
         flex-direction: column;
-        gap: 0;
+        gap: 24px;
       }
 
       .networkItem {

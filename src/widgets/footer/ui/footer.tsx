@@ -1,11 +1,14 @@
+//@ts-nocheck
 'use client';
 import Link from 'next/link';
 import { SpaceBackgroundZ } from '@/src/shared/background';
 import styles from './styles.module.scss';
 import { useLanguage } from '@/src/context/LanguageContext';
+import { useRef } from 'react';
 
 const Footer = () => {
   const { translations, setLanguage, language } = useLanguage();
+  const ref = useRef<HTMLElement>(null);
 
   const handleLanguageSwitch = (event: React.MouseEvent) => {
     event.preventDefault();
@@ -14,7 +17,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className={`${styles.footer} relative flex flex-col`}>
+    <footer ref={ref} className={`${styles.footer} relative flex flex-col`}>
       <div className={`${styles.container} flex flex-col background-black`}>
         <div className={`${styles.contacts} content-wrapper flex flex-col items-center`}>
           <Link className={`text-white text-bold caption-140`} href="tel:+7 495 918-33-14">
@@ -43,7 +46,8 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <SpaceBackgroundZ className={`${styles.background}`} />
+
+        <SpaceBackgroundZ className={`${styles.background}`} parentContainerRef={ref} />
       </div>
     </footer>
   );
