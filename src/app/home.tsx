@@ -176,7 +176,7 @@ export default function Home() {
           >
             <Partners ref={partnersRef} />
           </SectionWrapper>
-          <SectionWrapper caption={translations.page.works}>
+          <SectionWrapper caption={translations.page.works} classNames={{heading:styles.portfolioHeadingMargin}}>
             <Portfolio ref={portfolioRef} />
           </SectionWrapper>
 
