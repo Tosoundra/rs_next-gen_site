@@ -57,12 +57,15 @@ const Experience = ({ ...props }: Props) => {
             <span className="experience-title caption-120 font-black text-white">
               {getText(experience.title)}
             </span>
+            <div className="flex flex-col gap-2">
             <span className="experience-subtitle caption-38 font-black text-blue">
               {getText(experience.subtitle)}
             </span>
             <span className="experience-description text-[16px] md:text-[20px] font-normal text-white max-w-2xl mx-auto lg:mx-0">
               {getText(experience.description)}
             </span>
+            </div>
+           
           </section>
         ))}
       </section>
@@ -86,7 +89,7 @@ const Experience = ({ ...props }: Props) => {
           top: calc(50%);
         }
         .img-container .experience-description {
-          top: calc(51%);
+          top: calc(54%);
         }
 
         .experience-title.caption-120,

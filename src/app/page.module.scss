@@ -38,7 +38,7 @@
 }
 
 .portfolioHeadingMargin {
-  margin-bottom: -20dvh;
+  margin-bottom: -10dvh;
   @media (max-width: 1023px) {
     --block-heading-height: 71px; // надо вынести переменную за пределы компонента
     margin-bottom: calc(
