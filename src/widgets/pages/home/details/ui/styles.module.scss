@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: var(--gap-between-items);
+
 }
 
 .item {
@@ -13,42 +14,51 @@
 .A {
   position: relative;
   overflow: hidden;
-  max-height: 824px;
+  min-height: 312px;
   flex: 2 1 calc(50% - var(--gap-between-items));
 }
 
 .B {
   flex: 1 1 calc(25% - var(--gap-between-items));
   display: flex;
+  
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 20px;
   gap: 10px;
+
+
+  min-height: 312px;
 }
 
 .C {
   flex: 1 1 calc(25% - var(--gap-between-items));
+  min-height: 312px;
 }
 
 .D {
   flex: 1 1 calc(50% - var(--gap-between-items));
+  height: 312px;
 }
 
 .E {
   flex: 1 1 calc(25% - var(--gap-between-items));
+  height: 312px;
 }
 
 .F {
   flex: 1 1 calc(25% - var(--gap-between-items));
+  height: 312px;
 }
 
 .content {
-  padding: 40px;
+  // padding: 40px;
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;align-items: center;
 }
 
 .mainNumber {

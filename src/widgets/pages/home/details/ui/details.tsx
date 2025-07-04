@@ -124,45 +124,45 @@ const Details = ({ ...props }: Props) => {
         <div className={`${styles.content} gap-y-10 sm:gap-y-14 md:gap-y-16 lg:gap-y-20`}>
           <h3 className="text-transparent text-center bg-clip-text bg-gradient-to-r from-[#F8F8F8] via-[#E0E0E0] to-[#A1A1A1] caption-38 font-black ">
             {translations.details.expertiseIn} <br />
-            {translations.details.building} {/* Перевод */}
+            {translations.details.building} 
           </h3>
-          <ul className="flex flex-col text-white text-16 font-light justify-between h-full gap-y-10">
+          {/* <ul className="flex flex-col text-white text-16 font-light justify-between h-full gap-y-10">
             <li className="text-left">
               <span className="min-w-[142px] text-center border border-white rounded-[5px] py-1 px-3 inline-block">
-                {translations.details.webApps} {/* Перевод */}
+                {translations.details.webApps} 
               </span>
             </li>
             <li className="text-center">
               <span className="min-w-[142px] text-center border border-white rounded-[5px] py-1 px-3 inline-block">
-                {translations.details.futuredInterfaces} {/* Перевод */}
+                {translations.details.futuredInterfaces}
               </span>
             </li>
             <li className="text-right">
               <span className="min-w-[142px] text-center border border-white rounded-[5px] py-1 px-3 inline-block">
-                {translations.details.enterpriseApps} {/* Перевод */}
+                {translations.details.enterpriseApps} 
               </span>
             </li>
             <li className="text-center">
               <span className="min-w-[142px] text-center border border-white rounded-[5px] py-1 px-3 inline-block">
-                {translations.details.businessLogic} {/* Перевод */}
+                {translations.details.businessLogic} 
               </span>
             </li>
             <li className="text-left">
               <span className="min-w-[142px] text-center border border-white rounded-[5px] py-1 px-3 inline-block">
-                {translations.details.modernDesign} {/* Перевод */}
+                {translations.details.modernDesign} 
               </span>
             </li>
             <li className="text-center">
               <span className="min-w-[142px] text-center border border-white rounded-[5px] py-1 px-3 inline-block">
-                {translations.details.botDevelopment} {/* Перевод */}
+                {translations.details.botDevelopment} 
               </span>
             </li>
             <li className="text-right">
               <span className="min-w-[142px] text-center border border-white rounded-[5px] py-1 px-3 inline-block">
-                {translations.details.seo} {/* Перевод */}
+                {translations.details.seo} 
               </span>
             </li>
-          </ul>
+          </ul> */}
         </div>
       </div>
 
@@ -183,17 +183,17 @@ const Details = ({ ...props }: Props) => {
             </div>
           </div>
           <div className="flex-1 text-center text">
-            <span className="leading-[80%] text-outline-1 block text-white caption-116 font-black">
+            <span className="leading-[80%] text-outline-1 block text-white caption-60 font-black">
               30
             </span>
-            <span className="leading-[80%] text-outline-3 block text-white caption-116 font-black">
+            <span className="leading-[80%] text-outline-3 block text-white caption-80 font-black">
               30
             </span>
-            <span className="leading-[80%] block text-blue caption-116 font-black">30</span>
-            <span className="leading-[80%] text-outline-3 block text-white caption-116 font-black">
+            <span className="leading-[80%] block text-blue caption-100 font-black">30</span>
+            <span className="leading-[80%] text-outline-3 block text-white caption-80 font-black">
               30
             </span>
-            <span className="leading-[80%] text-outline-1 block text-white caption-116 font-black">
+            <span className="leading-[80%] text-outline-1 block text-white caption-60 font-black">
               30
             </span>
           </div>
@@ -217,18 +217,19 @@ const Details = ({ ...props }: Props) => {
       <div
         className={`${styles.item} ${styles.partners} ${styles.E} flex flex-col place-items-center justify-center bg-white overflow-hidden`}
       >
-        <div className="text-center">
+        <div className="text-center mb-10">
           <div className="text-black caption-38 font-black">{translations.details.clientsFrom}</div>
-          <div className="text-blue caption-116 font-black">10+</div>
+          <div className="text-blue caption-80 font-black">10+</div>
           <div className="text-black caption-38 font-black">{translations.details.countries}</div>
         </div>
 
         <Image
+        style={{clipPath:'inset20px_0px_0px_0px' }}
           src={worldImage}
           alt="World"
           width={450}
-          height={430}
-          className="mix-blend-difference"
+          height={450}
+          className="mix-blend-difference  mt-10"
         />
       </div>
 

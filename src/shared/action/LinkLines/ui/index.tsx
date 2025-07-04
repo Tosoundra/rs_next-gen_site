@@ -7,7 +7,7 @@ import styles from './styles.module.scss';
 
 const LinkLines = ({ title, href, ...props }: LinkLinesProps) => {
   return (
-    <div className={`${styles.wrapper} flex items-center justify-center`}>
+    <div className={`${styles.wrapper} flex items-center justify-center whitespace-nowrap`}>
       <LineAnimation widthPercent={100} direction={'right'} />
       <Link
         href={href}
