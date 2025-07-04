@@ -25,19 +25,19 @@ const Experience = ({ ...props }: Props) => {
   useEffect(() => {
     if (!containerRef.current) return;
 
-    if (containerRef.current) {
-      const sections = containerRef.current.querySelectorAll('.img-container');
-      sections.forEach((section) => {
-        const header = section.querySelectorAll('span');
-        if (header) {
-          header.forEach((item) => {
-            scroll(animate(item, { y: [-400, 400] }, { ease: 'linear' }), {
-              target: item,
-            });
-          });
-        }
-      });
-    }
+    // if (containerRef.current) {
+    //   const sections = containerRef.current.querySelectorAll('.img-container');
+    //   sections.forEach((section) => {
+    //     const header = section.querySelectorAll('span');
+    //     if (header) {
+    //       header.forEach((item) => {
+    //         scroll(animate(item, { y: [-400, 400] }, { ease: 'linear' }), {
+    //           target: item,
+    //         });
+    //       });
+    //     }
+    //   });
+    // }
   }, []);
 
   return (
@@ -71,7 +71,7 @@ const Experience = ({ ...props }: Props) => {
       </section>
       <style jsx>{`
         .img-container {
-          height: 100vh;
+          height: 120vh;
           scroll-snap-align: start;
           display: flex;
           justify-content: start;
@@ -81,13 +81,20 @@ const Experience = ({ ...props }: Props) => {
         .img-container span {
           margin: 0;
           position: absolute;
-          top: calc(43% - 25px);
+          top: calc(35% - 25px);
           left: calc(50% + 120px);
         }
 
         .img-container .experience-subtitle {
-          top: calc(50%);
+          top: calc(46%);
         }
+        
+        @media (max-width: 1023px) {
+          .img-container span {
+            top: calc(41% - 25px);
+          }
+        }
+
         .img-container .experience-description {
           top: calc(54%);
         }
@@ -133,10 +140,10 @@ const Experience = ({ ...props }: Props) => {
           }
 
           .experience-title {
-            top: calc(50%) !important;
+            top: calc(42%) !important;
           }
           .experience-subtitle {
-            top: calc(53%) !important;
+            top: calc(47%) !important;
           }
           .experience-description {
             top: calc(50%) !important;

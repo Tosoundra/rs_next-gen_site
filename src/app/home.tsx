@@ -156,9 +156,9 @@ export default function Home() {
           handleServiceClick={handleServiceClick}
         />
       )}
-      {/* {dimensions && (
+      {dimensions && (
         <CenteredPixelTransition menuIsActive={menuIsActive} dimensions={dimensions} />
-      )} */}
+      )}
       <Header
         onContactClick={handleContactClick}
         menuIsActive={menuIsActive}
