@@ -71,7 +71,7 @@ const Experience = ({ ...props }: Props) => {
       </section>
       <style jsx>{`
         .img-container {
-          height: 120vh;
+          height: 110vh;
           scroll-snap-align: start;
           display: flex;
           justify-content: start;
@@ -152,7 +152,7 @@ const Experience = ({ ...props }: Props) => {
           }
         }
 
-                @media (max-width: 640px) {
+                @media (max-width: 443px) {
                  .experience-title,
           .experience-subtitle,
           .experience-description {
@@ -160,13 +160,13 @@ const Experience = ({ ...props }: Props) => {
           }
 
           .experience-title {
-            top: calc(70%) !important;
+            top: calc(72%) !important;
           }
           .experience-subtitle {
-            top: calc(75%) !important;
+            top: calc(77%) !important;
           }
           .experience-description {
-            top: calc(80%) !important;
+            top: calc(82%) !important;
 
             max-width: 90%;
           }

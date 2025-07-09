@@ -5,6 +5,7 @@ import logo from '/public/ronix-logo.svg';
 import Image from 'next/image';
 import React, { useState, useEffect, SetStateAction } from 'react';
 import { useLanguage } from '@/src/context/LanguageContext';
+import { Hero } from '../../pages/home';
 
 type Props = {
   onContactClick: () => void;
@@ -55,6 +56,8 @@ const Header = ({ onContactClick, menuIsActive, setMenuIsActive }: Props) => {
             className={`${styles.burger} ${menuIsActive ? styles.burgerActive : ''}`}
           ></div>
         </div>
+
+
         <Image
           src={logo}
           alt="logo"

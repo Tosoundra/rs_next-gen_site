@@ -34,27 +34,27 @@ const Hero = ({ onExperienceClick }: Props) => {
       <div className="absolute rounded-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mix-blend-overlay">
         <Logo className="bg-transparent rounded-none" />
       </div>
-      <div className="content-wrapper grid grid-cols-1 md:grid-cols-2 min-h-0 md:min-h-screen md:h-screen text-white relative z-10 gap-y-10 md:gap-y-0">
-        <div className="flex flex-col justify-center px-4 sm:px-8 pt-16 md:pt-0">
+      <div className="content-wrapper grid grid-cols-1 md:grid-cols-1 min-h-0 md:min-h-screen md:h-screen text-white relative z-10 gap-y-10 md:gap-y-0">
+        <div className="flex flex-col justify-end px-4 sm:px-8 pt-16 md:pt-0">
           <h2 className="text-[clamp(1.8rem,5vw,5rem)] leading-tight font-semibold text-balance">
-            {translations.hero.welcome}{' '}
-            <span className="bg-gradient-to-r from-blue-500 to-blue-800 inline-block text-transparent bg-clip-text">
+            {/* {translations.hero.welcome}{' '} */}
+            <span className="bg-gradient-to-r from-white via-gray-200 to-gray-400 inline-block text-transparent bg-clip-text font-porsche" style={{mixBlendMode: 'overlay'}}>
               {translations.hero.future}
             </span>{' '}
-            {translations.hero.web}
+            {/* {translations.hero.web} */}
           </h2>
         </div>
 
-        <div className="flex flex-col justify-center px-4 sm:px-8 pb-20 md:pb-0">
+        <div className="flex flex-col md:mt-10 mt-0 justify-start px-4 sm:px-8 pb-20 md:pb-0">
           <h2 className="text-[clamp(1.25rem,4vw,2.25rem)] leading-snug">
             <span className="text-blue">{translations.hero.ronix}</span>
             {translations.hero.about_us}
           </h2>
           <button onClick={onExperienceClick} className="text-16 sm:text-18 mt-4 font-light w-fit ">
-            {translations.hero.get_started}{' '}
-            <span>
+            {/* {translations.hero.get_started}{' '} */}
+            {/* <span>
               <ArrowIcon className="fill-white rotate-90 inline-block font-light" width="9px" />
-            </span>
+            </span> */}
           </button>
         </div>
       </div>
