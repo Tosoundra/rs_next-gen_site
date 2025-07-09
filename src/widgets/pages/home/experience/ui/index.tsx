@@ -140,17 +140,39 @@ const Experience = ({ ...props }: Props) => {
           }
 
           .experience-title {
-            top: calc(42%) !important;
+            top: calc(75%) !important;
           }
           .experience-subtitle {
-            top: calc(47%) !important;
+            top: calc(80%) !important;
           }
           .experience-description {
-            top: calc(50%) !important;
+            top: calc(85%) !important;
 
             max-width: 90%;
           }
         }
+
+                @media (max-width: 640px) {
+                 .experience-title,
+          .experience-subtitle,
+          .experience-description {
+            left: 0% !important;
+          }
+
+          .experience-title {
+            top: calc(70%) !important;
+          }
+          .experience-subtitle {
+            top: calc(75%) !important;
+          }
+          .experience-description {
+            top: calc(80%) !important;
+
+            max-width: 90%;
+          }
+        }
+                
+                }
       `}</style>
     </div>
   );
