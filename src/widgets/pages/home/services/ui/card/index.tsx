@@ -19,7 +19,7 @@ const ServiceCard = ({ index, service }: ServiceProps) => {
       </div>
       <div className={`${styles.description} flex flex-col`}>
         <p className={`text-20 text-light text-pretty`}>{serviceDescription}</p>
-        <LinkUnderline title={translations.services.learn_more} href={`/services/${service.slug}`} />
+        {/* <LinkUnderline title={translations.services.learn_more} href={`/services/${service.slug}`} /> */}
       </div>
       <div className={`${styles.imageWrapper} flex`}>
         <ImageFlow

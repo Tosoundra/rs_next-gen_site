@@ -224,11 +224,11 @@ const Details = ({ ...props }: Props) => {
         </div>
 
         <Image
-        style={{clipPath:'inset20px_0px_0px_0px' }}
+        style={{clipPath:'inset150px_0px_0px_0px' }}
           src={worldImage}
           alt="World"
-          width={450}
-          height={450}
+          width={250}
+          height={250}
           className="mix-blend-difference  mt-10"
         />
       </div>

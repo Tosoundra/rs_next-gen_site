@@ -188,7 +188,7 @@ export default function Home() {
           <SectionWrapper caption={translations.page.contacts}>
             <Contacts ref={contactsRef} />
           </SectionWrapper>
-          <Map className={`${styles.map}`} />
+          {/* <Map className={`${styles.map}`} /> */}
         </div>
       </main>
       <LanguageSwitcher className={styles.languageToggleButton} />
