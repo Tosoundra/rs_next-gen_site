@@ -45,7 +45,10 @@ const Experience = ({ ...props }: Props) => {
       <SpaceBackgroundZ className={`${styles.background}`} parentContainerRef={containerRef}/>
       <section className="content-wrapper">
         {experienceList.map((experience, index) => (
-          <section key={index} className="img-container">
+          <section
+            key={index}
+            className={`img-container${index === experienceList.length - 1 ? ' mb-20' : ''}`.replace('img-containermb-10', 'img-container mb-10')}
+          >
             <Image
               width={650}
               height={650}
@@ -58,14 +61,13 @@ const Experience = ({ ...props }: Props) => {
               {getText(experience.title)}
             </span>
             <div className="flex flex-col gap-2">
-            <span className="experience-subtitle caption-38 font-black text-blue">
-              {getText(experience.subtitle)}
-            </span>
-            <span className="experience-description text-[16px] md:text-[20px] font-normal text-white max-w-2xl mx-auto lg:mx-0">
-              {getText(experience.description)}
-            </span>
+              <span className="experience-subtitle caption-38 font-black text-blue">
+                {getText(experience.subtitle)}
+              </span>
+              <span className="experience-description text-[16px] md:text-[20px] font-normal text-white max-w-2xl mx-auto lg:mx-0">
+                {getText(experience.description)}
+              </span>
             </div>
-           
           </section>
         ))}
       </section>

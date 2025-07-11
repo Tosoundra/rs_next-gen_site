@@ -71,7 +71,7 @@ const Portfolio = ({ ...props }: Props) => {
   ];
 
   return (
-    <div {...props} className={`content-wrapper flex flex-col ${styles.list}`}>
+    <div {...props} className={`content-wrapper flex flex-col ${styles.list} mt-10`}>
       {portfolioData.map((portfolioCase) => (
         <Fragment key={portfolioCase.id}>
           <CardPortfolioContainer index={+portfolioCase.id}>
