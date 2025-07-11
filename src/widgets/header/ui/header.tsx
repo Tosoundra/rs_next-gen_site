@@ -64,14 +64,14 @@ const Header = ({ onContactClick, menuIsActive, setMenuIsActive }: Props) => {
           height={44}
           className={` fixed left-1/2 -translate-x-1/2 h-[44px] w-[44px] sm:h-[36px] sm:w-[36px] ${menuIsActive ? 'invisible' : ''}`}
         />
-        <div className={`${menuIsActive ? 'invisible' : 'flex'} ${styles.side}  justify-end `}>
+        {/* <div className={`${menuIsActive ? 'invisible' : 'flex'} ${styles.side}  justify-end `}>
           <ButtonRounded
             type="button"
             title={translations.header.contact}
             onClick={onContactClick}
           />
 
-        </div>
+        </div> */}
       </div>
     </header>
   );

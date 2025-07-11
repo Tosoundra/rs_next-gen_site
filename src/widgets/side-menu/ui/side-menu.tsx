@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './styles.module.scss';
 import { useLanguage } from '@/src/context/LanguageContext';
+import { useMediaQuery } from '@uidotdev/usehooks';
 
 const anim = {
   initial: {
@@ -37,7 +38,7 @@ const Menu = ({
   handleContactClick,
 }: Props) => {
   const { translations } = useLanguage();
-
+  const isLargeDevice = useMediaQuery('only screen and (min-width : 993px)');
   return (
     <motion.div
       className={styles.menu}
@@ -57,9 +58,10 @@ const Menu = ({
       <button onClick={handlePartnersClick} className="caption-80 text-bold text-white">
         {translations.menuNavigation.clients}
       </button>
-      <button onClick={handleMoreDetailsClick} className="caption-80 text-bold text-white">
+      {isLargeDevice &&   <button onClick={handleMoreDetailsClick} className="caption-80 text-bold text-white">
         {translations.menuNavigation.moreDetails}
-      </button>
+      </button>}
+    
       <button onClick={handleContactClick} className="caption-80 text-bold text-white">
         {translations.menuNavigation.contacts}
       </button>

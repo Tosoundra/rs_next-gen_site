@@ -16,22 +16,27 @@
     border: none;
     background: none;
     cursor: pointer;
-
-    &::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      height: 1px;
-      width: 100%;
-      background-color: black;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s ease;
+    transition: ease-in-out 0.3s;
+    &:hover{ 
+      scale: 1.07;
+      transition: ease-in-out 0.3s;
     }
 
-    &:hover::after {
-      transform: scaleX(1);
-    }
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   left: 0;
+    //   bottom: 0;
+    //   height: 1px;
+    //   width: 100%;
+    //   background-color: black;
+    //   transform: scaleX(0);
+    //   transform-origin: left;
+    //   transition: transform 0.4s ease;
+    // }
+
+    // &:hover::after {
+    //   transform: scaleX(1);
+    // }
   }
 }

@@ -79,7 +79,7 @@ const Portfolio = ({ ...props }: Props) => {
           </CardPortfolioContainer>
         </Fragment>
       ))}
-      <LinkLines title={translations.portfolio.more_works} href="/portfolio" />
+      {/* <LinkLines title={translations.portfolio.more_works} href="/portfolio" /> */}
     </div>
   );
 };
