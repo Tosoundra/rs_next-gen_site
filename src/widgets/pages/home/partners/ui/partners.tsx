@@ -9,6 +9,10 @@ import { ComponentProps } from 'react';
 
 type Props = ComponentProps<'div'>;
 
+const half = Math.ceil(PartnerMock.length / 2);
+const firstHalf = PartnerMock.slice(0, half);
+const secondHalf = PartnerMock.slice(half);
+
 const Partners = ({ ...props }: Props) => {
   return (
     <div {...props} className={`${styles.wrapper} flex flex-col`}>
@@ -19,7 +23,7 @@ const Partners = ({ ...props }: Props) => {
         direction={'right'}
         className={`${styles.marquee} ${styles.top} marquee-line`}
       >
-        {PartnerMock.map((partner, index) => (
+        {firstHalf.map((partner, index) => (
           <Link
             href={partner.link}
             key={index + partner.slug}
@@ -29,14 +33,14 @@ const Partners = ({ ...props }: Props) => {
               alt={partner.name}
               className={styles.logo}
               src={partner.logo}
-              width={300}
-              height={300}
+              width={500}
+              height={500}
             />
           </Link>
         ))}
       </Marquee>
       <Marquee play={true} speed={50} className={`${styles.marquee} ${styles.bottom} marquee-line`}>
-        {PartnerMock.map((partner, index) => (
+        {secondHalf.map((partner, index) => (
           <Link
             href={partner.link}
             key={index + partner.slug}
@@ -46,8 +50,8 @@ const Partners = ({ ...props }: Props) => {
               alt={partner.name}
               className={styles.logo}
               src={partner.logo}
-              width={300}
-              height={300}
+              width={500}
+              height={500}
             />
           </Link>
         ))}
