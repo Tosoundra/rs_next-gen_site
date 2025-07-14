@@ -60,26 +60,26 @@
     "future": "RONIX SYSTEMS",
     "web": "of the web!",
     "ronix": "Ronix Systems",
-    "about_us": " – an IT studio with many years of experience in the information technology market. We keep pace with progress and make products that are as reliable as Swiss watches!",
+    "about_us": " – is an IT company with many years of experience in the information technology market. We keep up with the latest developments and create reliable products that open new horizons for your business!",
     "get_started": "Get Started",
     "scroll": "Let’s scroll"
   },
   "services": {
     "development": {
       "title": "Development",
-      "description": "At Ronix Systems, web development is a place where creativity is combined with functionality. We create visually vibrant and emotionally engaging websites that reflect the essence of your brand. In our projects, beauty is combined with smooth navigation, complemented by micro-interactions and futuristic animations. Every detail, from concept to pixel, is fully consistent with your vision and business goals."
+      "description": "At Ronix Systems, web development is a place where creativity meets functionality. We create visually stunning and emotionally engaging websites that reflect the essence of your brand. Our designs combine beauty with smooth navigation, modern UI/UX, and futuristic animations. Every detail, from the button to the block, is tailored to your company's vision and business goals."
     },
     "web-design": {
       "title": "Web Design",
-      "description": "Individual comprehensive web design solutions created in step with the times will not only emphasize the uniqueness of your product, but also boldly declare business in the best traditions of marketing approaches. We embody inspiration in a unique harmony of colors, interfaces and good architecture, enclosed on a website with the name of your brand!"
+      "description": "Customized comprehensive web design solutions that keep up with the times will not only emphasize the uniqueness of your product, but also boldly announce your business in the best traditions of marketing approaches. We bring inspiration to life through a unique harmony of colors, interfaces, and good architecture, linking your brand's name to the impeccability of your product!"
     },
     "Support": {
       "title": "Support",
-      "description": "We know that support is important!Every client is our friend, and friends are not abandoned in trouble. We know that nothing is impossible. Your problem is our solution. We will remove any headache for the product so that you can enjoy the result, excluding worries; We take care of them. Reliability and safety is the slogan of our support!"
+      "description": "We know that support is important! Every customer is our friend, and we don't leave our friends in trouble. We know that nothing is impossible! Your problem is our concern. We will take care of any product-related headaches so that you can enjoy the results without worrying. Reliability and security are the main values of our support!"
     },
     "Hosting": {
       "title": "Hosting",
-      "description": "A website is the temple of any business, product, or event. This is a source of income, a source of education for a potential visitor and a personal outlet for each holder of an Internet resource. The site's activity should not be destabilized. The site should always be accessible, and our hosting equipment will help you with this flawlessly! DDOS protection, backup backup, domain configuration, mail servers and much more are available at market prices."
+      "description": "A website is the temple of any business, product, or solution. It is a source of income, a source of education for potential visitors, and a personal outlet for every owner of an online resource. The website's activity should not be destabilized. The website should always be accessible, and our hosting equipment will ensure its availability. DDOS protection, regular backups, domain configuration, email servers, and much more are available at market-friendly prices!"
     },
     "learn_more": "Learn more"
   },
@@ -93,7 +93,7 @@
     "more_works": "More works",
     "idvit": {
       "title": "IDVIT",
-      "description": "At Refokus, web design is where creativity meets functionality. We craft visually striking and emotionally engaging websites that capture your brand's essence. Our designs blend beauty with seamless navigation, enhanced by micro-interactions and Lottie animations. Every detail, from concept to pixel, aligns with your vision and business."
+      "description": "A large medical system for pharmacists. Presented in the form of a website divided into an expert section (for Doctors) and a consumer section (for Patients). In addition to the public section, it includes an ERP system for organizing all of the company's internal business processes, from logistics to the calculation of microgranulates."
     },
     "picasso": {
       "title": "Picasso",
