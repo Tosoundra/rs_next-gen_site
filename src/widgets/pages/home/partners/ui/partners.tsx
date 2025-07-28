@@ -24,36 +24,42 @@ const Partners = ({ ...props }: Props) => {
         className={`${styles.marquee} ${styles.top} marquee-line`}
       >
         {firstHalf.map((partner, index) => (
-          <Link
-            href={partner.link}
-            key={index + partner.slug}
-            className={`${styles.item} flex items-center justify-center`}
-          >
-            <Image
+          // <Link
+          //   href={partner.link}
+          //   key={index + partner.slug}
+          //   className={`${styles.item} flex items-center justify-center`}
+          // >
+          <div key={index}  className={`${styles.item} flex items-center justify-center`}>
+<Image
               alt={partner.name}
               className={styles.logo}
               src={partner.logo}
               width={500}
               height={500}
             />
-          </Link>
+          </div>
+            
+          // </Link>
         ))}
       </Marquee>
       <Marquee play={true} speed={50} className={`${styles.marquee} ${styles.bottom} marquee-line`}>
         {secondHalf.map((partner, index) => (
-          <Link
-            href={partner.link}
-            key={index + partner.slug}
-            className={`${styles.item} flex items-center justify-center`}
-          >
-            <Image
+          // <Link
+          //   href={partner.link}
+          //   key={index + partner.slug}
+          //   className={`${styles.item} flex items-center justify-center`}
+          // >
+          <div key={index}  className={`${styles.item} flex items-center justify-center`}>
+  <Image
               alt={partner.name}
               className={styles.logo}
               src={partner.logo}
               width={500}
               height={500}
             />
-          </Link>
+          </div>
+          
+          // </Link>
         ))}
       </Marquee>
       <LineAnimation widthPercent={50} direction={'right'} />
