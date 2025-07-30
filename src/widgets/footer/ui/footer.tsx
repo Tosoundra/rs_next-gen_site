@@ -37,13 +37,13 @@ const Footer = () => {
             <h4 className={`text-light text-18nn text-white`}>© Ronix Systems – 2025</h4>
           </div>
           <div className={`${styles.side} flex justify-end`}>
-            <Link
+            {/* <Link
               href="#"
               onClick={handleLanguageSwitch}
               className={`text-bold text-18nn text-white`}
             >
               {language === 'ru' ? 'Ru / En' : 'En / Ru'}
-            </Link>
+            </Link> */}
           </div>
         </div>
 

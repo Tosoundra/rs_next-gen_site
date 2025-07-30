@@ -73,12 +73,12 @@
         max-width: min(720px);
       }
 
-      @media (max-width: 767px) {
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-      }
+      // @media (max-width: 767px) {
+      //   display: -webkit-box;
+      //   -webkit-line-clamp: 4;
+      //   -webkit-box-orient: vertical;
+      //   overflow: hidden;
+      // }
     }
 
     .tags {
