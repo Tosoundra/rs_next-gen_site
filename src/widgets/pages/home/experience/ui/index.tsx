@@ -49,7 +49,7 @@ const Experience = ({ ...props }: Props) => {
             key={index}
             className={'h-screen flex items-center justify-center'}
           >
-            <div className=" flex flex-col lg:flex-row items-stretch gap-[90px]">
+            <div className=" flex flex-col lg:flex-row items-stretch lg:gap-[90px] gap-[40px]">
               <Image
                 width={600}
                 height={600}
@@ -58,7 +58,7 @@ const Experience = ({ ...props }: Props) => {
                 src={experience.img}
                 className={`w-[600px] max-h-[600px] rounded-[30px] block flex-shrink-0`}
               />
-              <div className="flex flex-col justify-between min-h-full flex-1 gap-10 5xl:gap-0">
+              <div className="flex flex-col justify-between min-h-full flex-1 gap-2 lg:gap-10">
                 <span className="experience-title caption-120 font-black text-white">
                   {getText(experience.title)}
                 </span>
