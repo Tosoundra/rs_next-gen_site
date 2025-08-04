@@ -25,6 +25,57 @@ const Experience = ({ ...props }: Props) => {
   useEffect(() => {
     if (!containerRef.current) return;
 
+    // Zoom-Out эффект для изображений
+    const images = containerRef.current.querySelectorAll('.experience-image');
+    images.forEach((image) => {
+      gsap.fromTo(
+        image,
+        {
+          scale: 1.2,
+          opacity: 0,
+        },
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 1.2,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: image,
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    });
+
+    // Zoom-Out эффект для текстовых элементов
+    const textElements = containerRef.current.querySelectorAll('.experience-text');
+    textElements.forEach((element, index) => {
+      gsap.fromTo(
+        element,
+        {
+          scale: 1.1,
+          opacity: 0,
+          y: 50,
+        },
+        {
+          scale: 1,
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          delay: index * 0.2,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: element,
+            start: 'top 85%',
+            end: 'bottom 15%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    });
+
     // if (containerRef.current) {
     //   const sections = containerRef.current.querySelectorAll('.img-container');
     //   sections.forEach((section) => {
@@ -38,6 +89,11 @@ const Experience = ({ ...props }: Props) => {
     //     }
     //   });
     // }
+
+    // Cleanup function
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
   }, []);
 
   return (
@@ -56,16 +112,16 @@ const Experience = ({ ...props }: Props) => {
                 alt={getText(experience.title)}
                 loading="lazy"
                 src={experience.img}
-                className={`w-[600px] max-h-[600px] rounded-[30px] block flex-shrink-0`}
+                className={`experience-image w-[600px] max-h-[600px] rounded-[30px] block flex-shrink-0`}
               />
               <div className="flex flex-col justify-between min-h-full flex-1 gap-2 lg:gap-10 w-[800px]">
-                <span className="experience-title caption-120 font-black text-white">
+                <span className="experience-text experience-title caption-120 font-black text-white">
                   {getText(experience.title)}
                 </span>
-                <span className="experience-subtitle caption-38 font-black text-blue">
+                <span className="experience-text experience-subtitle caption-38 font-black text-blue">
                   {getText(experience.subtitle)}
                 </span>
-                <span className="text-[16px] md:text-[20px] font-normal text-white mx-auto lg:mx-0">
+                <span className="experience-text text-[16px] md:text-[20px] font-normal text-white mx-auto lg:mx-0">
                   {getText(experience.description)}
                 </span>
               </div>
