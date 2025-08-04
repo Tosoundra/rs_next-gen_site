@@ -38,9 +38,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang={defaultLang}>
       <body>
         <LanguageProvider initialLanguage={defaultLang} initialTranslations={translations}>
-          <ReactLenis root options={{ duration: 2, smoothWheel: true }}>
+          {/* <ReactLenis root options={{ duration: 2, smoothWheel: true }}> */}
             {children}
-          </ReactLenis>
+          {/* </ReactLenis> */}
         </LanguageProvider>
       </body>
     </html>
