@@ -166,7 +166,7 @@ export default function Home() {
       />
       <main>
         <div className={`${styles.wrapper} flex flex-col`}>
-          {/* <Hero onExperienceClick={handleExperienceClick} /> */}
+          <Hero onExperienceClick={handleExperienceClick} />
           <Experience ref={experienceRef} />
           <SectionWrapper caption={translations.page.services}>
             <Services ref={serviceRef} />

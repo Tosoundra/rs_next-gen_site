@@ -7,6 +7,7 @@ import { ArrowIcon, Logo, MouseWithDownArrow } from '@shared';
 import styles from './hero.module.scss';
 import { NeuroBackground } from '@/src/shared/background';
 import { useLanguage } from '@/src/context/LanguageContext';
+import { useMediaQuery } from '@uidotdev/usehooks';
 
 type Props = { onExperienceClick: () => void };
 
@@ -23,11 +24,12 @@ const Hero = ({ onExperienceClick }: Props) => {
 
   const { translations } = useLanguage();
 
+  const isLargeDevice = useMediaQuery('only screen and (min-width : 993px)');
   return (
     <section
       className={`${styles.section} flex justify-center items-center background-black text-white relative`}
     >
-      <NeuroBackground />
+      {isLargeDevice  && <NeuroBackground />}
       {/* <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[clamp(3rem,15vw,15rem)] mix-blend-overlay text-nowrap">
         Ronix Systems
       </h1> */}
