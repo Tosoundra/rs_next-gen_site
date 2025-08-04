@@ -114,7 +114,7 @@ const Experience = ({ ...props }: Props) => {
                 src={experience.img}
                 className={`experience-image w-[600px] max-h-[600px] rounded-[30px] block flex-shrink-0`}
               />
-              <div className="flex flex-col justify-between min-h-full flex-1 gap-2 lg:gap-10 w-[800px]">
+              <div className="flex flex-col justify-between min-h-full flex-1 gap-2 lg:gap-10 lg:w-[800px]">
                 <span className="experience-text experience-title caption-120 font-black text-white">
                   {getText(experience.title)}
                 </span>
