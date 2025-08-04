@@ -8,8 +8,6 @@ import Image from 'next/image';
 import { SpaceBackgroundZ } from '@/src/shared/background';
 import styles from './styles.module.scss';
 import { useLanguage } from '@/src/context/LanguageContext';
-import { animate, scroll } from 'motion';
-import { shouldReduceMotion, getOptimalScrollTriggerSettings } from '@/src/config/utils/deviceUtils';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,13 +23,6 @@ const Experience = ({ ...props }: Props) => {
 
   useEffect(() => {
     if (!containerRef.current) return;
-
-    // Отключаем анимации если пользователь предпочитает уменьшенное движение
-    if (shouldReduceMotion()) {
-      return;
-    }
-
-    const scrollSettings = getOptimalScrollTriggerSettings();
 
     // Zoom-Out эффект для изображений
     const images = containerRef.current.querySelectorAll('.experience-image');
@@ -52,7 +43,7 @@ const Experience = ({ ...props }: Props) => {
             start: 'top 80%',
             end: 'bottom 20%',
             toggleActions: 'play none none reverse',
-            ...scrollSettings,
+            
           },
         }
       );
@@ -80,7 +71,7 @@ const Experience = ({ ...props }: Props) => {
             start: 'top 85%',
             end: 'bottom 15%',
             toggleActions: 'play none none reverse',
-            ...scrollSettings,
+            
           },
         }
       );

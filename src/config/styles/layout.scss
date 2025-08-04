@@ -82,9 +82,7 @@ body {
    flex-direction: column;
    scroll-behavior: smooth;
    overflow-x: clip;
-   /* Оптимизация для мобильных устройств */
-   -webkit-overflow-scrolling: touch;
-   overscroll-behavior: none;
+
 }
 
 main {
