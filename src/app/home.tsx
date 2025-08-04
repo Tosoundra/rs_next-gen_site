@@ -159,11 +159,11 @@ export default function Home() {
       {dimensions && (
         <CenteredPixelTransition menuIsActive={menuIsActive} dimensions={dimensions} />
       )}
-      {/* <Header
+      <Header
         onContactClick={handleContactClick}
         menuIsActive={menuIsActive}
         setMenuIsActive={setMenuIsActive}
-      /> */}
+      />
       <main>
         <div className={`${styles.wrapper} flex flex-col`}>
           {/* <Hero onExperienceClick={handleExperienceClick} /> */}
