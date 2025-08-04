@@ -21,8 +21,8 @@ export const metadata = {
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
+  maximumScale: 5,
+  userScalable: true,
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -38,7 +38,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang={defaultLang}>
       <body>
         <LanguageProvider initialLanguage={defaultLang} initialTranslations={translations}>
-          <ReactLenis root options={{ duration: 2, smoothWheel: true }}>
+          <ReactLenis root options={{ 
+            duration: 1.2, 
+            smoothWheel: true,
+            lerp: 0.1
+          }}>
             {children}
           </ReactLenis>
         </LanguageProvider>
