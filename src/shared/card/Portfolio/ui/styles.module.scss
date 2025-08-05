@@ -19,6 +19,11 @@
   }
 
   .imageWrapper {
+
+    img { 
+      border-radius: 32px;
+      overflow: hidden;
+    }
     .image {
       --height: 585px;
       height: var(--height);

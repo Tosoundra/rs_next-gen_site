@@ -6,6 +6,7 @@ import { PortfolioCaseProps } from '../types';
 
 import styles from './styles.module.scss';
 import { useState } from 'react';
+import Image from 'next/image';
 
 const CardPortfolio = ({ data }: PortfolioCaseProps) => {
 const [clickCard, setClickCard] = useState(false);
@@ -19,12 +20,12 @@ const handleClickCard = () => {
       {/* <Link className={`${styles.imageWrapper} relative`} href={`/portfolio/${data.slug}`}> */}
 
       <div className={`${styles.imageWrapper} relative`}>
-        <ImageFlow
-          src={data.image}
-          alt={data.title}
-          width="1820"
-          height="585"
-          classNames={{ image: `${styles.image}` }}
+        <Image 
+        className={styles.image}
+        src={data.image}
+        alt={data.title}
+        width={1820}
+        height={585}
         />
         <h3 className={`${styles.title} caption-60 text-bold text-white`}>{data.title}</h3>
         </div>
