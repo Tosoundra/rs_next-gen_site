@@ -20,6 +20,8 @@
    .imageWrapper {
       flex: 1;
       justify-content: flex-end;
+      border: 1px solid black;
+      border-radius: 32px;
 
       .image {
          --image-size: 500px;
@@ -68,7 +70,7 @@
          order: 3;
       }
    }
-
+   
    @media (max-width: 1919px) {
       --padding-vertical: 24px;
       gap: 80px;
@@ -76,6 +78,13 @@
       .flowWrapper {
          width: 100%;
       }
+   }
+
+   .flowWrapper{ 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
    }
 
    @media (max-width: 1279px) and (min-width: 768px) {
