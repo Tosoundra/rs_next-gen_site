@@ -29,7 +29,7 @@ const Hero = ({ onExperienceClick }: Props) => {
     <section
       className={`${styles.section} flex justify-center items-center background-black text-white relative`}
     >
-      {isLargeDevice  && <NeuroBackground />}
+       <NeuroBackground />
       {/* <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[clamp(3rem,15vw,15rem)] mix-blend-overlay text-nowrap">
         Ronix Systems
       </h1> */}
