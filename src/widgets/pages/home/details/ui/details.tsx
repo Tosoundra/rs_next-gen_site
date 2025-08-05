@@ -85,7 +85,7 @@ const Details = ({ ...props }: Props) => {
   return (
     <div {...props} className={`${styles.wrapper} content-wrapper`}>
       <div className="grid grid-cols-4 grid-rows-3 gap-9 h-[80vh] w-full">
-        <div className="col-span-2 row-span-2 flex items-center justify-center text-3xl font-bold relative rounded-xl overflow-hidden">
+        <div className="col-span-2 row-span-2 flex items-center justify-center text-3xl font-bold relative rounded-3xl overflow-hidden">
           <div
             ref={containerRef}
             style={{
@@ -110,7 +110,7 @@ const Details = ({ ...props }: Props) => {
           </ul>
         </div>
         <div className="col-span-2 col-start-1 row-start-3 flex items-center justify-center text-3xl font-bold">
-          <div className="border border-black w-full h-full rounded-xl overflow-hidden">
+          <div className="border border-black w-full h-full rounded-3xl overflow-hidden">
             <div className="flex place-items-center justify-center h-full">
               <div className="flex-1 text-right pl-3">
                 <div className="relative">
@@ -156,13 +156,13 @@ const Details = ({ ...props }: Props) => {
             </div>
           </div>
         </div>
-        <div className="col-start-3 row-start-1 flex items-center justify-center text-3xl font-bold rounded-xl overflow-hidden">
+        <div className="col-start-3 row-start-1 flex items-center justify-center text-3xl font-bold rounded-3xl overflow-hidden">
           <div className="background-blue flex flex-col place-items-center justify-center text-white h-full w-full">
             <div className="caption-80 font-black">80+</div>
             <div className="caption-28 font-black text-center">{translations.details.completedProjects}</div>
           </div>
         </div>
-        <div className="row-span-2 col-start-3 row-start-2 flex items-center justify-center text-3xl font-bold rounded-xl overflow-hidden border border-black">
+        <div className="row-span-2 col-start-3 row-start-2 flex items-center justify-center text-3xl font-bold rounded-3xl overflow-hidden border border-black">
           <div className="h-full w-full flex flex-col place-items-center justify-center overflow-hidden">
             <div className="text-center ">
               <div className="text-black caption-38 font-black">{translations.details.clientsFrom}</div>
@@ -178,7 +178,7 @@ const Details = ({ ...props }: Props) => {
             />
           </div>
         </div>
-        <div className="row-span-2 col-start-4 row-start-1 flex items-center justify-center text-3xl font-bold rounded-xl overflow-hidden ">
+        <div className="row-span-2 col-start-4 row-start-1 flex items-center justify-center text-3xl font-bold rounded-3xl overflow-hidden ">
           <div className="background-black h-full w-full">
             <div className={`${styles.content} gap-y-10 sm:gap-y-14 md:gap-y-16 lg:gap-y-20`}>
               <h3 className="text-transparent text-center bg-clip-text bg-gradient-to-r from-[#F8F8F8] via-[#E0E0E0] to-[#A1A1A1] caption-38 font-black ">
@@ -188,7 +188,7 @@ const Details = ({ ...props }: Props) => {
             </div>
           </div>
         </div>
-        <div className="col-start-4 row-start-3 flex items-center justify-center text-3xl font-bold overflow-hidden border border-black rounded-xl">
+        <div className="col-start-4 row-start-3 flex items-center justify-center text-3xl font-bold overflow-hidden border border-black rounded-3xl">
           <div className="flex flex-col place-items-center justify-center">
             <div className="text-center">
               <span className="text-blue caption-100 font-black block">27</span>
