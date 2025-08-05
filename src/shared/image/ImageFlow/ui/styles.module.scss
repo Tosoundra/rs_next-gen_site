@@ -3,6 +3,9 @@
    width: 100%;
   //  background-color: var(--black);
    border-radius: var(--item-border-radius);
-   mix-blend-mode: luminosity;
-   filter: grayscale(1);
+   // mix-blend-mode: luminosity;
+   // filter: grayscale(1);
+
+   border: 1px solid black;
+   border-radius: 32px;
 }
