@@ -3,6 +3,7 @@
    width: 100%;
   //  background-color: var(--black);
    border-radius: var(--item-border-radius);
+
    // mix-blend-mode: luminosity;
    // filter: grayscale(1);
 
@@ -20,4 +21,9 @@
    // object-fit: cover;
 
 
+}
+
+.wrapper  { 
+   display: flex;
+   justify-content: center;
 }

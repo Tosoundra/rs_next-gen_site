@@ -1,5 +1,6 @@
 .card {
    --padding-vertical: 40px;
+   gap: 220px;
 
    .title {
       padding: var(--padding-vertical) 0;
@@ -19,7 +20,20 @@
 
    .imageWrapper {
       flex: 1;
-      justify-content: flex-end;
+      border: 1px solid black;
+      border-radius: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 500px;
+      height: 500px;
+
+
+      img { 
+         width: 180px !important;
+         height: 180px !important;
+         object-fit: contain;
+      }
 
       .image {
          --image-size: 500px;
@@ -57,7 +71,7 @@
    &.reverse {
       .imageWrapper {
          order: 1;
-         justify-content: flex-start;
+         justify-content: center;
       }
 
       .title {

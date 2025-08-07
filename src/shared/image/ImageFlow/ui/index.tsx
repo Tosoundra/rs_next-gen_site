@@ -12,7 +12,7 @@ const ImageFlow = ({
   ...props
 }: ImageFlowProps) => {
   return (
-    <div className={`${styles.wrapper} ${classNames?.wrapper && classNames.wrapper}`}>
+    <div className={`${styles.wrapper} ${classNames?.wrapper && classNames.wrapper }`}>
       <Image
         style={{
           width,
