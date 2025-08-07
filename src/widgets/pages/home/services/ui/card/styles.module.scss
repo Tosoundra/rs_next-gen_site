@@ -1,6 +1,5 @@
 .card {
    --padding-vertical: 40px;
-   gap: 40px;
 
    .title {
       padding: var(--padding-vertical) 0;
@@ -20,15 +19,13 @@
 
    .imageWrapper {
       flex: 1;
-      justify-content: center;
-      border: 1px solid black;
-      border-radius: 32px;
+      justify-content: flex-end;
 
       .image {
-         // --image-size: 500px;
-         // min-width: var(--image-size);
-         // width: var(--image-size);
-         // height: var(--image-size);
+         --image-size: 500px;
+         min-width: var(--image-size);
+         width: var(--image-size);
+         height: var(--image-size);
 
          @media (max-width: 1919px) {
             min-width: unset;
@@ -60,7 +57,7 @@
    &.reverse {
       .imageWrapper {
          order: 1;
-         justify-content: center;
+         justify-content: flex-start;
       }
 
       .title {
@@ -71,7 +68,7 @@
          order: 3;
       }
    }
-   
+
    @media (max-width: 1919px) {
       --padding-vertical: 24px;
       gap: 80px;
@@ -79,13 +76,6 @@
       .flowWrapper {
          width: 100%;
       }
-   }
-
-   .flowWrapper{ 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
    }
 
    @media (max-width: 1279px) and (min-width: 768px) {

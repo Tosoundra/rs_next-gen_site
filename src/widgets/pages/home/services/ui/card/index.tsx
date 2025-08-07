@@ -23,8 +23,6 @@ const ServiceCard = ({ index, service }: ServiceProps) => {
       </div>
       <div className={`${styles.imageWrapper} flex`}>
         <ImageFlow
-        width={180}
-        height={180}
           classNames={{ image: `${styles.image}`, wrapper: `${styles.flowWrapper}` }}
           src={service.image}
           alt={service.title}
