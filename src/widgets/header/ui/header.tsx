@@ -23,24 +23,35 @@ const Header = ({ onContactClick, menuIsActive, setMenuIsActive }: Props) => {
     setMenuIsActive(!menuIsActive);
   };
 
+  
+
   useEffect(() => {
+    let ticking = false;
+    
     const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-      const isScrollingUp = currentScrollPos < prevScrollPos;
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const currentScrollPos = window.scrollY;
+          const isScrollingUp = currentScrollPos < prevScrollPos;
+          
+          // Передаем состояние скролла в CSS переменные
+          document.documentElement.style.setProperty('--scroll-y', currentScrollPos.toString());
+          document.documentElement.style.setProperty('--scroll-direction', isScrollingUp ? 'down' : 'up');
+          
+          if (isScrollingUp) {
+            setIsVisible(true);
+          } else {
+            setIsVisible(false);
+          }
 
-      if (isScrollingUp) {
-        setIsVisible(false);
-      } else {
-        setIsVisible(true);
+          setPrevScrollPos(currentScrollPos);
+          ticking = false;
+        });
+        ticking = true;
       }
-
-      setPrevScrollPos(currentScrollPos);
-
-      if (timeoutId) clearTimeout(timeoutId);
-      timeoutId = window.setTimeout(() => setIsVisible(true), 100);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => {
       window.removeEventListener('scroll', handleScroll);
       if (timeoutId) clearTimeout(timeoutId);
@@ -48,7 +59,10 @@ const Header = ({ onContactClick, menuIsActive, setMenuIsActive }: Props) => {
   }, [prevScrollPos]);
 
   return (
-    <header className={`${styles.header} ${isVisible && styles.hidden}`}>
+    <header 
+      className={`${styles.header} ${isVisible && styles.hidden}`}
+      data-scroll-direction={prevScrollPos > 0 ? (isVisible ? 'down' : 'up') : 'down'}
+    >
       <div className={`${styles.wrapper} content-wrapper flex items-center`}>
         <div className={`${styles.side} flex justify-start`}>
           <div

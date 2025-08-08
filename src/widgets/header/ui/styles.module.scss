@@ -1,13 +1,17 @@
 .header {
   --padding-vertical: 75px;
+  --scroll-y: 0;
+  --scroll-direction: down;
   position: fixed;
   z-index: 9999;
   padding-top: var(--padding-vertical);
   width: 100%;
-  transition: transform 1s ease-in-out;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   mix-blend-mode: difference;
   margin-top: 20px;
   will-change: transform;
+  /* Используем CSS переменные для анимации */
+  transform: translateY(calc(var(--scroll-y) * 0.1px));
 
   @media (max-width: 1919px) {
     --padding-vertical: 44px;
@@ -63,7 +67,16 @@
 }
 
 .header.hidden {
-  transform: translateY(-600%);
+  transform: translateY(-150%);
+}
+
+/* Альтернативный способ с CSS переменными */
+.header[data-scroll-direction="up"] {
+  transform: translateY(-150%);
+}
+
+.header[data-scroll-direction="down"] {
+  transform: translateY(0);
 }
 
 .wrapper {
